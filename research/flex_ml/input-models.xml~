@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet 
+    type="text/xsl" 
+    href="http://www.cs.virginia.edu/~ms6ep/research/flex_ml/specifyBindings.xsl"?>
+
+<program 
+    programmingLanguage="C"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.cs.virginia.edu/~ms6ep/research/flex_ml/flexible.xsd"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML">
+
+<programHeader>
+</programHeader>
+
+<programContent>
+<staticCode>
+
+#include &lt;stdio.h&gt;
+
+int main (void)
+{
+   double retval;
+   double uniform;
+
+   uniform = drand48(); 
+</staticCode>
+
+
+
+
+<algorithmicFlexiblePoint 
+    name="Probability Distribution Function" 
+    id="pdf"
+    default="gamma">
+
+<alternative
+    name="Uniform Distribution"
+    id="uniform">
+  <characterization>
+   <mml:math>
+      <mml:apply>
+        <mml:eq/>
+        <mml:apply><mml:mean/>
+          <mml:ci>X</mml:ci>
+        </mml:apply>
+        <mml:apply><mml:divide/>
+          <mml:apply>
+            <mml:plus/>
+            <mml:ci>&#x003B1;</mml:ci>
+            <mml:ci>&#x003B2;</mml:ci>
+          </mml:apply><mml:mn>2</mml:mn>
+        </mml:apply>
+      </mml:apply>
+    </mml:math>
+  </characterization>
+  retval = uniform * (b-a) + a;
+</alternative>
+
+<alternative 
+    name="Gamma Distribution" 
+    id="gamma">
+  <characterization>
+    <mml:math>
+      <mml:apply>
+        <mml:eq/>
+        <mml:apply><mml:mean/>
+          <mml:ci>X</mml:ci>
+        </mml:apply>
+        <mml:apply><mml:times/>
+          <mml:ci>&#x003B1;</mml:ci>
+          <mml:ci>&#x003B2;</mml:ci>
+        </mml:apply>
+      </mml:apply>
+    </mml:math>
+  </characterization>
+  retval = gamma(uniform,alpha,beta);
+</alternative>
+
+</algorithmicFlexiblePoint>
+
+<staticCode>
+  return retval;
+}
+</staticCode>
+
+</programContent>
+</program>

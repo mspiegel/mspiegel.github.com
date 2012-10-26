@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML lang="en">
+<HEAD>
+<title>Michael Spiegel, Ph.D.</title>
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<style type="text/css">
+dt { margin-top: 1em; font-weight: bold; }
+@media print {
+        dt { page-break-after: avoid; }
+        dd { page-break-before: avoid; }
+}
+</style>
+</HEAD>
+<body bgcolor="#FFFFFF">
+<table width="100%">
+<tr><td width="250">
+<center><img width=225 src="images/shuttle.jpg" /></center>
+<br><div align="center">
+</td><td valign="top" width="*"><hr size=3 noshade><strong><font size=+2>Michael Spiegel, Ph.D.</font></strong> <hr size=3 noshade>
+<table><tr><td>
+Post-Doctoral Research Associate<br>
+<A HREF="http://www.renci.org/focus-areas/computing-technology">High Performance Computing Group</A><BR> <A HREF="http://www.renci.org">Renaissance Computing Institute (RENCI)</A><BR> <A HREF="http://www.unc.edu">UNC - Chapel Hill</A><BR>100 Europa Drive Suite 540<BR> <a href="http://www.ci.chapel-hill.nc.us">Chapel Hill</A>, NC 27517<P><!-- Phone: () - <BR> Fax:  () - <BR> -->Email:&nbsp;&nbsp;<img src="email2.jpg" align="middle"><br> 
+Web: <A HREF="http://www.unc.edu/~mspiegel/">http://www.unc.edu/~mspiegel</A><br>
+Career: <a href="resume-mspiegel.pdf">Curriculum Vitae</a><br>
+Research: <a href="#publications">publications</a><br>
+Links: <a href="http://delicious.com/drmajormccheese">del.icio.us</a><br>
+
+</td><td style="vertical-align: top">
+&nbsp;&nbsp;<a href="http://www.renci.org"><img src="images/renci-logo.jpg" /></a>
+</td></tr></table>
+</td></tr></table>
+<p>
+<table width="80%">
+<tr align="justify"><td>
+<h3>Current Projects</h3>
+        </td></tr>
+        <tr align="justify"><td>
+        <ul class="noindent">
+        <li>Hierarchical work-stealing - The high performance computing group at RENCI is developing an efficient hierarchical OpenMP implementation for the open-source <a href="http://www.cs.sandia.gov/qthreads">Qthreads</a> runtime library. Efficient scheduling of tasks on modern multi-socket many-core shared memory systems requires consideration of an increasingly complex memory hierarchy. In a traditional work-stealing framework, each core is assigned a double-ended queue (a dequeue). One side of the dequeue supports sequential operations while the other side supports concurrent modification. In contrast, our runtime assigns several cores to a single dequeue. For these cores on the same chip, the LIFO task scheduling allows exploitation of cache locality between sibling tasks as well as between a parent task and its newly created child tasks. My contribution is the design and implementation of an array-based lock-free dequeue that supports concurrent modification on both ends of the data structure.
+<p>The paper "OpenMP Task Scheduling Strategies for Multicore NUMA Systems" has been accepted for publication in the peer-reviewed journal <i>International Jounral of High Performance Computing Applications</i>.
+        </li></ul></td></tr>
+        <tr align="justify"><td>
+        <ul class="noindent">
+        <li>Convergent Haplotype Association Tagging - A haplotype is a DNA sequence that has been inherited from one parent. Each person possesses two haplotypes for most regions of the genome. The process of deducing haplotype information based on genotype data is known as <i>haplotype phasing</i>. Haplotype information is important in untangling the heritability of traits of interest such as generic disorders. We can use genetic markers that are uncommon in the population as beacons to identify common ancestors for individuals that are not known to be related. The design of this phasing strategy is ongoing. My responsibilities involve scaling our phasing algorithm to thousands of individuals and hundreds of thousands of genetic markers per individual.
+        </li></ul></td></tr>
+        <tr align="justify"><td>
+        <ul class="noindent">
+        <li><a href="http://openmx.psyc.virginia.edu">OpenMx</a> - The OpenMx Project intends to rewrite and extend the popular statistical package Mx to address the challenges facing a large range of modern statistical problems such as: (i) the difficulty of measuring behavioral traits; (ii) the availability of technologies - such as such as magnetic resonance imaging, continuous physiological monitoring and microarrays - which generate extremely large amounts of data often with complex time-dependent patterning; (iii) increased sophistication in the statistical models used to analyze the data. To address these problems, the Mx Structural Equation Modeling software will be rewritten so as to: (i) split OpenMx into modules that interoperate with the R statistical package; (ii) release OpenMx as open source so as to provide a stable path for future maintenance and development; (iii) integrate OpenMx with the Swift (formerly VDL) parallel workflow software.
+<p>The paper "OpenMx: An Open Source Extended Structural Equation Modeling Framework" has been accepted for publication in the peer-reviewed journal <i>Psychometrika</i>, the print journal of the Psychometric Society.
+        </li></ul></td></tr>
+<tr align="justify"><td>
+</td></tr>
+</table>
+<table width="80%">
+<tr align="justify"><td>
+<h3>Previous Projects</h3>
+        </td></tr>
+        <tr align="justify"><td>
+        <ul class="noindent">
+   <li>Cache-conscious concurrent data structures - The power wall, the ILP wall, and the memory wall are driving a trend from implicitly parallel architectures towards explicitly parallel architectures. The memory wall has been identified as one of the fundamental challenges to high-performance concurrent computing. The design of cache-conscious concurrent data structures for many-core systems will show significant performance improvements over the state of the art in concurrent data structure designs for those applications that must contend with the deleterious effects of the memory wall. The design of cache-conscious, linearizable concurrent data structures has advantageous properties that can be measured across multiple architecture platforms. My dissertation research fills the gap in cache-conscious concurrent data structures by providing concurrent algorithms that implement an ordered set abstract data type. The dense skip tree is a randomized data structure that has been designed to probabilistically exploit spatial locality of reference. The dense skip tree causes fewer cache misses than self-balancing binary search trees by probabilistically aggregating consecutive sequences of keys into contiguous regions of memory. The primary contributions of my thesis are the optimistic skip tree algorithm, the lock-free concurrent skip tree algorithm, and the lock-free concurrent HAT trie algorithm.
+<p>I successfully defended my dissertation on April 18, 2011. A copy of the thesis is <a href="publications/michael-spiegel-dissertation.pdf">available online</a>.
+        </li></ul></td></tr>
+        <tr align="justify"><td>
+	<ul class="noindent">
+  <li><a href="http://java.net/projects/projectfortress/pages/Home">Fortress</a> - Fortress is a new programming language designed for high-performance computing with high programmability. Fortress will support features such as transactions, specification of locality, and implicit parallel computation as integral features built into the core of the language. Features such as the Fortress component system and test framework facilitate program assembly and testing, and enable powerful compiler optimizations across library boundaries. The syntax and type system of Fortress are custom-tailored to modern HPC programming, supporting mathematical notation and static checking of properties such as physical units and dimensions, static type checking of multidimensional arrays and matrices, and definitions of domain-specific language syntax in libraries.
+</li></ul></td></tr>
+<tr align="justify"><td>
+</td></tr>
+
+</table>
+
+<table width="80%"><tr align="justify"><td>
+
+<h3>Computer Science Canon</h3>
+<p>For a young field with only 60 years of modern history, there is very little emphasis on studying the development of computer science.  I like to read these formative papers in order to (a) understand the intellectual development of computer science, and (b) inspire new avenues of thinking in future research. Here is my first draft of a <a href="canon.html">"Great Works in Computer Science"</a> reading list.  Please email me with your additions, deletions, or modifications to the list.  I am particularly interested in nominations from the '80s, '90s, and '00s. </td></tr>
+
+<tr align="justify"><td></td></tr></table>
+
+<h3 id="publications">Publications</h3> 
+
+<dl>
+
+<dt>Journal Article</dt> 
+<dd>Olivier, S.L., Porterfield, A.K., Wheeler, K.B., Spiegel, M. &amp; Prins, J.F.</dd> 
+<dd><i>OpenMP Task Scheduling Strategies for Multicore NUMA Systems</i></dd> 
+<dd>International Journal of High Performance Computing Applications, <b>2011</b>. Accepted for publication. <a href="publications/ijhpca11.pdf">pdf</a></dd> 
+
+<dt>PhD Thesis</dt>
+<dd>Spiegel, M.</dd>
+<dd><i>Cache-conscious concurrent data structures</i></dd>
+<dd>Committee: Andrew Grimshaw (Chair), Paul F. Reynolds (Advisor), Abhi Shelat, Steven Boker, and Doug Lea.</dd>
+<dd>University of Virginia, <b>2011</b>. <a href="publications/michael-spiegel-dissertation.pdf">link</a></dd>
+
+<dt>Journal Article</dt>
+<dd>Boker, S., Neale, M., Maes, H., Wilde, M., Spiegel, M., Brick, T., Spies, J., Estabrook, R., Kenny, S., Bates, T., Mehta, P. &amp; Fox, J.</dd>
+<dd><i>OpenMx: An Open Source Extended Structural Equation Modeling Framework</i></dd>
+<dd>Psychometrika, <b>2011</b>, Vol. 76(2), pp. 306-317. <a href="https://springerlink3.metapress.com/content/dg37445107026711/resource-secured/?target=fulltext.pdf&sid=sy240hi1nahau145kq3trhbo&sh=www.springerlink.com">SpringerLink</a></dd>
+
+<dt>Conference Article</dt>
+<dd>Spiegel, M. &amp; Reynolds, Jr., P.F.</dd>
+<dd><i>Lock-Free Multiway Search Trees</i></dd>
+<dd>Proceedings of the 39th Annual International Conference on Parallel Processing (ICPP)</dd>
+<dd>IEEE Computer Society, <b>2010</b>. <a href="publications/mspiegel-icpp2010.pdf">pdf</a></dd>
+
+<dt>Conference Article</a></dt>
+<dd>Spiegel, M., Gore, R. &amp; Reynolds, P.F.</dd>
+<dd><i>Quantifying and Analyzing Uncertainty in Simulations to Enable User Understanding</i></dd>
+<dd>Proceedings of the Modeling, Simulation, &amp; Gaming Student Capstone Conference</dd>
+<dd><b>2008</b>. <a href="publications/mspiegel-vmasc08.doc">doc</a></dd>
+
+<dt>Technical Report</dt>
+<dd>Spiegel, M.</dd>
+<dd><i>A proposal for computing with imprecise probabilities: A framework for multiple representations of uncertainty in simulation software</i></dd>
+<dd>Department of Computer Science, University of Virginia, <b>2007</b> (CS-2007-16). <a href="publications/mspiegel-proposal07.pdf">pdf</a></dd>
+
+<dt>Conference Article</dt>
+<dd>Reynolds, Jr., P.F., Spiegel, M., Liu, X. &amp; Gore, R.</dd>
+<dd><i>Validating evolving simulations in COERCE</i></dd>
+<dd>Proceedings of the 2007 International Conference on Computational Science (ICCS)</dd>
+<dd><b>2007</b>, pp. 1238-1245. <a href="publications/reynolds-iccs07.pdf">pdf</a></dd>
+
+<dt>Conference Article</dt>
+<dd>Spiegel, M., Reynolds, P.F. &amp; Brogan, D.C.</dd>
+<dd><i>Grand challenge case studies in a simulation curriculum</i></dd>
+<dd>Perrone, L., Wieland, F., Liu, J., Lawson, B., Nicol, D. &amp; Fujimoto, R. <i>(ed.)</i></dd>
+<dd>Proceedings of the 2006 Winter Simulation Conference (WSC)</dd>
+<dd><b>2006</b>, pp. 2242-2249. <a href="publications/mspiegel-wintersim06.pdf">pdf</a></dd>
+
+<dt>Conference Article</dt>
+<dd>Reynolds, Jr., P.F., Brogan, D.C., Carnahan, J., Loitiere, Y. &amp; Spiegel, M.</dd>
+<dd><i>Capturing scientists' insight for DDDAS</i></dd>
+<dd>Alexandrov, V., Van Albada, G., Sloot, P. &amp; Dongarra, J. <i>(ed.)</i></dd>
+<dd>Proceedings of the 2006 International Conference on Computational Science (ICCS)</dd>
+<dd><b>2006</b>, pp. 570-577. <a href="publications/reynolds-iccs06.pdf">pdf</a></dd>
+
+<dt>Conference Article</dt>
+<dd>Spiegel, M., Reynolds, P.F. &amp; Brogan, D.C.</dd>
+<dd><i>A case study of model context for simulation composability and reusability</i></dd>
+<dd>Kuhl, M., Steiger, N., Armstrong, F. &amp; Joines, J. <i>(ed.)</i></dd>
+<dd>Proceedings of the 2005 Winter Simulation Conference (WSC)</dd>
+<dd><b>2005</b>, pp. 437-444. <a href="publications/mspiegel-wintersim05.pdf">pdf</a></dd>
+
+<dt>Conference Article</dt>
+<dd>Newhall, T., Finney, S., Ganchev, K. &amp; Spiegel, M.</dd>
+<dd><i>Nswap: A network swap module for linux clusters.</i></dd>
+<dd>Kosch, H., Boszormenyi, L. &amp; Hellwagner, H. <i>(ed.)</i></dd>
+<dd>Proceedings of the 9th European Conference on Parallel Processing (Euro-Par)</dd>
+<dd><b>2003</b>, pp. 1160-1169. <a href="publications/europar03.pdf">pdf</a></dd>
+</dl>
+
+<a href="images/mosaic-medium.jpg"><img src="images/mosaic-low.jpg" alt="photo mosaic"/></a>
+</body>
+</html>
+
+

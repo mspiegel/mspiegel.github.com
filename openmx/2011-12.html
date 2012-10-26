@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - December 2011 Commit Log</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.5.0"/>
+    <link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+  </head>
+
+<body>
+
+<h1>December 2011 Commit Log</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for OpenMx</a></div>
+
+<div id="nav" class="section">
+<h2>Commit Logs</h2>
+<ul>
+    <li><a href="2012-09.html">September 2012</a></li>
+    <li><a href="2012-08.html">August 2012</a></li>
+    <li><a href="2012-07.html">July 2012</a></li>
+    <li><a href="2012-06.html">June 2012</a></li>
+    <li><a href="2012-05.html">May 2012</a></li>
+    <li><a href="2012-04.html">April 2012</a></li>
+    <li><a href="2012-03.html">March 2012</a></li>
+    <li><a href="2012-02.html">February 2012</a></li>
+    <li><a href="2012-01.html">January 2012</a></li>
+    <li><span class="here">December 2011</span></li>
+    <li><a href="2011-11.html">November 2011</a></li>
+    <li><a href="2011-10.html">October 2011</a></li>
+    <li><a href="2011-09.html">September 2011</a></li>
+    <li><a href="2011-08.html">August 2011</a></li>
+    <li><a href="2011-07.html">July 2011</a></li>
+    <li><a href="2011-06.html">June 2011</a></li>
+    <li><a href="2011-05.html">May 2011</a></li>
+    <li><a href="2011-04.html">April 2011</a></li>
+    <li><a href="2011-03.html">March 2011</a></li>
+    <li><a href="2011-02.html">February 2011</a></li>
+    <li><a href="2011-01.html">January 2011</a></li>
+    <li><a href="2010-12.html">December 2010</a></li>
+    <li><a href="2010-11.html">November 2010</a></li>
+    <li><a href="2010-10.html">October 2010</a></li>
+    <li><a href="2010-09.html">September 2010</a></li>
+    <li><a href="2010-08.html">August 2010</a></li>
+    <li><a href="2010-07.html">July 2010</a></li>
+    <li><a href="2010-06.html">June 2010</a></li>
+    <li><a href="2010-05.html">May 2010</a></li>
+    <li><a href="2010-04.html">April 2010</a></li>
+    <li><a href="2010-03.html">March 2010</a></li>
+    <li><a href="2010-02.html">February 2010</a></li>
+    <li><a href="2010-01.html">January 2010</a></li>
+    <li><a href="2009-12.html">December 2009</a></li>
+    <li><a href="2009-11.html">November 2009</a></li>
+    <li><a href="2009-10.html">October 2009</a></li>
+    <li><a href="2009-09.html">September 2009</a></li>
+    <li><a href="2009-08.html">August 2009</a></li>
+    <li><a href="2009-07.html">July 2009</a></li>
+    <li><a href="2009-06.html">June 2009</a></li>
+    <li><a href="2009-05.html">May 2009</a></li>
+    <li><a href="2009-04.html">April 2009</a></li>
+    <li><a href="2009-03.html">March 2009</a></li>
+    <li><a href="2009-02.html">February 2009</a></li>
+    <li><a href="2009-01.html">January 2009</a></li>
+    <li><a href="2008-12.html">December 2008</a></li>
+    <li><a href="2008-11.html">November 2008</a></li>
+    <li><a href="2008-10.html">October 2008</a></li>
+    <li><a href="2008-09.html">September 2008</a></li>
+    <li><a href="2008-08.html">August 2008</a></li>
+    <li><a href="2008-07.html">July 2008</a></li>
+    <li><a href="2008-06.html">June 2008</a></li>
+    <li><a href="2008-05.html">May 2008</a></li>
+    <li><a href="2008-04.html">April 2008</a></li>
+    <li><a href="2008-03.html">March 2008</a></li>
+    <li><a href="2008-02.html">February 2008</a></li>
+    <li><a href="2008-01.html">January 2008</a></li>
+    <li><a href="2007-12.html">December 2007</a></li>
+</ul>
+</div><dl class="attributes">
+    <dt>Number of Commits:</dt>
+    <dd>21</dd>
+    <dt>Number of Active Developers:</dt>
+    <dd>4</dd>
+</dl>
+<dl class="commitlist">
+  <dt><a name="21"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-22 11:11</span>
+    <a class="permalink" title="Permalink to this commit" href="#21">#21</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1887</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Parallelizing the MxRowObjective calculation.<br />
+
+    </p>
+    <p class="commitdetails"><strong>103</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/src</strong>:
+        omxData.c&#160;<span class="change">(+9)</span>,
+        omxData.h&#160;<span class="change">(+4&#160;-2)</span>,
+        omxFIMLSingleIteration.c&#160;<span class="change">(-10)</span>,
+        omxRowObjective.c&#160;<span class="change">(+90&#160;-31)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="20"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-21 17:00</span>
+    <a class="permalink" title="Permalink to this commit" href="#20">#20</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1886</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Ensure that parallel FIML computes the same likelihood values<br />
+for all possible thread counts.<br />
+<br />
+
+    </p>
+    <p class="commitdetails"><strong>69</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/src</strong>:
+        omxFIMLObjective.c&#160;<span class="change">(+8&#160;-4)</span>,
+        omxFIMLSingleIteration.c&#160;<span class="change">(+61&#160;-44)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="19"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-20 13:53</span>
+    <a class="permalink" title="Permalink to this commit" href="#19">#19</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1885</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Serializing the sum operation on likelihoods<br />
+
+    </p>
+    <p class="commitdetails"><strong>79</strong> lines of code changed in <span class="files">5 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        CHANGES&#160;<span class="change">(+1)</span>
+      </li>
+      <li>
+        <strong>trunk/src</strong>:
+        omxFIMLObjective.c&#160;<span class="change">(+42&#160;-28)</span>,
+        omxFIMLObjective.h&#160;<span class="change">(+2&#160;-1)</span>,
+        omxFIMLSingleIteration.c&#160;<span class="change">(+32&#160;-37)</span>,
+        omxFIMLSingleIteration.h&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="18"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-07 12:02</span>
+    <a class="permalink" title="Permalink to this commit" href="#18">#18</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1884</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Reverting to revision 1880
+    </p>
+    <p class="commitdetails"><strong>52</strong> lines of code changed in <span class="files">17 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        DESCRIPTION&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>trunk/R</strong>:
+        MxAlgebra.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxConstraint.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxFIMLObjective.R&#160;<span class="change">(+1&#160;-2)</span>,
+        MxLISRELObjective.R&#160;<span class="change">(+1&#160;-2)</span>,
+        MxMLObjective.R&#160;<span class="change">(+1&#160;-2)</span>,
+        MxMatrix.R&#160;<span class="change">(+4&#160;-5)</span>,
+        MxModel.R&#160;<span class="change">(+3&#160;-2)</span>,
+        MxMultiModel.R&#160;<span class="change">(+22&#160;-39)</span>,
+        MxNamedEntity.R&#160;<span class="del">(del)</span>,
+        MxNamespace.R&#160;<span class="change">(+6&#160;-17)</span>,
+        MxObjectiveFunction.R&#160;<span class="change">(+3&#160;-3)</span>,
+        MxRAMObjective.R&#160;<span class="change">(+1&#160;-2)</span>,
+        MxRObjective.R&#160;<span class="change">(+1&#160;-2)</span>,
+        MxReservedNames.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxRowObjective.R&#160;<span class="change">(+1&#160;-2)</span>,
+        MxRun.R&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="17"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-05 16:05</span>
+    <a class="permalink" title="Permalink to this commit" href="#17">#17</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1883</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Shoot this file should have been committed.<br />
+
+    </p>
+    <p class="commitdetails"><strong>18</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxNamedEntity.R&#160;<span class="new">(new&#160;18)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="16"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-05 14:10</span>
+    <a class="permalink" title="Permalink to this commit" href="#16">#16</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1882</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Correcting the .absoluteName field in MxNamedEntity objects<br />
+
+    </p>
+    <p class="commitdetails"><strong>69</strong> lines of code changed in <span class="files">9 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxFIMLObjective.R&#160;<span class="change">(+2&#160;-1)</span>,
+        MxLISRELObjective.R&#160;<span class="change">(+2&#160;-1)</span>,
+        MxMLObjective.R&#160;<span class="change">(+2&#160;-1)</span>,
+        MxMultiModel.R&#160;<span class="change">(+39&#160;-22)</span>,
+        MxNamespace.R&#160;<span class="change">(+17&#160;-6)</span>,
+        MxObjectiveFunction.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxRAMObjective.R&#160;<span class="change">(+2&#160;-1)</span>,
+        MxRObjective.R&#160;<span class="change">(+2&#160;-1)</span>,
+        MxRowObjective.R&#160;<span class="change">(+2&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="15"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-05 11:35</span>
+    <a class="permalink" title="Permalink to this commit" href="#15">#15</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1881</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Refactoring in preparation of performance optimizations to front-end.<br />
+
+    </p>
+    <p class="commitdetails"><strong>17</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        DESCRIPTION&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>trunk/R</strong>:
+        MxAlgebra.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxConstraint.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxMatrix.R&#160;<span class="change">(+5&#160;-4)</span>,
+        MxModel.R&#160;<span class="change">(+2&#160;-3)</span>,
+        MxObjectiveFunction.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxReservedNames.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxRun.R&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="14"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-04 22:48</span>
+    <a class="permalink" title="Permalink to this commit" href="#14">#14</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1880</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Performance improvements to front-end model processing time.<br />
+
+    </p>
+    <p class="commitdetails"><strong>26</strong> lines of code changed in <span class="files">7 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxFIMLObjective.R&#160;<span class="change">(+8&#160;-10)</span>,
+        MxMLObjective.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxObjectiveFunction.R&#160;<span class="change">(+11&#160;-8)</span>,
+        MxRAMObjective.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxRObjective.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxRowObjective.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxRun.R&#160;<span class="change">(+2&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-04 22:41</span>
+    <a class="permalink" title="Permalink to this commit" href="#13">#13</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1879</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Forgot to add OpenMP notices in CHANGES file.<br />
+
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        CHANGES&#160;<span class="change">(+2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-04 13:12</span>
+    <a class="permalink" title="Permalink to this commit" href="#12">#12</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1878</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Performance improvements to locating free and fixed paramters in front-end processing.<br />
+
+    </p>
+    <p class="commitdetails"><strong>46</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxEval.R&#160;<span class="change">(+25&#160;-14)</span>
+      </li>
+      <li>
+        <strong>trunk/models/passing</strong>:
+        IntroSEM-ThreeLatentMultipleRegTest1.R&#160;<span class="change">(+21&#160;-21)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_mneale.html" class="author">mneale</a>
+    <span class="date">2011-12-03 11:29</span>
+    <a class="permalink" title="Permalink to this commit" href="#11">#11</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1877</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added RegimeSwitching script which takes ~4 minutes in front end
+    </p>
+    <p class="commitdetails"><strong>210</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/models/nightly</strong>:
+        RegimeSwitching_MatrixRawNoCholDifferentTransitionsAllFixed.R&#160;<span class="new">(new&#160;210)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rgore.html" class="author">rgore</a>
+    <span class="date">2011-12-02 17:44</span>
+    <a class="permalink" title="Permalink to this commit" href="#10">#10</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1876</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Prepping version # for 1.2 beta release.<br />
+
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        CHANGES&#160;<span class="change">(+1&#160;-1)</span>,
+        DESCRIPTION&#160;<span class="change">(+1&#160;-1)</span>,
+        Makefile&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>trunk/docs/source</strong>:
+        conf.py&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rgore.html" class="author">rgore</a>
+    <span class="date">2011-12-02 17:16</span>
+    <a class="permalink" title="Permalink to this commit" href="#9">#9</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1875</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Updating version # and date info for 1.2 beta release.<br />
+
+    </p>
+    <p class="commitdetails"><strong>5</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        CHANGES&#160;<span class="change">(+2&#160;-2)</span>,
+        DESCRIPTION&#160;<span class="change">(+1&#160;-1)</span>,
+        Makefile&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>trunk/docs/source</strong>:
+        conf.py&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rgore.html" class="author">rgore</a>
+    <span class="date">2011-12-02 17:11</span>
+    <a class="permalink" title="Permalink to this commit" href="#8">#8</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1874</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Fixed a typo in one of the examples.<br />
+
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/man</strong>:
+        mxPath.Rd&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rgore.html" class="author">rgore</a>
+    <span class="date">2011-12-02 16:33</span>
+    <a class="permalink" title="Permalink to this commit" href="#7">#7</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1873</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Changed an omxCheckCloseEnough to omxCheckWithinPercentError.<br />
+
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/models/passing</strong>:
+        IntroSEM-ThreeFactorScale2Test.R&#160;<span class="change">(+2&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-02 16:13</span>
+    <a class="permalink" title="Permalink to this commit" href="#6">#6</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1872</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Make test easier to debug.<br />
+
+    </p>
+    <p class="commitdetails"><strong>16</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/models/passing</strong>:
+        IntroSEM-ThreeFactorScale2Test.R&#160;<span class="change">(+16&#160;-16)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-01 14:27</span>
+    <a class="permalink" title="Permalink to this commit" href="#5">#5</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1871</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Eliminating two confusing sentences from ordinal documentation.<br />
+
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/docs/source</strong>:
+        Ordinal_Path.rst&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-01 14:21</span>
+    <a class="permalink" title="Permalink to this commit" href="#4">#4</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1869</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added error checking for NA values in threshold matrices.<br />
+
+    </p>
+    <p class="commitdetails"><strong>14</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxThreshold.R&#160;<span class="change">(+14&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-01 12:04</span>
+    <a class="permalink" title="Permalink to this commit" href="#3">#3</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1868</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Eliminating unnecessary code.<br />
+
+    </p>
+    <p class="commitdetails"><strong>11</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/src</strong>:
+        omxFIMLObjective.c&#160;<span class="change">(+11&#160;-7)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2011-12-01 11:47</span>
+    <a class="permalink" title="Permalink to this commit" href="#2">#2</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1867</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+bug fix to parallel ordinal FIML.<br />
+
+    </p>
+    <p class="commitdetails"><strong>14</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/src</strong>:
+        omxFIMLObjective.c&#160;<span class="change">(+7)</span>,
+        omxFIMLSingleIteration.c&#160;<span class="change">(+7&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_tbrick.html" class="author">tbrick</a>
+    <span class="date">2011-12-01 10:02</span>
+    <a class="permalink" title="Permalink to this commit" href="#1">#1</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1866</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Fixed a bug in the recomputation system and enabled parallel execution on ordinal FIML.
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxFIMLObjective.R&#160;<span class="change">(-1)</span>
+      </li>
+      <li>
+        <strong>trunk/src</strong>:
+        omxState.c&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+<p class="previous"><a href="2011-11.html">November 2011</a> &#187; </p>
+<div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.5.0</div>
+</body>
+</html>

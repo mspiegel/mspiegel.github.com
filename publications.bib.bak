@@ -1,0 +1,271 @@
+% This file was created with JabRef 2.4.2.
+% Encoding: ISO8859_1
+
+@INPROCEEDINGS{Newhall2003,
+  author = {Newhall, Tia and Finney, Sean and Ganchev, Kuzman and Spiegel, Michael},
+  title = {Nswap: A network swap module for linux clusters.},
+  booktitle = {Proceedings of the International Conference on Parallel and Distributed
+	Computing},
+  year = {2003},
+  editor = {Kosch, H., and Boszormenyi, L., and Hellwagner, H.},
+  volume = {2790},
+  series = {Springer Lecture Notes in Computer Science},
+  pages = {1160-1169},
+  abstract = {Cluster applications that process large amounts of data, such as parallel
+	scientific or multimedia applications, are likely to cause swapping
+	on individual cluster nodes. These applications will perform better
+	on clusters with network swapping support. Network swapping allows
+	any cluster node with over-committed memory to use idle memory of
+	a remote node as its backing store and to "swap" its pages over the
+	network. As the disparity between network speeds and disk speeds
+	continues to grow, network swapping will be faster than traditional
+	swapping to local disk. We present Nswap, a network swapping system
+	for heterogeneous Linux clusters and networks of Linux machines.
+	Nswap is implemented as a loadable kernel module for version 2.4
+	of the Linux kernel. It is a space-efficient and time-efficient implementation
+	that transparently performs network swapping. Nswap scales to larger
+	clusters, supports migration of remotely swapped pages, and supports
+	dynamic growing and shrinking of Nswap cache (the amount of RAM available
+	to store remote pages) in response to a node's local memory needs.
+	Results comparing Nswap running on an eight node Linux cluster with
+	100BaseT Ethernet interconnect and faster disk show that Nswap is
+	comparable to swapping to local, faster disk; depending on the workload,
+	Nswap's performance is up to 1.7 times faster than disk to between
+	1.3 and 4.6 times slower than disk for most workloads. We show that
+	with faster networking technology, Nswap will outperform swapping
+	to disk.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/newhall-europar03.pdf}
+}
+
+@INPROCEEDINGS{Reynolds2006,
+  author = {Reynolds, Paul F. and Brogan, David C. and Carnahan, Joe and Loitiere,
+	Yannick and Spiegel, Michael},
+  title = {Capturing scientists' insight for DDDAS},
+  booktitle = {Proceedings of the 2006 International Conference on Computational
+	Science},
+  year = {2006},
+  editor = {Alexandrov, V.N., and Van Albada, G.D., and Sloot, P.M.A., and Dongarra,
+	J.},
+  volume = {3993},
+  series = {Springer Lecture Notes in Computer Science},
+  pages = {570-577},
+  address = {Reading, U.K.},
+  abstract = {One of the intended consequences of utilizing simulations in dynamic,
+	data-driven application systems is that the simulations will adjust
+	to new data as it arrives. These adjustments will be difficult because
+	of the unpredictable nature of the world and because simulations
+	are so carefully tuned to model specific operating conditions. Accommodating
+	new data may require adapting or replacing numerical methods, simulation
+	parameters, or the analytical scientific models from which the simulation
+	is derived. In this research, we emphasize the important role a scientist's
+	insight can play in facilitating the runtime adaptation of a simulation
+	to accurately utilize new data. We present the tools that serve to
+	capture and apply a scientist's insight about opportunities for,
+	and limitations of, simulation adaptation. Additionaly, we report
+	on the two ongoing collaborations that serve to guide and evaluate
+	our research.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/reynolds-iccs06.pdf}
+}
+
+@INPROCEEDINGS{Reynolds2007,
+  author = {Reynolds, Paul F. and Spiegel, Michael and Liu, Xinyu and Gore, Ross},
+  title = {Validating evolving simulations in COERCE},
+  booktitle = {Proceedings of the 2007 International Conference on Computational
+	Science},
+  year = {2007},
+  volume = {4487},
+  pages = {1238-1245},
+  month = {May},
+  abstract = {We seek to increase user confidence in simulations as they are adapted
+	to meet new requirements. Our approach includes formal representation
+	of uncertainty, lightweight validation, and novel techniques for
+	exploring emergent behavior. Uncertainty representation, using formalisms
+	such as Dempster-Shafer theory, can capture designer insight about
+	uncertainty, enabling formal analysis and improving communication
+	with decision and policy makers. Lightweight validation employs targeted
+	program analysis and automated regression testing to maintain user
+	confidence as adaptations occur. Emergent behavior validation exploits
+	the semi-automatic adaptation capability of COERCE to make exploration
+	of such behavior efficient and productive. We describe our research
+	on these three technologies and their impact on validating dynamically
+	evolving simulations.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/reynolds-iccs07.pdf}
+}
+
+@INCOLLECTION{Spiegel2006,
+  author = {Michael Spiegel},
+  title = {{Perfect} {Developer} tool suite},
+  booktitle = {A Survey of Tools for Model Checking and Model-Based Development},
+  publisher = {Technical Report CS-2006-17},
+  year = {2006},
+  editor = {Strunk, E. and Aiello, A. and Knight, J.},
+  pages = {53-57},
+  address = {Department of Computer Science, University of Virginia},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/strunk-survey06.pdf}
+}
+
+@TECHREPORT{Spiegel2007,
+  author = {Michael Spiegel},
+  title = {A proposal for computing with imprecise probabilities: A framework
+	for multiple representations of uncertainty in simulation software},
+  institution = {Department of Computer Science, University of Virginia},
+  year = {2007},
+  number = {CS-2007-16},
+  abstract = {We propose the design and construction of a programming language for
+	the formal representation of uncertainty in modeling and simulation.
+	Modeling under uncertainty has been of paramount importance in the
+	past half century, as quantitative methods of analysis have been
+	developed to take advantage of computational resources. Simulation
+	is gaining prominence as the proper tool of scientific analysis under
+	circumstances where it is infeasible or impractical to directly study
+	the system in question. This programming language will be built as
+	an extension to the Modelica programming language, which is an acausal
+	object-oriented language for hybrid continuous and discrete-event
+	simulations [22]. Our language extensions will serve as a platform
+	for the research into representation and calibration of imprecise
+	probabilities in quantitative risk analysis simulations. Imprecise
+	probability is used a generic term for any mathematical model which
+	measures chance or uncertainty without crisp numerical probabilities.
+	The explicit representation of imprecise probability theories in
+	a domain-specific programming language will facilitate the development
+	of efficient algorithms for expressing, computing, and calibrating
+	imprecise probability structures. Computation with imprecise probability
+	structures will lead to quantitative risk analyses that are more
+	informative than analyses using traditional probability theory. We
+	have three primary research objectives: (i) the exploration of efficient
+	representational structures and computational algorithms of Dempster-Shafer
+	belief structures; (ii) the application of the imprecise probabilities
+	to representing variable dependence; and (iii) the exploration of
+	various Dempster-Shafer combination rules for model calibration.
+	At the completion of this dissertation, we will have produced the
+	end-to-end design, implementation, and analysis of a programming
+	language that will facilitate the future exploration of algorithms,
+	software, and theory for quantitative uncertainty analysis in computer
+	science.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/mspiegel-proposal07.pdf}
+}
+
+@CONFERENCE{Spiegel2008,
+  author = {Spiegel, Michael and Gore, Ross and Reynolds, Paul F.},
+  title = {Quantifying and Analyzing Uncertainty in Simulations to Enable User
+	Understanding},
+  booktitle = {Proceedings of the Modeling, Simulation, \& Gaming Student Capstone
+	Conference},
+  year = {2008},
+  address = {Suffolk, VA},
+  organization = {The Virginia Modeling, Analysis, \& Simulation Center (VMASC)},
+  note = {Recipient of best paper award in "Discipline of Modeling \& Simulation"
+	track.},
+  abstract = {Quantitative methods of analysis have progressed faster than quantitative
+	methods of capturing, representing, propagating and analyzing uncertainty
+	in the realm of computational thinking, adversely affecting the quality
+	of both scientific computational analysis, and important policy decisions.
+	Uncertainty arises from incomplete model input information (aleatory
+	uncertainty), incomplete model structure information (epistemic uncertainty),
+	and incomplete understanding of model dynamics. We describe a work
+	in progress computational approach, framework, and language, RiskModelica,
+	that will 1) support representation, propagation, and calibration
+	of aleatory uncertainty using probability theory, probability boxes,
+	and Dempster-Shafer theory of evidence; 2) develop reliable methodologies
+	- algorithms, data acquisition and management procedures, software
+	and theory - for quantifying uncertainty in computer predictions;
+	3) support exploration of epistemic uncertainty utilizing causal
+	analysis, and static and dynamic program slicing to characterize
+	the dependencies, causal relationships, and interactions of design
+	decisions; and 4) as a way of gaining insight into uncertainties,
+	enable subject matter experts to observe model characteristics under
+	novel conditions of interest. These capabilities represent a revolutionary
+	approach to capturing, representing, propagating, and analyzing quantitatively,
+	uncertainties that arise in the process of computational thinking.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/mspiegel-vmasc08.doc}
+}
+
+@TECHREPORT{Spiegel2009,
+  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  title = {The Dense Skip Tree: A Cache-Conscious Randomized Data Structure},
+  institution = {Department of Computer Science, University of Virginia},
+  year = {2009},
+  number = {CS-2009-05},
+  owner = {ms6ep},
+  timestamp = {2009.04.27},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/CS-2009-05.pdf}
+}
+
+@INPROCEEDINGS{Spiegel2005,
+  author = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
+  title = {A case study of model context for simulation composability and reusability},
+  booktitle = {Proceedings of the 2005 Winter Simulation Conference},
+  year = {2005},
+  editor = {Kuhl, M.E., and Steiger, N.M., and Armstrong, F.B., and Joines, J.A.},
+  pages = {437-444},
+  address = {Piscataway, New Jersey},
+  organization = {Institute of Electrical and Electronics Engineers},
+  abstract = {How much effort will be required to compose or reuse simulations?
+	What factors need to be considered? It is generally known that composability
+	and reusability are daunting challenges for both simulations and
+	more broadly software design as a whole. We have conducted a small
+	case study in order to clarify the role that model context plays
+	in simulation composability and reusability. For a simple problem:
+	compute the position and velocity of a falling body, we found that
+	a reasonable formulation of a solution included a surprising number
+	of implicit constraints. Equally surprising, in a challenge posed
+	to a small group of capable individuals, no one of them was able
+	to identify more than three-quarters of the ultimate set of validation
+	constraints. We document the challenge, interpret its results, and
+	discuss the utility our study will have in future investigations
+	into simulation composition and reuse.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/mspiegel-wintersim05.pdf}
+}
+
+@INPROCEEDINGS{Spiegel2006a,
+  author = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
+  title = {Grand challenge case studies in a simulation curriculum},
+  booktitle = {Proceedings of the 2006 Winter Simulation Conference},
+  year = {2006},
+  editor = {Perrone, L.F., and Wieland, F.P., and Liu, J., and Lawson, B.G.,
+	and Nicol, D.M., and Fujimoto, R.M.},
+  pages = {2242-2249},
+  address = {Piscataway, New Jersey},
+  organization = {Institute of Electrical and Electronics Engineers},
+  abstract = {Students wishing to become experts in modeling and simulation (M&S)
+	need to appreciate limitations of the technology. Our goal is to
+	expose students to the current boundaries of simulation technology.
+	To achieve this, we propose the incorporation of grand challenge
+	case studies into a modeling and simulation curriculum. Grand challenge
+	problems are defined as problems for which there does not exist a
+	universally accepted solution (at present). We argue that grand challenge
+	case studies are an excellent vehicle for discovering and appreciating
+	current boundaries of M&S technology. We present three candidate
+	case studies, one in detail - the ongoing U.S. Department of Energy
+	analysis of Yucca Mountain as a location for nuclear waste storage
+	- with supporting discussion about how these cases can enhance exploration
+	of the challenges inM&S technology. We discuss the proposed Yucca
+	Mountain storage facility, along with two other case studies, and
+	examine their integration into M&S curricula.},
+  owner = {mspiegel},
+  timestamp = {2008.08.11},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/mspiegel-wintersim06.pdf}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

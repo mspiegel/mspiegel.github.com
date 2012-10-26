@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--========================================================================
+  == flexible.xsd
+  == This is the XML schema which defines the form of Flex ML documents.
+  == To summarize, each Flex ML document represents a coercible simulation.
+  == The document begins with a header that contains a list of effects that
+  == the user may wish to have on the simulation's behavior.  This is
+  == followed by the body of the program, which consists of staticCode
+  == elements that hold ordinary simulation code and other elements that
+  == describe each kind of flexible point as it is found (e.g. an
+  == algorithmic flexible point at a position where more than one different
+  == algorithm or formula could have been used, or a numeric flexible
+  == point at the point where a particular parameter is declared and
+  == initialized in the program.
+  == Author: Joe Carnahan
+  ==
+  == Contributors: Michael Spiegel (MathML)
+  ======================================================================-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty"
+    >
+
+  <xs:import namespace="http://www.w3.org/1998/Math/MathML"
+schemaLocation="http://www.w3.org/Math/XMLSchema/mathml2/mathml2.xsd" />
+
+  <xs:element name="program">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element 
+            name="programHeader" 
+            minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element 
+                  name="effect" 
+                  minOccurs="0" 
+                  maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute 
+                          name="id" 
+                          type="xs:ID" 
+                          use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="programContent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice maxOccurs="unbounded" minOccurs="1">
+
+                <xs:element name="algorithmicFlexiblePoint">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element 
+                          name="alternative" 
+                          minOccurs="1" 
+                          maxOccurs="unbounded">
+                        <xs:complexType mixed="true">
+                    	  <xs:sequence>
+			     <xs:element
+				 name="characterization"
+				 minOccurs="0"
+				 maxOccurs="unbounded" >
+			         <xs:complexType>
+                                   <xs:sequence>
+				     <xs:element ref="mml:math" />
+                                   </xs:sequence>
+			         </xs:complexType>
+                              </xs:element>
+			  </xs:sequence>     
+                          <xs:attribute 
+                              name="name" 
+                              type="xs:normalizedString"/>
+                          <xs:attribute 
+                              name="id" 
+                              type="xs:ID"
+			      use="required"/>
+                          <xs:attribute 
+                              name="effects" 
+                              type="xs:IDREFS"/>
+                          <xs:attribute 
+                              name="summary" 
+                              type="xs:string" />
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    
+                    <xs:attribute 
+                        name="name" 
+                        type="xs:normalizedString"/>
+                    
+                    <xs:attribute 
+                        name="id" 
+                        type="xs:ID" 
+                        use="required" />
+                    
+                    <xs:attribute 
+                        name="default" 
+                        type="xs:IDREF" 
+                        use="required" />
+                    
+                    <xs:attribute 
+                        name="summary" 
+                        type="xs:string"/>
+                    
+                    <xs:attribute 
+                        name="effects" 
+                        type="xs:IDREFS"/>
+                  </xs:complexType>
+                </xs:element>
+
+                <xs:element name="integerFlexiblePoint">
+                  <xs:complexType>
+                    <xs:sequence>
+
+                      <xs:element name="variableName">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:pattern value="[a-zA-Z_][a-zA-Z0-9_]*" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+
+                    </xs:sequence>
+
+                    <xs:attribute 
+                        name="name" 
+                        type="xs:string"/>
+
+                    <xs:attribute 
+                        name="id" 
+                        type="xs:ID"
+			use="required"/>
+
+                    <xs:attribute 
+                        name="lowerBound" 
+                        type="xs:integer" 
+                        use="required"/>
+                    
+                    <xs:attribute 
+                        name="upperBound" 
+                        type="xs:integer" 
+                        use="required"/>
+
+                    <xs:attribute 
+                        name="default" 
+                        type="xs:integer" 
+                        use="required"/>
+
+                    <xs:attribute 
+                        name="effects"
+			type="xs:IDREFS"/>
+
+                    <xs:attribute 
+                        name="summary" 
+                        type="xs:string"/>
+
+                  </xs:complexType>
+                </xs:element>
+
+                <xs:element name="numericFlexiblePoint">
+                  <xs:complexType>
+                    <xs:sequence>
+
+                      <xs:element name="variableName">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:pattern value="[a-zA-Z_][a-zA-Z0-9_]*" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+
+                    </xs:sequence>
+                    
+                    <xs:attribute 
+                        name="name" 
+                        type="xs:string"/>
+
+                    <xs:attribute 
+                        name="id" 
+                        type="xs:ID"
+			use="required"/>
+
+                    <xs:attribute 
+                        name="lowerBound" 
+                        type="xs:decimal" 
+                        use="required"/>
+                    
+                    <xs:attribute 
+                        name="upperBound" 
+                        type="xs:decimal" 
+                        use="required"/>
+
+                    <xs:attribute 
+                        name="default" 
+                        type="xs:decimal" 
+                        use="required"/>
+
+                    <xs:attribute 
+                        name="effects"
+			type="xs:IDREFS"/>
+
+                    <xs:attribute 
+                        name="summary" 
+                        type="xs:string"/>
+
+                  </xs:complexType>
+                </xs:element>
+
+                <xs:element name="booleanFlexiblePoint">
+                  <xs:complexType>
+                    <xs:sequence>
+
+                      <xs:element name="variableName">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:pattern value="[a-zA-Z_][a-zA-Z0-9_]*" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+
+                    </xs:sequence>
+
+                    <xs:attribute 
+                        name="name" 
+                        type="xs:string"/>
+
+                    <xs:attribute 
+                        name="id" 
+                        type="xs:ID"
+			use="required"/>
+
+                    <xs:attribute 
+                        name="default" 
+                        type="xs:boolean" 
+                        use="required"/>
+
+                    <xs:attribute 
+                        name="effects"
+			type="xs:IDREFS"/>
+
+                    <xs:attribute 
+                        name="summary" 
+                        type="xs:string"/>
+
+                  </xs:complexType>
+                </xs:element>
+
+                <xs:element name="staticCode" type="xs:string" />
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+
+      <xs:attribute name="programmingLanguage" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="Cplusplus"/>
+            <xs:enumeration value="Java"/>
+            <xs:enumeration value="Perl"/>
+            <xs:enumeration value="Fortran"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+
+      <xs:anyAttribute />
+
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

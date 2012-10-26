@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - January 2009 Commit Log</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.5.0"/>
+    <link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+  </head>
+
+<body>
+
+<h1>January 2009 Commit Log</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for OpenMx</a></div>
+
+<div id="nav" class="section">
+<h2>Commit Logs</h2>
+<ul>
+    <li><a href="2012-09.html">September 2012</a></li>
+    <li><a href="2012-08.html">August 2012</a></li>
+    <li><a href="2012-07.html">July 2012</a></li>
+    <li><a href="2012-06.html">June 2012</a></li>
+    <li><a href="2012-05.html">May 2012</a></li>
+    <li><a href="2012-04.html">April 2012</a></li>
+    <li><a href="2012-03.html">March 2012</a></li>
+    <li><a href="2012-02.html">February 2012</a></li>
+    <li><a href="2012-01.html">January 2012</a></li>
+    <li><a href="2011-12.html">December 2011</a></li>
+    <li><a href="2011-11.html">November 2011</a></li>
+    <li><a href="2011-10.html">October 2011</a></li>
+    <li><a href="2011-09.html">September 2011</a></li>
+    <li><a href="2011-08.html">August 2011</a></li>
+    <li><a href="2011-07.html">July 2011</a></li>
+    <li><a href="2011-06.html">June 2011</a></li>
+    <li><a href="2011-05.html">May 2011</a></li>
+    <li><a href="2011-04.html">April 2011</a></li>
+    <li><a href="2011-03.html">March 2011</a></li>
+    <li><a href="2011-02.html">February 2011</a></li>
+    <li><a href="2011-01.html">January 2011</a></li>
+    <li><a href="2010-12.html">December 2010</a></li>
+    <li><a href="2010-11.html">November 2010</a></li>
+    <li><a href="2010-10.html">October 2010</a></li>
+    <li><a href="2010-09.html">September 2010</a></li>
+    <li><a href="2010-08.html">August 2010</a></li>
+    <li><a href="2010-07.html">July 2010</a></li>
+    <li><a href="2010-06.html">June 2010</a></li>
+    <li><a href="2010-05.html">May 2010</a></li>
+    <li><a href="2010-04.html">April 2010</a></li>
+    <li><a href="2010-03.html">March 2010</a></li>
+    <li><a href="2010-02.html">February 2010</a></li>
+    <li><a href="2010-01.html">January 2010</a></li>
+    <li><a href="2009-12.html">December 2009</a></li>
+    <li><a href="2009-11.html">November 2009</a></li>
+    <li><a href="2009-10.html">October 2009</a></li>
+    <li><a href="2009-09.html">September 2009</a></li>
+    <li><a href="2009-08.html">August 2009</a></li>
+    <li><a href="2009-07.html">July 2009</a></li>
+    <li><a href="2009-06.html">June 2009</a></li>
+    <li><a href="2009-05.html">May 2009</a></li>
+    <li><a href="2009-04.html">April 2009</a></li>
+    <li><a href="2009-03.html">March 2009</a></li>
+    <li><a href="2009-02.html">February 2009</a></li>
+    <li><span class="here">January 2009</span></li>
+    <li><a href="2008-12.html">December 2008</a></li>
+    <li><a href="2008-11.html">November 2008</a></li>
+    <li><a href="2008-10.html">October 2008</a></li>
+    <li><a href="2008-09.html">September 2008</a></li>
+    <li><a href="2008-08.html">August 2008</a></li>
+    <li><a href="2008-07.html">July 2008</a></li>
+    <li><a href="2008-06.html">June 2008</a></li>
+    <li><a href="2008-05.html">May 2008</a></li>
+    <li><a href="2008-04.html">April 2008</a></li>
+    <li><a href="2008-03.html">March 2008</a></li>
+    <li><a href="2008-02.html">February 2008</a></li>
+    <li><a href="2008-01.html">January 2008</a></li>
+    <li><a href="2007-12.html">December 2007</a></li>
+</ul>
+</div><dl class="attributes">
+    <dt>Number of Commits:</dt>
+    <dd>7</dd>
+    <dt>Number of Active Developers:</dt>
+    <dd>4</dd>
+</dl>
+<dl class="commitlist">
+  <dt><a name="7"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2009-01-31 14:54</span>
+    <a class="permalink" title="Permalink to this commit" href="#7">#7</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">194</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Modify mxJobRun() to insert the final values of the free parameters<br />
+back into the matrices after a job is finished. (Algebras do not store<br />
+their final values yet). Updated printing methods for mxModels to<br />
+show path-style notation. Fixed bug in backend when # of free parameters<br />
+is 0. Used to return 1-length vector of NA, now returns 0-length vector.<br />
+
+    </p>
+    <p class="commitdetails"><strong>41</strong> lines of code changed in <span class="files">6 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/R</strong>:
+        MxAlgebraObjective.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxFIMLObjective.R&#160;<span class="change">(+2&#160;-2)</span>,
+        MxJob.R&#160;<span class="change">(+1)</span>,
+        MxModel.R&#160;<span class="change">(+28&#160;-10)</span>,
+        MxRAMObjective.R&#160;<span class="change">(+2&#160;-1)</span>
+      </li>
+      <li>
+        <strong>trunk/src</strong>:
+        npsolWrap.c&#160;<span class="change">(+7&#160;-10)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_mspiegel.html" class="author">mspiegel</a>
+    <span class="date">2009-01-31 13:14</span>
+    <a class="permalink" title="Permalink to this commit" href="#6">#6</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">193</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added support for submodels, data, and objective functions<br />
+to be stored in the MxModel object. Objective functions are<br />
+now named objects. Added an boolean flag to MxModel objects<br />
+that signals model dependence/independence. Submodels are<br />
+not properly executed yet (they are ignored).<br />
+
+    </p>
+    <p class="commitdetails"><strong>310</strong> lines of code changed in <span class="files">13 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk</strong>:
+        DESCRIPTION&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>trunk/R</strong>:
+        MxAlgebra.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxAlgebraObjective.R&#160;<span class="change">(+18&#160;-11)</span>,
+        MxFIMLObjective.R&#160;<span class="change">(+29&#160;-18)</span>,
+        MxJob.R&#160;<span class="change">(+10&#160;-33)</span>,
+        MxMatrix.R&#160;<span class="change">(+1&#160;-1)</span>,
+        MxModel.R&#160;<span class="change">(+174&#160;-53)</span>,
+        MxNullObjective.R&#160;<span class="new">(new&#160;19)</span>,
+        MxObjectiveFunction.R&#160;<span class="change">(+8&#160;-1)</span>,
+        MxRAMObjective.R&#160;<span class="change">(+34&#160;-24)</span>,
+        MxUntitled.R&#160;<span class="change">(+5)</span>
+      </li>
+      <li>
+        <strong>trunk/demo</strong>:
+        SimpleCovarianceS4.R&#160;<span class="change">(+5&#160;-5)</span>,
+        SimpleFIMLS4.R&#160;<span class="change">(+5&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_tbrick.html" class="author">tbrick</a>
+    <span class="date">2009-01-27 14:16</span>
+    <a class="permalink" title="Permalink to this commit" href="#5">#5</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">192</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+C-only revision.  Needs tuning and some renaming.
+    </p>
+    <p class="commitdetails"><strong>1977</strong> lines of code changed in <span class="files">13 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/demo</strong>:
+        SimpleAlgebra.R&#160;<span class="change">(+17&#160;-12)</span>
+      </li>
+      <li>
+        <strong>trunk/src</strong>:
+        npsolWrap.c&#160;<span class="new">(new&#160;967)</span>,
+        npsolWrap.cc&#160;<span class="del">(del)</span>,
+        omxAlgebra.c&#160;<span class="new">(new&#160;226)</span>,
+        omxAlgebra.cc&#160;<span class="del">(del)</span>,
+        omxAlgebra.h&#160;<span class="change">(+58&#160;-33)</span>,
+        omxAlgebraFunctions.c&#160;<span class="new">(new&#160;259)</span>,
+        omxAlgebraFunctions.cc&#160;<span class="del">(del)</span>,
+        omxMatrix.c&#160;<span class="new">(new&#160;365)</span>,
+        omxMatrix.cc&#160;<span class="del">(del)</span>,
+        omxMatrix.h&#160;<span class="change">(+55&#160;-53)</span>,
+        omxSymbolTable.c&#160;<span class="new">(new&#160;24)</span>,
+        omxSymbolTable.h&#160;<span class="change">(+6&#160;-18)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_mneale.html" class="author">mneale</a>
+    <span class="date">2009-01-15 17:55</span>
+    <a class="permalink" title="Permalink to this commit" href="#4">#4</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">190</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Change to omxAlgebraFunctions.cc commit<br />
+
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/src</strong>:
+        omxAlgebraFunctions.cc&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_tbrick.html" class="author">tbrick</a>
+    <span class="date">2009-01-15 16:36</span>
+    <a class="permalink" title="Permalink to this commit" href="#3">#3</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">189</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Modifications to fix compile errors, apparently.
+    </p>
+    <p class="commitdetails"><strong>91</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/src</strong>:
+        omxAlgebraFunctions.cc&#160;<span class="change">(+87&#160;-15)</span>,
+        omxAlgebraFunctions.h&#160;<span class="change">(+2&#160;-2)</span>,
+        omxMatrix.cc&#160;<span class="change">(+1)</span>,
+        omxMatrix.h&#160;<span class="change">(+1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_skenny.html" class="author">skenny</a>
+    <span class="date">2009-01-06 23:05</span>
+    <a class="permalink" title="Permalink to this commit" href="#2">#2</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">188</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+does not generate models with negatve deg of freedom or with 2-way symmetric connections
+    </p>
+    <p class="commitdetails"><strong>94</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/swift</strong>:
+        singleperm.c&#160;<span class="change">(+94&#160;-120)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_tbrick.html" class="author">tbrick</a>
+    <span class="date">2009-01-02 22:08</span>
+    <a class="permalink" title="Permalink to this commit" href="#1">#1</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">187</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Test version of algebras.  Needs to be made neater.  Algebras are working, but some operators are still untested.
+    </p>
+    <p class="commitdetails"><strong>615</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>trunk/demo</strong>:
+        SimpleAlgebra.R&#160;<span class="new">(new&#160;58)</span>
+      </li>
+      <li>
+        <strong>trunk/src</strong>:
+        npsolWrap.cc&#160;<span class="change">(+169&#160;-111)</span>,
+        omxAlgebra.cc&#160;<span class="change">(+127&#160;-52)</span>,
+        omxAlgebra.h&#160;<span class="change">(+6&#160;-3)</span>,
+        omxAlgebraFunctions.cc&#160;<span class="change">(+132&#160;-24)</span>,
+        omxAlgebraFunctions.h&#160;<span class="change">(+13&#160;-13)</span>,
+        omxMatrix.cc&#160;<span class="change">(+83&#160;-68)</span>,
+        omxMatrix.h&#160;<span class="change">(+27&#160;-20)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+<p class="previous"><a href="2008-12.html">December 2008</a> &#187; </p>
+<div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.5.0</div>
+</body>
+</html>

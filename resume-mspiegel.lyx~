@@ -1,0 +1,359 @@
+#LyX 1.5.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass simplecv
+\begin_preamble
+\AtBeginDocument{%
+\addto\captionsenglish{%
+\renewcommand{\refname}{Publications}%
+}}
+\usepackage[citebordercolor={1 1 1}]{hyperref}
+\end_preamble
+\language english
+\inputencoding auto
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\paperorientation portrait
+\topmargin 0.5in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Michael Spiegel
+\end_layout
+
+\begin_layout Right Header
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}{2.5in}
+\end_layout
+
+\end_inset
+
+Department of Computer Science
+\newline
+School of Engineering and Applied Science
+\newline
+Universit
+y of Virginia
+\newline
+151 Engineer's Way, P.O.
+ Box 400740
+\newline
+Charlottesville, VA 22904-4740
+\newline
+www.cs.virginia.edu/~ms6ep
+\newline
+<firstinitial>+<
+lastname>@cs.virginia.edu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Header
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{minipage}{2in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename face.jpg
+	display none
+	scale 30
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Education
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+B.A.
+ Swarthmore College.
+ Swarthmore, PA.
+ Bachelor of Arts with Honors, 2003.
+ Computer Science Major.
+ Adviser Tia Newhall.
+ Relevant courses: Theory of Algorithms, Relational Databases, Theory of
+ Programming Languages, Operating Systems, Compiler Design, Artificial Intellige
+nce, Computer Architecture, Natural Language Processing, Linear Algebra,
+ Multivariable Calculus, Complex Analysis, Differential Equations, Partial
+ Differential Equations, Organic Chemistry.
+ 
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+M.C.S.
+ University of Virginia.
+ Charlottesville, VA.
+ Ph.D.
+ Candidate, Department of Computer Science.
+ Adviser Paul F.
+ Reynolds, Jr.
+ Advancement to candidacy completed October, 2007.
+ Coursework: Computer Graphics, Advanced Computer Architecture, Malware,
+ Modeling and Simulation, Advanced Operating Systems, Algorithms, Theory
+ of Computation, Software Dependability, Model Checking & Development, Informati
+on Theory, Temporal Issues In Computing.
+\end_layout
+
+\begin_layout Section
+Work Experience
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+Summer\InsetSpace ~
+Intern Sun Microsystems (2008) Burlington, MA.
+ Worked on the Fortress language implementation.
+ Performed concurrent maintenance of the Fortress interpreter while designing
+ a compiler to target Java bytecode instructions.
+ Fortress is a novel programming language designed for high-performance
+ computing with high programmability.
+ Fortress is an open-source project sponsored by the programming languages
+ research group at Sun laboratories.
+ Additionally I wrote a performance testing framework to work with the automated
+ build system, such that code contributions can be assessed on multiple
+ performance metrics.
+ 
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+Research\InsetSpace ~
+Scientist StreamSage,\InsetSpace ~
+Inc.
+ (2004) Washington, DC.
+ Conducted R&D of software products that enable organizations to cost-effectivel
+y organize and manage audio/video content.
+ Combined research tools in the areas of computational linguistics, artificial
+ intelligence, machine learning, and speech recognition for English/Spanish
+ and English/Arabic translation systems.
+ StreamSage was founded in 2000 as a privately owned, small business.
+ The company was acquired by Comcast Corporation in 2005.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+Analyst Accenture, Inc.
+ (2003-2004) Washington, DC.
+ Design and support for the electronic edition of the Department of Education
+ Free Application for Federal Student Aid.
+ Developed reusable common libraries for multiple Java-based web applications.
+ Designed test conditions and test scripts for reusable common services
+ using JUnit.
+ Conducted systems performance analysis using jProbe.
+ Maintained team bugtracking database.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+Research\InsetSpace ~
+Assistant Cluster computing lab.
+ (2002-2003) Swarthmore College, Department of Computer Science.
+ Development of a linux loadable kernel module that utilizes idle RAM of
+ the cluster as swap space for memory-saturated nodes of the cluster.
+ The module employs a client/server architecture.
+ The client is implemented as a virtual block device, which is employed
+ as the swap device.
+ I implemented the device driver code of the client, and the dynamic growing/shr
+inking of the server.
+ Learned linux kernel development practices, including the KDB built-in
+ kernel debugger.
+ Gained familiarization of the kernel, particularly the driver code and
+ linux 2.4 memory management subsystems.
+ This project served as the basis of my undergraduate Honors thesis.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+General\InsetSpace ~
+Manager WSRN 91.5 FM.
+ (2001-2003) Swarthmore College Radio.
+ Responsible for the continued operation of the campus’ 110 watt radio station.
+ We broadcast daily from 9 am to 4 am, with a staff of 120 students and
+ twelve musical and technical directors.
+ Annual budget of approximately $8,000.
+ Responsible for the maintenance of equipment, the training of DJs, and
+ the compliance with FCC regulations.
+ In my tenure I instituted regular office hours for the station staff, implement
+ed new security policies to protect our equipment, and facilitated the rewriting
+ of our organization’s charter.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+Resident\InsetSpace ~
+Assistant Swarthmore College.
+ (2001-2003) Responsible for promoting a safe and friendly environment in
+ my residence halls (2 years).
+ Acted as liaison between the students and the college administration, including
+ the Dean's Office, Public Safety, Maintenance, and the Office of Residential
+ Life.
+ Mediated conflicts between student residents, and provided assistance for
+ sick or injured students.
+ Organized residential life events, such as study breaks, holiday celebrations,
+ and community meetings.
+\end_layout
+
+\begin_layout Section
+Teaching Experience
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+CS101\InsetSpace ~
+&\InsetSpace ~
+CS216 University of Virginia.
+ Teaching assistant for one semester of CS101: Introduction to Computer
+ Science.
+ Introduces the basic principles and concepts of object-oriented programming
+ through a study of algorithms, data structures and software development
+ methods in Java.
+ Teaching assistant for two semesters of CS216: Program and Data Representation.
+ Introduces programs and data representation at the machine level.
+ Representations of numbers, arithmetic operations, arrays, records, recursion,
+ hashing, stacks, queues, trees, graphs, and related concepts.
+ TA duties included running lab sessions every week, holding office hours,
+ grading lab assignments, and grading three exams per semester.
+ Lecture experience during professor's absence.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+CS451 University of Virginia.
+ Team-taught undergraduate seminar with my research adviser.
+ CS451: Advanced Modeling and Simulation.
+ CS451 was designed by Paul Reynolds and myself to expose students to the
+ existing capabilities, challenges, and limitations of Modeling and Simulation
+ (M&S) technology.
+ One of the teaching goals was to expose students to current applications
+ of modeling and simulation in public policy.
+ Topics included epidemic prediction, long-term nuclear waste storage, and
+ global warming.
+ I researched the reading material and prepared class discussion for approximate
+ly 1/2 of the course content.
+ The class notes are available online at www.cs.virginia.edu/wiki/simulation.
+\end_layout
+
+\begin_layout Section
+Community Activities
+\end_layout
+
+\begin_layout Standard
+Elected as a graduate student representative for the computer science department
+, 2006-2007.
+ Attended weekly faculty meetings and spoke on behalf of student opinion
+ on relevant matters.
+ Organized the graduate town hall meetings with department chair, the orientatio
+n weekend for incoming graduate students, and the visitation weekend for
+ prospective graduate students.
+\end_layout
+
+\begin_layout Section
+Technical Skills
+\end_layout
+
+\begin_layout Standard
+Experienced in C (since 1995), C++ (since 1995), Java 1.4/5.0/6.0 (since 1999),
+ Perl (since 1999), Lisp (since 1998), Scheme (since 1999), MPI (since 2003),
+ ant (since 2005), HTML/CGI (since 1999), CVS/SVN/git (since 2000), SQL/XML
+ (since 2001), Python (since 2006), and R (since 2007).
+ UNIX/Linux system administration experience in server and workstation environme
+nts (since 1999).
+ Hebrew native speaker.
+\color white
+
+\begin_inset LatexCommand citet
+key "Spiegel2008,Reynolds2007,Spiegel2007,Reynolds2006,Spiegel2006a,Spiegel2006,Spiegel2005,Newhall2003"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand bibtex
+options "unsrtnat"
+bibfiles "publications"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

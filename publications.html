@@ -1,0 +1,869 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>JabRef References output</title>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<script type="text/javascript">
+<!--
+// QuickSearch script for JabRef HTML export 
+// Version: 2.0
+//
+// Copyright (c) 2006-2008, Mark Schenk
+//
+// This software is distributed under a Creative Commons Attribution 3.0 License
+// http://creativecommons.org/licenses/by/3.0/
+
+// Some features:
+// + optionally searches Abstracts and Reviews
+// + allows RegExp searches
+//   e.g. to search for entries between 1980 and 1989, type:  198[0-9]
+//   e.g. for any entry ending with 'symmetry', type:  symmetry$
+//   e.g. for all reftypes that are books: ^book$, or ^article$
+//   e.g. for entries by either John or Doe, type john|doe
+// + easy toggling of Abstract/Review/BibTeX
+
+// Search settings
+var searchAbstract = true;
+var searchReview = true;
+
+// Speed optimisation introduced some esoteric problems with certain RegExp searches
+// e.g. if the previous search is 200[-7] and the next search is 200[4-7] then the search doesn't work properly until the next 'keyup'
+// hence the searchOpt can be turned off for RegExp adepts
+var searchOpt = true;
+
+if (window.addEventListener) {
+	window.addEventListener("load",initSearch,false); }
+else if (window.attachEvent) {
+	window.attachEvent("onload", initSearch); }
+
+function initSearch() {
+	// basic object detection
+	if(!document.getElementById || !document.getElementsByTagName) { return; }
+	if (!document.getElementById('qstable')||!document.getElementById('qs')) { return; }
+
+	// find QS table and appropriate rows
+	searchTable = document.getElementById('qstable');
+	var allRows = searchTable.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+	// split all rows into entryRows and infoRows (e.g. abstract, review, bibtex)
+	entryRows = new Array();
+	infoRows = new Array(); absRows = new Array(); revRows = new Array();
+
+	for (var i=0, k=0, j=0; i<allRows.length;i++) {
+		if (allRows[i].className.match(/entry/)) {
+			entryRows[j++] = allRows[i];
+		} else {
+			infoRows[k++] = allRows[i];
+			// check for abstract/review
+			if (allRows[i].className.match(/abstract/)) {
+				absRows.push(allRows[i]);
+			} else if (allRows[i].className.match(/review/)) {
+				revRows.push(allRows[i]);
+			}
+		}
+	}
+
+	//number of entries and rows
+	numRows = allRows.length;
+	numEntries = entryRows.length;
+	numInfo = infoRows.length;
+	numAbs = absRows.length;
+	numRev = revRows.length;
+
+	//find the query field
+	qsfield = document.getElementById('qsfield');
+
+	// previous search term; used for speed optimisation
+	prevSearch = '';
+
+	//find statistics location
+	stats = document.getElementById('stat');
+	setStatistics(-1);
+
+	// creates the appropriate search settings
+	createQSettingsDialog();
+
+	// shows the searchfield
+	document.getElementById('qs').style.display = 'block';
+	document.getElementById('qsfield').onkeyup = testEvent;
+}
+
+function quickSearch(tInput){
+
+	 if (tInput.value.length == 0) {
+		showAll();
+		setStatistics(-1);
+		qsfield.className = '';
+		return;
+	} else {
+		// only search for valid RegExp
+		try {
+			var searchText = new RegExp(tInput.value,"i")
+			closeAllInfo();
+			qsfield.className = '';
+		}
+		catch(err) {
+			prevSearch = tInput.value;
+			qsfield.className = 'invalidsearch';
+			return;
+		}
+	}
+	
+	// count number of hits
+	var hits = 0;
+
+	// start looping through all entry rows
+	for (var i = 0; cRow = entryRows[i]; i++){
+
+		// only show search the cells if it isn't already hidden OR if the search term is getting shorter, then search all
+		// some further optimisation is possible: if the search string is getting shorter, and the row is already visible, skip it. Then be careful with hits!
+		if(!searchOpt || cRow.className.indexOf('noshow')==-1 || tInput.value.length <= prevSearch.length){
+			var found = false; 
+
+			var inCells = cRow.getElementsByTagName('td');
+			var numCols = inCells.length;
+				
+			for (var j=0; j<numCols; j++) {
+				cCell = inCells[j];
+				var t = cCell.innerText?cCell.innerText:getTextContent(cCell);
+				if (t.search(searchText) != -1){ 
+					found=true; 
+					break;
+				} 
+			}
+
+			// look for further hits in Abstract and Review
+			if(!found) {
+				var articleid = cRow.id;
+				if(searchAbstract && (abs = document.getElementById('abs_'+articleid))) {
+					if (getTextContent(abs).search(searchText) != -1){ found=true; } 
+				}
+				if(searchReview && (rev = document.getElementById('rev_'+articleid))) {
+					if (getTextContent(rev).search(searchText) != -1){ found=true; } 
+				}
+			}
+			
+			if(found) {
+				cRow.className = 'entry show';
+				hits++;
+			} else {
+				cRow.className = 'entry noshow';
+			}
+		}
+	}
+
+	// update statistics
+	setStatistics(hits)
+	
+	// set previous search value
+	prevSearch = tInput.value;
+}
+
+function toggleInfo(articleid,info) {
+
+	var entry = document.getElementById(articleid);
+	var abs = document.getElementById('abs_'+articleid);
+	var rev = document.getElementById('rev_'+articleid);
+	var bib = document.getElementById('bib_'+articleid);
+
+	// Get the abstracts/reviews/bibtext in the right location
+	// in unsorted tables this is always the case, but in sorted tables it is necessary. 
+	// Start moving in reverse order, so we get: entry, abstract,review,bibtex
+	if (searchTable.className.indexOf('sortable') != -1) {
+		if(bib) { entry.parentNode.insertBefore(bib,entry.nextSibling); }
+		if(rev) { entry.parentNode.insertBefore(rev,entry.nextSibling); }
+		if(abs) { entry.parentNode.insertBefore(abs,entry.nextSibling); }
+	}
+
+	if (abs && info == 'abstract') {
+		if(abs.className.indexOf('abstract') != -1) {
+		abs.className.indexOf('noshow') == -1?abs.className = 'abstract noshow':abs.className = 'abstract';
+		}
+	} else if (rev && info == 'review') {
+		if(rev.className.indexOf('review') != -1) {
+		rev.className.indexOf('noshow') == -1?rev.className = 'review noshow':rev.className = 'review';
+		}
+	} else if (bib && info == 'bibtex') {
+		if(bib.className.indexOf('bibtex') != -1) {
+		bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+		}		
+	} else { 
+		return;
+	}
+	
+	// check if one or the other is available
+	var revshow = false;
+	var absshow = false;
+	var bibshow = false;
+	(abs && abs.className.indexOf('noshow') == -1)? absshow = true: absshow = false;
+	(rev && rev.className.indexOf('noshow') == -1)? revshow = true: revshow = false;	
+	(bib && bib.className == 'bibtex')? bibshow = true: bibshow = false;
+	
+	// highlight original entry
+	if(entry) {
+		if (revshow || absshow || bibshow) {
+		entry.className = 'entry highlight show';
+		} else {
+		entry.className = 'entry show';
+		}		
+	}
+	
+	// When there's a combination of abstract/review/bibtex showing, need to add class for correct styling
+	if(absshow) {
+		(revshow||bibshow)?abs.className = 'abstract nextshow':abs.className = 'abstract';
+	} 
+	if (revshow) {
+		bibshow?rev.className = 'review nextshow': rev.className = 'review';
+	}
+	
+}
+
+function setStatistics (hits) {
+	if(hits < 0) { hits=numEntries; }
+	if(stats) { stats.firstChild.data = hits + '/' + numEntries}
+}
+
+function getTextContent(node) {
+	// Function written by Arve Bersvendsen
+	// http://www.virtuelvis.com
+	
+	if (node.nodeType == 3) {
+	return node.nodeValue;
+	} // text node
+	if (node.nodeType == 1) { // element node
+	var text = [];
+	for (var chld = node.firstChild;chld;chld=chld.nextSibling) {
+		text.push(getTextContent(chld));
+	}
+	return text.join("");
+	} return ""; // some other node, won't contain text nodes.
+}
+
+function showAll(){
+	// first close all abstracts, reviews, etc.
+	closeAllInfo();
+
+	for (var i = 0; i < numEntries; i++){
+		entryRows[i].className = 'entry show'; 
+	}
+}
+
+function closeAllInfo(){
+	for (var i=0; i < numInfo; i++){
+		if (infoRows[i].className.indexOf('noshow') ==-1) {
+			infoRows[i].className = infoRows[i].className + ' noshow';
+		}
+	}
+}
+
+function testEvent(e){
+	if (!e) var e = window.event;
+	quickSearch(this);
+}
+
+function clearQS() {
+	qsfield.value = '';
+	quickSearch(qsfield);
+}
+
+function redoQS(){
+	showAll();
+	quickSearch(qsfield);
+}
+
+// Create Search Settings
+
+function toggleQSettingsDialog() {
+
+	var qssettings = document.getElementById('qssettings');
+	
+	if(qssettings.className.indexOf('active')==-1) {
+		qssettings.className = 'active';
+
+		if(absCheckBox && searchAbstract == true) { absCheckBox.checked = 'checked'; }
+		if(revCheckBox && searchReview == true) { revCheckBox.checked = 'checked'; }
+
+	} else {
+		qssettings.className= '';
+	}
+}
+
+function createQSettingsDialog(){
+	var qssettingslist = document.getElementById('qssettings').getElementsByTagName('ul')[0];
+	
+	if(numAbs!=0) {
+		var x = document.createElement('input');
+		x.id = "searchAbs";
+		x.type = "checkbox";
+		x.onclick = toggleQSetting;
+		var y = qssettingslist.appendChild(document.createElement('li')).appendChild(document.createElement('label'));
+		y.appendChild(x);
+		y.appendChild(document.createTextNode('search abstracts'));		
+	}
+	if(numRev!=0) {
+		var x = document.createElement('input');
+		x.id = "searchRev";
+		x.type = "checkbox";		
+		x.onclick = toggleQSetting;
+		var y = qssettingslist.appendChild(document.createElement('li')).appendChild(document.createElement('label'));		
+		y.appendChild(x);		
+		y.appendChild(document.createTextNode('search reviews'));
+	}
+		
+	// global variables
+	absCheckBox = document.getElementById('searchAbs');
+	revCheckBox = document.getElementById('searchRev');
+	
+	// show search settings
+	if(absCheckBox||revCheckBox) {
+		document.getElementById('qssettings').style.display = 'block';
+	}
+}
+
+function toggleQSetting() {
+	if(this.id=='searchAbs') { searchAbstract = !searchAbstract; }
+	if(this.id=='searchRev') { searchReview = !searchReview; }
+	redoQS()
+}
+-->
+</script>
+<script type="text/javascript">
+<!--
+// Sort Table Script
+// Version: 1.1
+//
+// Copyright (c) 2006-2008, Mark Schenk
+//
+// This software is distributed under a Creative Commons Attribution 3.0 License
+// http://creativecommons.org/licenses/by/3.0/
+
+// NB: slow as molasses in FireFox, especially when sorting columns with a lot of text.
+// An optimization is implemented which makes speed bearable, toggled by the following variable
+var SORT_SPEED_OPT = true;
+// a bit of browser preference: Opera does not need optimization
+if(window.opera) { SORT_SPEED_OPT=false; }
+// the optimization has one limitation on the functionality: when sorting search
+// results, the expanded info, e.g. bibtex/review, is collapsed. In the non-optimized
+// version they remain visible.
+
+
+if (window.addEventListener) {
+	window.addEventListener("load",initSortTable,false) }
+else if (window.attachEvent) {
+	window.attachEvent("onload", initSortTable); }
+
+function initSortTable() {
+var alltables = document.getElementsByTagName('table');
+for(i=0;i<alltables.length;i++) {
+	var currentTable = alltables[i];
+	if(currentTable.className.indexOf('sortable') !=-1) {
+		var thead = currentTable.getElementsByTagName('thead')[0];
+		thead.title = 'Click on any column header to sort';
+		for (var i=0;cell = thead.getElementsByTagName('th')[i];i++) {
+			cell.onclick = function () { resortTable(this); };
+			// make it possible to have a default sort column
+			if(cell.className.indexOf('sort')!=-1) {
+				resortTable(cell)
+			}
+		}
+	}
+}
+}
+
+var SORT_COLUMN_INDEX
+
+function resortTable(td) {
+	var column = td.cellIndex;
+	var table = getParent(td,'TABLE');
+
+	var allRows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+	var newRows = new Array();
+
+	for (var i=0, k=0; i<allRows.length;i++) {
+
+		var rowclass = allRows[i].className;
+
+		if (rowclass.indexOf('entry') != -1) {
+	       	newRows[k++] = allRows[i];
+		}
+		
+		if (SORT_SPEED_OPT) {
+		// remove highlight class
+		allRows[i].className = rowclass.replace(/highlight/,'');
+		// close information
+		if(rowclass.indexOf('entry') == -1 && rowclass.indexOf('noshow') == -1) { allRows[i].className = rowclass + ' noshow';}
+		} 
+	}
+
+
+	// If other sort functions are deemed necessary (e.g. for
+	// dates and currencies) they can be added.
+	var sortfn = ts_sort_firstchild_caseinsensitive;
+	SORT_COLUMN_INDEX = column;
+	newRows.sort(sortfn);
+
+	// create a container for showing sort arrow
+	var arrow =  td.getElementsByTagName('span')[0];
+	if (!arrow) { var arrow = td.appendChild(document.createElement('span'));}
+	
+	if (td.className) {
+		if (td.className.indexOf('sort_asc') !=-1) {
+			td.className = td.className.replace(/_asc/,"_des");
+			newRows.reverse();
+			arrow.innerHTML = '&uArr;';
+		} else if (td.className.indexOf('sort_des') !=-1) {
+			td.className = td.className.replace(/_des/,"_asc");
+			arrow.innerHTML = '&dArr;';
+		} else { 
+			td.className += ' sort_asc'; 
+			arrow.innerHTML = '&dArr;';
+		}
+	} else {
+		td.className += 'sort_asc';
+		arrow.innerHTML = '&dArr;';
+	}
+	
+	// Remove the classnames and up/down arrows for the other headers
+	var ths = table.getElementsByTagName('thead')[0].getElementsByTagName('th');
+	for (var i=0; i<ths.length; i++) {
+		if(ths[i]!=td && ths[i].className.indexOf('sort_')!=-1) {
+		// argh, moronic JabRef thinks (backslash)w is an output field!!
+		//ths[i].className = ths[i].className.replace(/sort_(backslash)w{3}/,"");
+		ths[i].className = ths[i].className.replace(/sort_asc/,"");
+		ths[i].className = ths[i].className.replace(/sort_des/,"");
+
+		// remove span
+		var arrow =  ths[i].getElementsByTagName('span')[0];
+		if (arrow) { ths[i].removeChild(arrow); }
+		}
+	}
+
+	// We appendChild rows that already exist to the tbody, so it moves them rather than creating new ones
+	for (i=0;i<newRows.length;i++) { 
+		table.getElementsByTagName('tbody')[0].appendChild(newRows[i]);
+
+		if(!SORT_SPEED_OPT){
+		// moving additional information, e.g. bibtex/abstract to right locations
+		// this allows to sort, even with abstract/review/etc. still open
+		var articleid = newRows[i].id;
+
+		var entry = document.getElementById(articleid);
+		var abs = document.getElementById('abs_'+articleid);
+		var rev = document.getElementById('rev_'+articleid);
+		var bib = document.getElementById('bib_'+articleid);		
+	
+		var tbody = table.getElementsByTagName('tbody')[0];
+		// mind the order of adding the entries
+		if(abs) { tbody.appendChild(abs); }
+		if(rev) { tbody.appendChild(rev); }
+		if(bib) { tbody.appendChild(bib); }
+		}
+	}
+}
+
+function ts_sort_firstchild_caseinsensitive(a,b) {
+	// only search in .firstChild of the cells. Speeds things up tremendously in FF
+	// problem is that it won't find all the text in a cell if the firstChild is an element
+	// or if there are other elements in the cell. Risky fix, but the speed boost is worth it.
+	var acell = a.cells[SORT_COLUMN_INDEX];
+	var bcell = b.cells[SORT_COLUMN_INDEX];
+	
+	acell.firstChild? aa = getTextContent(acell.firstChild).toLowerCase():aa = "";
+	bcell.firstChild? bb = getTextContent(bcell.firstChild).toLowerCase():bb = "";
+
+	if (aa==bb) return 0;
+	if (aa<bb) return -1;
+	return 1;
+}
+
+function ts_sort_caseinsensitive(a,b) {
+	aa = getTextContent(a.cells[SORT_COLUMN_INDEX]).toLowerCase();
+	bb = getTextContent(b.cells[SORT_COLUMN_INDEX]).toLowerCase();
+	if (aa==bb) return 0;
+	if (aa<bb) return -1;
+	return 1;
+}
+
+function ts_sort_default(a,b) {
+	aa = getTextContent(a.cells[SORT_COLUMN_INDEX]);
+	bb = getTextContent(b.cells[SORT_COLUMN_INDEX]);
+	if (aa==bb) return 0;
+	if (aa<bb) return -1;
+	return 1;
+}
+
+function getParent(el, pTagName) {
+	if (el == null) { 
+		return null;
+	} else if (el.nodeType == 1 && el.tagName.toLowerCase() == pTagName.toLowerCase()) {
+		return el;
+	} else {
+		return getParent(el.parentNode, pTagName);
+	}
+}
+-->
+</script>
+<style type="text/css">
+body { background-color: white; font-family: "Trebuchet MS", Arial, sans-serif; font-size: 12px; line-height: 1.2; padding: 1em; color: #2E2E2E; }
+
+#qs { width: auto; border-style: solid; border-color: gray; border-width: 1px 1px 0px 1px; padding: 0.5em 0.5em; display:none; position:relative; }
+#qs form { padding: 0px; margin: 0px; }
+#qs form p { padding: 0px; margin: 0px; }
+
+.invalidsearch { background-color: red; }
+
+table { border: 1px gray solid; width: 100%; empty-cells: show; }
+th, td { border: 1px gray solid; padding: 0.5em; vertical-align: top;  }
+td { text-align: left; vertical-align: top; }
+th { background-color: #EFEFEF; }
+
+td a { color: navy; text-decoration: none; }
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+
+tr.highlight td { background-color: #F1F1F1; border-top: 2px black solid; font-weight: bold; }
+tr.abstract td, tr.review td, tr.bibtex td { background-color: #F1F1F1; border-bottom: 2px black solid; }
+tr.nextshow td { border-bottom: 1px gray solid; }
+
+tr.bibtex pre { width: 100%; overflow: auto;}
+
+p.infolinks { margin: 0.5em 0em 0em 0em; padding: 0px; }
+
+#qssettings { padding: 0.5em; position: absolute; top: 0.2em; right: 0.2em; border: 1px gray solid; background-color: white; display: none; }
+#qssettings p { font-weight: bold; cursor: pointer; }
+#qssettings ul { display: none; list-style-type: none; padding-left: 0; margin: 0; }
+#qssettings.active ul { display: block; }
+
+@media print {
+	p.infolinks, #qssettings, #qs { display: none !important; }
+	table { border-width: 0px; }
+	tr { page-break-inside: avoid; }
+	tr > * + * + * + * + * {display: none; }
+	thead tr::before { content: "Reference"; border: 1px gray solid; padding: 0.5em; vertical-align: top; font-weight: bold; text-align: center; display: table-cell; background-color: #EFEFEF; }
+	tr[id]::before { content: attr(id); display: table-cell; border: 1px gray solid; padding: 0.5em; vertical-align: top; font-style: italic; }
+}
+
+th.sort_asc, th.sort_des { border: 2px black solid; }
+</style>
+</head>
+<body>
+
+<div id="qs">
+	<form action="">
+	<p>QuickSearch: <input type="text" name="qsfield" id="qsfield" autocomplete="off" title="Allows plain text as well as RegExp searches" /><input type="button" onclick="clearQS()" value="clear" />&nbsp; Number of matching entries: <span id="stat">0</span>.</p>
+	<div id="qssettings">
+		<p onclick="toggleQSettingsDialog()">Search Settings</p>
+		<ul></ul>
+	</div>
+	</form>
+</div>
+<table id="qstable" class="sortable" border="1">
+<thead><tr><th width="20%">Author</th><th width="30%">Title</th><th width="5%">Year</th><th width="30%">Journal/Proceedings</th><th width="10%">Reftype</th><th width="5%">DOI/URL</th></tr></thead>
+<tbody><tr id="Spiegel2011" class="entry">
+	<td>Spiegel, M. &amp; Reynolds, Jr., P.F.</td>
+	<td>Lock-Free Multiway Search Trees as Priority Queues in Parallel Branch and Bound Applications <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2011','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2011','bibtex')">BibTeX</a>]</p></td>
+	<td>2011</td>
+	<td>(CS-2011-01)&nbsp;</td>
+	<td>techreport</td>
+	<td><a href="http://www.cs.virginia.edu/~ms6ep/publications/CS-2011-01.pdf">URL</a>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2011" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: The lock-free skip tree is a cache-conscious concurrent data structure for many-core systems that shows significant performance improvements over the state of the art in concurrent data structure designs for those applications that must contend with the deleterious effects of the memory wall. In a previous study using a series of synthetic benchmarks, the lock-free skip tree was found to improve peak throughput by x1.8 to x2.3 relative to a state of the art lock-free skip list implementation when the working set size exceeds cache size. In this work, we study a class of application benchmarks that can be used to characterize the relative merits of the lock-free skip tree as compared to the lock-free skip list. In a series of four parallel branch-and-bound applications, two of the applications are x2.3 and x3.1 faster when using the skip tree as a concurrent priority queue as compared to the lock-free skip list priority queue. On a shared-memory supercomputer architecture the two branch-and-bound applications are x1.6 and x2.1 faster with the skip tree versus the skip list running at 80 hardware threads. Based on the four application benchmarks and a synthetic branch-and-bound application, a set of guidelines is offered for selecting the lock-free skip tree to use as a centralized priority queue in parallel branch-and-bound applications.</td>
+</tr>
+<tr id="bib_Spiegel2011" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@techreport{Spiegel2011,
+  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  title = {Lock-Free Multiway Search Trees as Priority Queues in Parallel Branch and Bound Applications},
+  year = {2011},
+  number = {CS-2011-01},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/CS-2011-01.pdf}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2011a" class="entry">
+	<td>Spiegel, M.</td>
+	<td>Cache-conscious concurrent data structures <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2011a','bibtex')">BibTeX</a>]</p></td>
+	<td>2011</td>
+	<td><i>School</i>: University of Virginia&nbsp;</td>
+	<td>phdthesis</td>
+	<td><a href="http://www.cs.virginia.edu/~ms6ep/publications/michael-spiegel-dissertation.pdf">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Spiegel2011a" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@phdthesis{Spiegel2011a,
+  author = {Michael Spiegel},
+  title = {Cache-conscious concurrent data structures},
+  school = {University of Virginia},
+  year = {2011},
+  url = {http://www.cs.virginia.edu/~ms6ep/publications/michael-spiegel-dissertation.pdf}
+}
+</pre></td>
+</tr>
+<tr id="Boker2011" class="entry">
+	<td>Boker, S., Neale, M., Maes, H., Wilde, M., Spiegel, M., Brick, T., Spies, J., Estabrook, R., Kenny, S., Bates, T., Mehta, P. &amp; Fox, J.</td>
+	<td>OpenMx: An Open Source Extended Structural Equation Modeling Framework <p class="infolinks">[<a href="javascript:toggleInfo('Boker2011','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Boker2011','bibtex')">BibTeX</a>]</p></td>
+	<td>2011</td>
+	<td>Psychometrika<br/>Vol. 76(2), pp. 306-317&nbsp;</td>
+	<td>article</td>
+	<td><a href="http://www.springerlink.com/content/dg37445107026711/">URL</a>&nbsp;</td>
+</tr>
+<tr id="abs_Boker2011" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: OpenMx is free, full-featured, open source, structural equation modeling (SEM) software. OpenMx runs within the R statistical programming environment on Windows, Mac OS-X, and Linux computers. The rationale for developing OpenMx is discussed along with the philosophy behind the user interface. The OpenMx data structures are introduced -- these novel structures define the user interface framework and provide new opportunities for model specification. Two short example scripts for the specification and fitting of a confirmatory factor model are next presented. We end with an abbreviated list of modeling applications available in OpenMx 1.0 and a discussion of directions for future development.</td>
+</tr>
+<tr id="bib_Boker2011" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{Boker2011,
+  author = {Steven Boker and Michael Neale and Hermine Maes and Michael Wilde and Michael Spiegel and Timothy Brick and Jeffrey Spies and Ryne Estabrook and Sarah Kenny and Timothy Bates and Paras Mehta and John Fox},
+  title = {OpenMx: An Open Source Extended Structural Equation Modeling Framework},
+  journal = {Psychometrika},
+  year = {2011},
+  volume = {76},
+  number = {2},
+  pages = {306-317},
+  url = {http://www.springerlink.com/content/dg37445107026711/}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2010" class="entry">
+	<td>Spiegel, M. &amp; Reynolds, Jr., P.F.</td>
+	<td>Lock-Free Multiway Search Trees <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2010','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2010','bibtex')">BibTeX</a>]</p></td>
+	<td>2010</td>
+	<td>Proceedings of the 39th Annual International Conference on Parallel Processing (ICPP)&nbsp;</td>
+	<td>inproceedings</td>
+	<td><a href="http://dx.doi.org/10.1109/ICPP.2010.68">URL</a>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2010" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: We propose a lock-free multiway search tree algorithm for concurrent applications with large working set sizes. Our algorithm is a variation of the randomized skip tree. We relax the ordering constraints among the nodes in the original skip tree definition. Optimal paths through the tree are temporarily violated by mutation operations, and eventually restored using online node compaction. Experimental evidence shows that our lock-free skip tree outperforms a highly tuned concurrent skip list under workloads of various proportions of operations and working set sizes. The max throughput of our algorithm is on average 41% higher than the throughput of the skip list, and 129% higher on the workload of the largest working set size and read-dominated operations.</td>
+</tr>
+<tr id="bib_Spiegel2010" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{Spiegel2010,
+  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  title = {Lock-Free Multiway Search Trees},
+  booktitle = {Proceedings of the 39th Annual International Conference on Parallel Processing (ICPP)},
+  publisher = {IEEE Computer Society},
+  year = {2010},
+  url = {http://dx.doi.org/10.1109/ICPP.2010.68}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2009" class="entry">
+	<td>Spiegel, M. &amp; Reynolds, Jr., P.F.</td>
+	<td>The Dense Skip Tree: A Cache-Conscious Randomized Data Structure <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2009','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2009','bibtex')">BibTeX</a>]</p></td>
+	<td>2009</td>
+	<td>(CS-2009-05)&nbsp;</td>
+	<td>techreport</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2009" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: We introduce the dense skip tree, a novel cache-conscious randomized data structure. Algorithms for search, insertion, and deletion are presented, and they are shown to have expected cost O(log n). The dense skip tree obeys the same asymptotic properties as the skip list and the skip tree. A series of properties on the dense skip tree is proven, in order to show the probabilistic organization of data in a cache-conscious design. Performance benchmarks show the dense skip tree to outperform the skip list and the self-balancing binary search tree when the working set cannot be contained in cache.</td>
+</tr>
+<tr id="bib_Spiegel2009" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@techreport{Spiegel2009,
+  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  title = {The Dense Skip Tree: A Cache-Conscious Randomized Data Structure},
+  year = {2009},
+  number = {CS-2009-05}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2008" class="entry">
+	<td>Spiegel, M., Gore, R. &amp; Reynolds, P.F.</td>
+	<td>Quantifying and Analyzing Uncertainty in Simulations to Enable User Understanding <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2008','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2008','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>Proceedings of the Modeling, Simulation, &amp; Gaming Student Capstone Conference&nbsp;</td>
+	<td>conference</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2008" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Quantitative methods of analysis have progressed faster than quantitative methods of capturing, representing, propagating and analyzing uncertainty in the realm of computational thinking, adversely affecting the quality of both scientific computational analysis, and important policy decisions. Uncertainty arises from incomplete model input information (aleatory uncertainty), incomplete model structure information (epistemic uncertainty), and incomplete understanding of model dynamics. We describe a work in progress computational approach, framework, and language, RiskModelica, that will 1) support representation, propagation, and calibration of aleatory uncertainty using probability theory, probability boxes, and Dempster-Shafer theory of evidence; 2) develop reliable methodologies - algorithms, data acquisition and management procedures, software and theory - for quantifying uncertainty in computer predictions; 3) support exploration of epistemic uncertainty utilizing causal analysis, and static and dynamic program slicing to characterize the dependencies, causal relationships, and interactions of design decisions; and 4) as a way of gaining insight into uncertainties, enable subject matter experts to observe model characteristics under novel conditions of interest. These capabilities represent a revolutionary approach to capturing, representing, propagating, and analyzing quantitatively, uncertainties that arise in the process of computational thinking.</td>
+</tr>
+<tr id="bib_Spiegel2008" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@conference{Spiegel2008,
+  author = {Spiegel, Michael and Gore, Ross and Reynolds, Paul F.},
+  title = {Quantifying and Analyzing Uncertainty in Simulations to Enable User Understanding},
+  booktitle = {Proceedings of the Modeling, Simulation, &amp; Gaming Student Capstone Conference},
+  year = {2008},
+  note = {Recipient of best paper award in "Discipline of Modeling &amp; Simulation" track.}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2007" class="entry">
+	<td>Spiegel, M.</td>
+	<td>A proposal for computing with imprecise probabilities: A framework for multiple representations of uncertainty in simulation software <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2007','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2007','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>(CS-2007-16)&nbsp;</td>
+	<td>techreport</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2007" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: We propose the design and construction of a programming language for the formal representation of uncertainty in modeling and simulation. Modeling under uncertainty has been of paramount importance in the past half century, as quantitative methods of analysis have been developed to take advantage of computational resources. Simulation is gaining prominence as the proper tool of scientific analysis under circumstances where it is infeasible or impractical to directly study the system in question. This programming language will be built as an extension to the Modelica programming language, which is an acausal object-oriented language for hybrid continuous and discrete-event simulations [22]. Our language extensions will serve as a platform for the research into representation and calibration of imprecise probabilities in quantitative risk analysis simulations. Imprecise probability is used a generic term for any mathematical model which measures chance or uncertainty without crisp numerical probabilities. The explicit representation of imprecise probability theories in a domain-specific programming language will facilitate the development of efficient algorithms for expressing, computing, and calibrating imprecise probability structures. Computation with imprecise probability structures will lead to quantitative risk analyses that are more informative than analyses using traditional probability theory. We have three primary research objectives: (i) the exploration of efficient representational structures and computational algorithms of Dempster-Shafer belief structures; (ii) the application of the imprecise probabilities to representing variable dependence; and (iii) the exploration of various Dempster-Shafer combination rules for model calibration. At the completion of this dissertation, we will have produced the end-to-end design, implementation, and analysis of a programming language that will facilitate the future exploration of algorithms, software, and theory for quantitative uncertainty analysis in computer science.</td>
+</tr>
+<tr id="bib_Spiegel2007" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@techreport{Spiegel2007,
+  author = {Michael Spiegel},
+  title = {A proposal for computing with imprecise probabilities: A framework for multiple representations of uncertainty in simulation software},
+  year = {2007},
+  number = {CS-2007-16}
+}
+</pre></td>
+</tr>
+<tr id="Reynolds2007" class="entry">
+	<td>Reynolds, Jr., P.F., Spiegel, M., Liu, X. &amp; Gore, R.</td>
+	<td>Validating evolving simulations in COERCE <p class="infolinks">[<a href="javascript:toggleInfo('Reynolds2007','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Reynolds2007','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>Proceedings of the 2007 International Conference on Computational Science (ICCS), pp. 1238-1245&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Reynolds2007" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: We seek to increase user confidence in simulations as they are adapted to meet new requirements. Our approach includes formal representation of uncertainty, lightweight validation, and novel techniques for exploring emergent behavior. Uncertainty representation, using formalisms such as Dempster-Shafer theory, can capture designer insight about uncertainty, enabling formal analysis and improving communication with decision and policy makers. Lightweight validation employs targeted program analysis and automated regression testing to maintain user confidence as adaptations occur. Emergent behavior validation exploits the semi-automatic adaptation capability of COERCE to make exploration of such behavior efficient and productive. We describe our research on these three technologies and their impact on validating dynamically evolving simulations.</td>
+</tr>
+<tr id="bib_Reynolds2007" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{Reynolds2007,
+  author = {Reynolds, Jr., Paul F. and Spiegel, Michael and Liu, Xinyu and Gore, Ross},
+  title = {Validating evolving simulations in COERCE},
+  booktitle = {Proceedings of the 2007 International Conference on Computational Science (ICCS)},
+  year = {2007},
+  pages = {1238-1245}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2006a" class="entry">
+	<td>Spiegel, M., Reynolds, P.F. &amp; Brogan, D.C.</td>
+	<td>Grand challenge case studies in a simulation curriculum <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2006a','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2006a','bibtex')">BibTeX</a>]</p></td>
+	<td>2006</td>
+	<td>Proceedings of the 2006 Winter Simulation Conference (WSC), pp. 2242-2249&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2006a" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Students wishing to become experts in modeling and simulation (M&amp;S) need to appreciate limitations of the technology. Our goal is to expose students to the current boundaries of simulation technology. To achieve this, we propose the incorporation of grand challenge case studies into a modeling and simulation curriculum. Grand challenge problems are defined as problems for which there does not exist a universally accepted solution (at present). We argue that grand challenge case studies are an excellent vehicle for discovering and appreciating current boundaries of M&amp;S technology. We present three candidate case studies, one in detail - the ongoing U.S. Department of Energy analysis of Yucca Mountain as a location for nuclear waste storage - with supporting discussion about how these cases can enhance exploration of the challenges inM&amp;S technology. We discuss the proposed Yucca Mountain storage facility, along with two other case studies, and examine their integration into M&amp;S curricula.</td>
+</tr>
+<tr id="bib_Spiegel2006a" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{Spiegel2006a,
+  author = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
+  title = {Grand challenge case studies in a simulation curriculum},
+  booktitle = {Proceedings of the 2006 Winter Simulation Conference (WSC)},
+  year = {2006},
+  pages = {2242-2249}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2006" class="entry">
+	<td>Spiegel, M.</td>
+	<td>Perfect Developer tool suite <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2006','bibtex')">BibTeX</a>]</p></td>
+	<td>2006</td>
+	<td>A Survey of Tools for Model Checking and Model-Based Development, pp. 53-57&nbsp;</td>
+	<td>incollection</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_Spiegel2006" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@incollection{Spiegel2006,
+  author = {Michael Spiegel},
+  title = {Perfect Developer tool suite},
+  booktitle = {A Survey of Tools for Model Checking and Model-Based Development},
+  publisher = {Technical Report CS-2006-17},
+  year = {2006},
+  pages = {53-57}
+}
+</pre></td>
+</tr>
+<tr id="Reynolds2006" class="entry">
+	<td>Reynolds, Jr., P.F., Brogan, D.C., Carnahan, J., Loitiere, Y. &amp; Spiegel, M.</td>
+	<td>Capturing scientists' insight for DDDAS <p class="infolinks">[<a href="javascript:toggleInfo('Reynolds2006','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Reynolds2006','bibtex')">BibTeX</a>]</p></td>
+	<td>2006</td>
+	<td>Proceedings of the 2006 International Conference on Computational Science (ICCS), pp. 570-577&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Reynolds2006" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: One of the intended consequences of utilizing simulations in dynamic, data-driven application systems is that the simulations will adjust to new data as it arrives. These adjustments will be difficult because of the unpredictable nature of the world and because simulations are so carefully tuned to model specific operating conditions. Accommodating new data may require adapting or replacing numerical methods, simulation parameters, or the analytical scientific models from which the simulation is derived. In this research, we emphasize the important role a scientist's insight can play in facilitating the runtime adaptation of a simulation to accurately utilize new data. We present the tools that serve to capture and apply a scientist's insight about opportunities for, and limitations of, simulation adaptation. Additionaly, we report on the two ongoing collaborations that serve to guide and evaluate our research.</td>
+</tr>
+<tr id="bib_Reynolds2006" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{Reynolds2006,
+  author = {Reynolds, Jr., Paul F. and Brogan, David C. and Carnahan, Joe and Loitiere, Yannick and Spiegel, Michael},
+  title = {Capturing scientists' insight for DDDAS},
+  booktitle = {Proceedings of the 2006 International Conference on Computational Science (ICCS)},
+  year = {2006},
+  pages = {570-577}
+}
+</pre></td>
+</tr>
+<tr id="Spiegel2005" class="entry">
+	<td>Spiegel, M., Reynolds, P.F. &amp; Brogan, D.C.</td>
+	<td>A case study of model context for simulation composability and reusability <p class="infolinks">[<a href="javascript:toggleInfo('Spiegel2005','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Spiegel2005','bibtex')">BibTeX</a>]</p></td>
+	<td>2005</td>
+	<td>Proceedings of the 2005 Winter Simulation Conference (WSC), pp. 437-444&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Spiegel2005" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: How much effort will be required to compose or reuse simulations? What factors need to be considered? It is generally known that composability and reusability are daunting challenges for both simulations and more broadly software design as a whole. We have conducted a small case study in order to clarify the role that model context plays in simulation composability and reusability. For a simple problem: compute the position and velocity of a falling body, we found that a reasonable formulation of a solution included a surprising number of implicit constraints. Equally surprising, in a challenge posed to a small group of capable individuals, no one of them was able to identify more than three-quarters of the ultimate set of validation constraints. We document the challenge, interpret its results, and discuss the utility our study will have in future investigations into simulation composition and reuse.</td>
+</tr>
+<tr id="bib_Spiegel2005" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{Spiegel2005,
+  author = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
+  title = {A case study of model context for simulation composability and reusability},
+  booktitle = {Proceedings of the 2005 Winter Simulation Conference (WSC)},
+  year = {2005},
+  pages = {437-444}
+}
+</pre></td>
+</tr>
+<tr id="Newhall2003" class="entry">
+	<td>Newhall, T., Finney, S., Ganchev, K. &amp; Spiegel, M.</td>
+	<td>Nswap: A network swap module for linux clusters. <p class="infolinks">[<a href="javascript:toggleInfo('Newhall2003','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('Newhall2003','bibtex')">BibTeX</a>]</p></td>
+	<td>2003</td>
+	<td>Proceedings of the 9th European Conference on Parallel Processing (Euro-Par), pp. 1160-1169&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="abs_Newhall2003" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Cluster applications that process large amounts of data, such as parallel scientific or multimedia applications, are likely to cause swapping on individual cluster nodes. These applications will perform better on clusters with network swapping support. Network swapping allows any cluster node with over-committed memory to use idle memory of a remote node as its backing store and to "swap" its pages over the network. As the disparity between network speeds and disk speeds continues to grow, network swapping will be faster than traditional swapping to local disk. We present Nswap, a network swapping system for heterogeneous Linux clusters and networks of Linux machines. Nswap is implemented as a loadable kernel module for version 2.4 of the Linux kernel. It is a space-efficient and time-efficient implementation that transparently performs network swapping. Nswap scales to larger clusters, supports migration of remotely swapped pages, and supports dynamic growing and shrinking of Nswap cache (the amount of RAM available to store remote pages) in response to a node's local memory needs. Results comparing Nswap running on an eight node Linux cluster with 100BaseT Ethernet interconnect and faster disk show that Nswap is comparable to swapping to local, faster disk; depending on the workload, Nswap's performance is up to 1.7 times faster than disk to between 1.3 and 4.6 times slower than disk for most workloads. We show that with faster networking technology, Nswap will outperform swapping to disk.</td>
+</tr>
+<tr id="bib_Newhall2003" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{Newhall2003,
+  author = {Newhall, Tia and Finney, Sean and Ganchev, Kuzman and Spiegel, Michael},
+  title = {Nswap: A network swap module for linux clusters.},
+  booktitle = {Proceedings of the 9th European Conference on Parallel Processing (Euro-Par)},
+  year = {2003},
+  pages = {1160-1169}
+}
+</pre></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+ <small>Created by <a href="http://jabref.sourceforge.net">JabRef</a> on 26/04/2011.</small>
+</p>
+
+</body>
+</html>
+
+<!-- File generated by JabRef ; Export Filter written by Mark Schenk -->

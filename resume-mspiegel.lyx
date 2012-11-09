@@ -92,25 +92,13 @@ begin{minipage}{2.3in}
 \begin_inset VSpace -0.25in
 \end_inset
 
-Renaissance Computing Institute
-\begin_inset Newline newline
-\end_inset
-
-100 Europa Drive Suite 540
-\begin_inset Newline newline
-\end_inset
-
-Chapel Hill, North Carolina 27517
-\begin_inset Newline newline
-\end_inset
-
 
 \begin_inset Flex URL
 status open
 
 \begin_layout Plain Layout
 
-www.unc.edu/~mspiegel
+http://mspiegel.github.com
 \end_layout
 
 \end_inset
@@ -119,11 +107,7 @@ www.unc.edu/~mspiegel
 \begin_inset Newline newline
 \end_inset
 
-<first initial>+<surname>@unc.edu
-\begin_inset Newline newline
-\end_inset
-
-<first initial>+<surname>@renci.org
+[firstname].m.[lastname]@gmail.com
 \begin_inset ERT
 status collapsed
 
@@ -539,7 +523,8 @@ Languages: C, C++, Java, Java bytecode, OpenMP, MPI, Perl, Python, Lisp,
 \end_layout
 
 \begin_layout Itemize
-Tools: GCC, GDB, oprofile, make, autoconf, ant, SVN, git, LaTeX, Eclipse
+Tools: GCC, GDB, oprofile, make, autoconf, ant, subversion, git, LaTeX,
+ Eclipse
 \end_layout
 
 \begin_layout Itemize

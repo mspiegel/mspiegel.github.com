@@ -4,11 +4,13 @@
 \begin_header
 \textclass simplecv
 \begin_preamble
-\AtBeginDocument{%
-\addto\captionsenglish{%
-\renewcommand{\refname}{Publications}%
-}}
-\usepackage[citebordercolor={1 1 1}]{hyperref}
+\newcommand\mybibname{Publications}
+\renewcommand\bibsection{%
+   \noindent\normalsize{\mybibname}%
+   \markboth{{\mybibname}}{{\mybibname}}%
+  }
+\let\oldbibsection\bibsection
+\renewcommand{\bibsection}{\oldbibsection\addcontentsline{toc}{part}{Publications}}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -33,7 +35,16 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_amsmath 1
@@ -54,8 +65,8 @@
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 2
+\tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
@@ -94,11 +105,11 @@ begin{minipage}{2.3in}
 
 
 \begin_inset Flex URL
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
-http://mspiegel.github.com
+http://mspiegel.github.io
 \end_layout
 
 \end_inset
@@ -222,11 +233,57 @@ Work Experience
 
 \begin_layout Topic
 \labelwidthstring MMMMM
+Software
+\begin_inset space ~
+\end_inset
+
+Engineer AddThis (2012-present).
+ Vienna, VA.
+ Software engineer in the platform engineering team.
+ Of the primary contributors to Hydra, a distributed data analytics platform.
+ Hydra is a streaming data processing system that is designed to process
+ records into tree structured output for hierarchical querying.
+ It is similar in features to Apache Drill or Apache Samza.
+ Responsible for performance analysis and tuning.
+ Design and implementation of a concurrent paged object cache that is backed
+ by persistent storage.
+ Implemented an web application that exposes simple Hydra functionality
+ as a teaching aid and debugging environment.
+ Instituted nightly functional and performance testing.
+ Wrote the reference documentation.
+ Contributor to AddThis open source projects 
+\begin_inset CommandInset href
+LatexCommand href
+name "stream-lib"
+target "github.com/addthis/stream-lib"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+target "basis"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset href
+LatexCommand href
+name "ssync"
+target "github.com/addthis/ssync"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
 Post
 \begin_inset space ~
 \end_inset
 
-Doc Renaissance Computing Institute (2011-present).
+Doc Renaissance Computing Institute (2011-2012).
  Chapel Hill, NC.
  An interdisciplinary position sponsored by the high performance computing
  and bioinformatics groups.
@@ -246,30 +303,7 @@ www.cs.sandia.gov/qthreads
 \end_inset
 
 ).
- My contribution is the design and implementation of an array-based lock-free
- dequeue that supports concurrent modification on both ends of the data
- structure.
- Experience with reasoning about the x86 memory model and atomic operations.
- Also involved in the North Carolina Clinical Genomic Evaluation by NextGen
- Exome Sequencing project.
- I am involved in the effort to transform the genomic statistical inference
- algorithms that are typically applied across 100 kilobase pair regions
- into efficient implementations that process all 3.2 billion base pairs of
- the human genome.
  
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-The Renaissance Computing Institute (RENCI) was launched in 2004 as collaborativ
-e institute involving the University of North Carolina at Chapel Hill, Duke
- University and North Carolina State University.
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Topic
@@ -518,13 +552,13 @@ itemsep}{0mm}
 
 \end_inset
 
-Languages: C, C++, Java, Java bytecode, OpenMP, MPI, Perl, Python, Lisp,
- Scheme, SQL, R
+Languages: C, C++, Java, Java bytecode, OpenMP, MPI, Lisp, Scheme, R, Python,
+ Scala, SQL, Javascript, Perl, Ruby
 \end_layout
 
 \begin_layout Itemize
-Tools: GCC, GDB, oprofile, make, autoconf, ant, subversion, git, LaTeX,
- Eclipse
+Tools: GCC, GDB, oprofile, make, autoconf, ant, maven, subversion, git,
+ LaTeX, Eclipse
 \end_layout
 
 \begin_layout Itemize

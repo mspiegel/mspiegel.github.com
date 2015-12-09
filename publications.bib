@@ -1,48 +1,27 @@
-% This file was created with JabRef 2.4.
-% Encoding: ASCII
+% Encoding: US-ASCII
 
-@TECHREPORT{Spiegel2011,
-  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
-  title = {Lock-Free Multiway Search Trees as Priority Queues in Parallel Branch
-	and Bound Applications},
-  institution = {Department of Computer Science, University of Virginia},
-  year = {2011},
-  number = {CS-2011-01},
-  month = {February},
-  abstract = {The lock-free skip tree is a cache-conscious concurrent data structure
-	for many-core systems that shows significant performance improvements
-	over the state of the art in concurrent data structure designs for
-	those applications that must contend with the deleterious effects
-	of the memory wall. In a previous study using a series of synthetic
-	benchmarks, the lock-free skip tree was found to improve peak throughput
-	by x1.8 to x2.3 relative to a state of the art lock-free skip list
-	implementation when the working set size exceeds cache size. In this
-	work, we study a class of application benchmarks that can be used
-	to characterize the relative merits of the lock-free skip tree as
-	compared to the lock-free skip list. In a series of four parallel
-	branch-and-bound applications, two of the applications are x2.3 and
-	x3.1 faster when using the skip tree as a concurrent priority queue
-	as compared to the lock-free skip list priority queue. On a shared-memory
-	supercomputer architecture the two branch-and-bound applications
-	are x1.6 and x2.1 faster with the skip tree versus the skip list
-	running at 80 hardware threads. Based on the four application benchmarks
-	and a synthetic branch-and-bound application, a set of guidelines
-	is offered for selecting the lock-free skip tree to use as a centralized
-	priority queue in parallel branch-and-bound applications.},
-  owner = {ms6ep},
-  timestamp = {2009.04.27},
-  url = {http://www.cs.virginia.edu/~ms6ep/publications/CS-2011-01.pdf}
+
+@Article{bizon2014variant,
+  Title                    = {Variant calling in low-coverage whole genome sequencing of a Native American population sample},
+  Author                   = {Bizon, Chris and Spiegel, Michael and Chasse, Scott A and Gizer, Ian R and Li, Yun and Malc, Ewa P and Mieczkowski, Piotr A and Sailsbery, Josh K and Wang, Xiaoshu and Ehlers, Cindy L and others},
+  Journal                  = {BMC genomics},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {85},
+  Volume                   = {15},
+  Publisher                = {BioMed Central Ltd}
 }
 
-@ARTICLE{Boker2011,
-  author = {Steven Boker and Michael Neale and Hermine Maes and Michael Wilde
-	and Michael Spiegel and Timothy Brick and Jeffrey Spies and Ryne
-	Estabrook and Sarah Kenny and Timothy Bates and Paras Mehta and John
-	Fox},
-  title = {{OpenMx}: An Open Source Extended Structural Equation Modeling Framework},
-  journal = {Psychometrika},
-  year = {2011},
-  abstract = {OpenMx is free, full-featured, open source, structural equation modeling
+@Article{Boker2011,
+  Title                    = {{OpenMx}: An Open Source Extended Structural Equation Modeling Framework},
+  Author                   = {Steven Boker and Michael Neale and Hermine Maes and Michael Wilde and Michael Spiegel and Timothy Brick and Jeffrey Spies and Ryne Estabrook and Sarah Kenny and Timothy Bates and Paras Mehta and John Fox},
+  Journal                  = {Psychometrika},
+  Year                     = {2011},
+  Note                     = {[413 citations]},
+  Number                   = {2},
+  Pages                    = {306-317},
+  Volume                   = {76},
+  Abstract                 = {OpenMx is free, full-featured, open source, structural equation modeling
 	(SEM) software. OpenMx runs within the R statistical programming
 	environment on Windows, Mac OS-X, and Linux computers. The rationale
 	for developing OpenMx is discussed along with the philosophy behind
@@ -53,99 +32,189 @@
 	are next presented. We end with an abbreviated list of modeling applications
 	available in OpenMx 1.0 and a discussion of directions for future
 	development.},
-  owner = {Michael},
-  timestamp = {2010.07.24},
-  url = {http://www.springerlink.com/content/dg37445107026711/}
+  Owner                    = {Michael},
+  Timestamp                = {2010.07.24},
+  URL                      = {http://www.springerlink.com/content/dg37445107026711/}
 }
 
-@INPROCEEDINGS{Spiegel2010,
-  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
-  title = {Lock-Free Multiway Search Trees},
-  booktitle = {Proceedings of the 39th Annual International Conference on Parallel
-	Processing ({ICPP})},
-  year = {2010},
-  address = {San Diego, CA},
-  month = {September 13-16},
-  publisher = {IEEE Computer Society},
-  abstract = {We propose a lock-free multiway search tree algorithm for concurrent
-	applications with large working set sizes. Our algorithm is a variation
-	of the randomized skip tree. We relax the ordering constraints among
-	the nodes in the original skip tree definition. Optimal paths through
-	the tree are temporarily violated by mutation operations, and eventually
-	restored using online node compaction. Experimental evidence shows
-	that our lock-free skip tree outperforms a highly tuned concurrent
-	skip list under workloads of various proportions of operations and
-	working set sizes. The max throughput of our algorithm is on average
-	41% higher than the throughput of the skip list, and 129% higher
-	on the workload of the largest working set size and read-dominated
-	operations.},
-  owner = {Michael},
-  timestamp = {2010.07.06}
+@InProceedings{Newhall2003,
+  Title                    = {Nswap: A network swap module for linux clusters.},
+  Author                   = {Newhall, Tia and Finney, Sean and Ganchev, Kuzman and Spiegel, Michael},
+  Booktitle                = {Proceedings of the 9th European Conference on Parallel Processing ({Euro-Par})},
+  Year                     = {2003},
+  Editor                   = {Kosch, H., and Boszormenyi, L., and Hellwagner, H.},
+  Note                     = {[47 citations]},
+  Pages                    = {1160-1169},
+  Series                   = {Springer Lecture Notes in Computer Science},
+  Abstract                 = {Cluster applications that process large amounts of data, such as parallel
+	scientific or multimedia applications, are likely to cause swapping
+	on individual cluster nodes. These applications will perform better
+	on clusters with network swapping support. Network swapping allows
+	any cluster node with over-committed memory to use idle memory of
+	a remote node as its backing store and to "swap" its pages over the
+	network. As the disparity between network speeds and disk speeds
+	continues to grow, network swapping will be faster than traditional
+	swapping to local disk. We present Nswap, a network swapping system
+	for heterogeneous Linux clusters and networks of Linux machines.
+	Nswap is implemented as a loadable kernel module for version 2.4
+	of the Linux kernel. It is a space-efficient and time-efficient implementation
+	that transparently performs network swapping. Nswap scales to larger
+	clusters, supports migration of remotely swapped pages, and supports
+	dynamic growing and shrinking of Nswap cache (the amount of RAM available
+	to store remote pages) in response to a node's local memory needs.
+	Results comparing Nswap running on an eight node Linux cluster with
+	100BaseT Ethernet interconnect and faster disk show that Nswap is
+	comparable to swapping to local, faster disk; depending on the workload,
+	Nswap's performance is up to 1.7 times faster than disk to between
+	1.3 and 4.6 times slower than disk for most workloads. We show that
+	with faster networking technology, Nswap will outperform swapping
+	to disk.},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
 }
 
-@TECHREPORT{Spiegel2009,
-  author = {Michael Spiegel and Reynolds, Jr., Paul F.},
-  title = {The Dense Skip Tree: A Cache-Conscious Randomized Data Structure},
-  institution = {Department of Computer Science, University of Virginia},
-  year = {2009},
-  number = {CS-2009-05},
-  abstract = {We introduce the dense skip tree, a novel cache-conscious randomized
-	data structure. Algorithms for search, insertion, and deletion are
-	presented, and they are shown to have expected cost O(log n). The
-	dense skip tree obeys the same asymptotic properties as the skip
-	list and the skip tree. A series of properties on the dense skip
-	tree is proven, in order to show the probabilistic organization of
-	data in a cache-conscious design. Performance benchmarks show the
-	dense skip tree to outperform the skip list and the self-balancing
-	binary search tree when the working set cannot be contained in cache.},
-  owner = {ms6ep},
-  timestamp = {2009.04.27}
+@Article{Olivier2011,
+  Title                    = {{OpenMP} Task Scheduling Strategies for Multicore {NUMA} Systems},
+  Author                   = {Stephen L. Olivier and Allan K. Porterfield and Kyle B. Wheeler and Michael Spiegel and Jan F. Prins},
+  Journal                  = {International Journal of High Performance Computing Applications},
+  Year                     = {2012},
+  Month                    = {May},
+  Note                     = {[45 citations]},
+  Number                   = {2},
+  Pages                    = {110-124},
+  Volume                   = {26},
+  Owner                    = {Michael},
+  Timestamp                = {2011.09.05},
+  URL                      = {http://hpc.sagepub.com/content/26/2/110}
 }
 
-@CONFERENCE{Spiegel2008,
-  author = {Spiegel, Michael and Gore, Ross and Reynolds, Paul F.},
-  title = {Quantifying and Analyzing Uncertainty in Simulations to Enable User
-	Understanding},
-  booktitle = {Proceedings of the Modeling, Simulation, \& Gaming Student Capstone
-	Conference},
-  year = {2008},
-  address = {Suffolk, VA},
-  organization = {The Virginia Modeling, Analysis, \& Simulation Center (VMASC)},
-  note = {Recipient of best paper award in "Discipline of Modeling \& Simulation"
-	track.},
-  abstract = {Quantitative methods of analysis have progressed faster than quantitative
-	methods of capturing, representing, propagating and analyzing uncertainty
-	in the realm of computational thinking, adversely affecting the quality
-	of both scientific computational analysis, and important policy decisions.
-	Uncertainty arises from incomplete model input information (aleatory
-	uncertainty), incomplete model structure information (epistemic uncertainty),
-	and incomplete understanding of model dynamics. We describe a work
-	in progress computational approach, framework, and language, RiskModelica,
-	that will 1) support representation, propagation, and calibration
-	of aleatory uncertainty using probability theory, probability boxes,
-	and Dempster-Shafer theory of evidence; 2) develop reliable methodologies
-	- algorithms, data acquisition and management procedures, software
-	and theory - for quantifying uncertainty in computer predictions;
-	3) support exploration of epistemic uncertainty utilizing causal
-	analysis, and static and dynamic program slicing to characterize
-	the dependencies, causal relationships, and interactions of design
-	decisions; and 4) as a way of gaining insight into uncertainties,
-	enable subject matter experts to observe model characteristics under
-	novel conditions of interest. These capabilities represent a revolutionary
-	approach to capturing, representing, propagating, and analyzing quantitatively,
-	uncertainties that arise in the process of computational thinking.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+@InProceedings{Reynolds2006,
+  Title                    = {Capturing scientists' insight for {DDDAS}},
+  Author                   = {Reynolds, Jr., Paul F. and Brogan, David C. and Carnahan, Joe and Loitiere, Yannick and Spiegel, Michael},
+  Booktitle                = {Proceedings of the 2006 International Conference on Computational Science ({ICCS})},
+  Year                     = {2006},
+  Address                  = {Reading, U.K.},
+  Editor                   = {Alexandrov, V.N., and Van Albada, G.D., and Sloot, P.M.A., and Dongarra, J.},
+  Pages                    = {570-577},
+  Series                   = {Springer Lecture Notes in Computer Science},
+  Abstract                 = {One of the intended consequences of utilizing simulations in dynamic,
+	data-driven application systems is that the simulations will adjust
+	to new data as it arrives. These adjustments will be difficult because
+	of the unpredictable nature of the world and because simulations
+	are so carefully tuned to model specific operating conditions. Accommodating
+	new data may require adapting or replacing numerical methods, simulation
+	parameters, or the analytical scientific models from which the simulation
+	is derived. In this research, we emphasize the important role a scientist's
+	insight can play in facilitating the runtime adaptation of a simulation
+	to accurately utilize new data. We present the tools that serve to
+	capture and apply a scientist's insight about opportunities for,
+	and limitations of, simulation adaptation. Additionaly, we report
+	on the two ongoing collaborations that serve to guide and evaluate
+	our research.},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
 }
 
-@TECHREPORT{Spiegel2007,
-  author = {Michael Spiegel},
-  title = {A proposal for computing with imprecise probabilities: A framework
-	for multiple representations of uncertainty in simulation software},
-  institution = {Department of Computer Science, University of Virginia},
-  year = {2007},
-  number = {CS-2007-16},
-  abstract = {We propose the design and construction of a programming language for
+@InProceedings{Reynolds2007,
+  Title                    = {Validating evolving simulations in {COERCE}},
+  Author                   = {Reynolds, Jr., Paul F. and Spiegel, Michael and Liu, Xinyu and Gore, Ross},
+  Booktitle                = {Proceedings of the 2007 International Conference on Computational Science ({ICCS})},
+  Year                     = {2007},
+  Month                    = {May},
+  Pages                    = {1238-1245},
+  Abstract                 = {We seek to increase user confidence in simulations as they are adapted
+	to meet new requirements. Our approach includes formal representation
+	of uncertainty, lightweight validation, and novel techniques for
+	exploring emergent behavior. Uncertainty representation, using formalisms
+	such as Dempster-Shafer theory, can capture designer insight about
+	uncertainty, enabling formal analysis and improving communication
+	with decision and policy makers. Lightweight validation employs targeted
+	program analysis and automated regression testing to maintain user
+	confidence as adaptations occur. Emergent behavior validation exploits
+	the semi-automatic adaptation capability of COERCE to make exploration
+	of such behavior efficient and productive. We describe our research
+	on these three technologies and their impact on validating dynamically
+	evolving simulations.},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
+}
+
+@InProceedings{Spiegel2005,
+  Title                    = {A case study of model context for simulation composability and reusability},
+  Author                   = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
+  Booktitle                = {Proceedings of the 2005 Winter Simulation Conference ({WSC})},
+  Year                     = {2005},
+  Address                  = {Piscataway, New Jersey},
+  Editor                   = {Kuhl, M.E., and Steiger, N.M., and Armstrong, F.B., and Joines, J.A.},
+  Note                     = {[48 citations]},
+  Organization             = {Institute of Electrical and Electronics Engineers},
+  Pages                    = {437-444},
+  Abstract                 = {How much effort will be required to compose or reuse simulations?
+	What factors need to be considered? It is generally known that composability
+	and reusability are daunting challenges for both simulations and
+	more broadly software design as a whole. We have conducted a small
+	case study in order to clarify the role that model context plays
+	in simulation composability and reusability. For a simple problem:
+	compute the position and velocity of a falling body, we found that
+	a reasonable formulation of a solution included a surprising number
+	of implicit constraints. Equally surprising, in a challenge posed
+	to a small group of capable individuals, no one of them was able
+	to identify more than three-quarters of the ultimate set of validation
+	constraints. We document the challenge, interpret its results, and
+	discuss the utility our study will have in future investigations
+	into simulation composition and reuse.},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
+}
+
+@InCollection{Spiegel2006,
+  Title                    = {{Perfect} {Developer} tool suite},
+  Author                   = {Michael Spiegel},
+  Booktitle                = {A Survey of Tools for Model Checking and Model-Based Development},
+  Publisher                = {Technical Report CS-2006-17},
+  Year                     = {2006},
+  Address                  = {Department of Computer Science, University of Virginia},
+  Editor                   = {Strunk, E. and Aiello, A. and Knight, J.},
+  Pages                    = {53-57},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
+}
+
+@InProceedings{Spiegel2006a,
+  Title                    = {Grand challenge case studies in a simulation curriculum},
+  Author                   = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
+  Booktitle                = {Proceedings of the 2006 Winter Simulation Conference ({WSC})},
+  Year                     = {2006},
+  Address                  = {Piscataway, New Jersey},
+  Editor                   = {Perrone, L.F., and Wieland, F.P., and Liu, J., and Lawson, B.G., and Nicol, D.M., and Fujimoto, R.M.},
+  Organization             = {Institute of Electrical and Electronics Engineers},
+  Pages                    = {2242-2249},
+  Abstract                 = {Students wishing to become experts in modeling and simulation (M&S)
+	need to appreciate limitations of the technology. Our goal is to
+	expose students to the current boundaries of simulation technology.
+	To achieve this, we propose the incorporation of grand challenge
+	case studies into a modeling and simulation curriculum. Grand challenge
+	problems are defined as problems for which there does not exist a
+	universally accepted solution (at present). We argue that grand challenge
+	case studies are an excellent vehicle for discovering and appreciating
+	current boundaries of M&S technology. We present three candidate
+	case studies, one in detail - the ongoing U.S. Department of Energy
+	analysis of Yucca Mountain as a location for nuclear waste storage
+	- with supporting discussion about how these cases can enhance exploration
+	of the challenges inM&S technology. We discuss the proposed Yucca
+	Mountain storage facility, along with two other case studies, and
+	examine their integration into M&S curricula.},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
+}
+
+@TechReport{Spiegel2007,
+  Title                    = {A proposal for computing with imprecise probabilities: A framework for multiple representations of uncertainty in simulation software},
+  Author                   = {Michael Spiegel},
+  Institution              = {Department of Computer Science, University of Virginia},
+  Year                     = {2007},
+  Number                   = {CS-2007-16},
+  Abstract                 = {We propose the design and construction of a programming language for
 	the formal representation of uncertainty in modeling and simulation.
 	Modeling under uncertainty has been of paramount importance in the
 	past half century, as quantitative methods of analysis have been
@@ -176,175 +245,134 @@
 	language that will facilitate the future exploration of algorithms,
 	software, and theory for quantitative uncertainty analysis in computer
 	science.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
 }
 
-@INPROCEEDINGS{Reynolds2007,
-  author = {Reynolds, Paul F. and Spiegel, Michael and Liu, Xinyu and Gore, Ross},
-  title = {Validating evolving simulations in {COERCE}},
-  booktitle = {Proceedings of the 2007 International Conference on Computational
-	Science ({ICCS})},
-  year = {2007},
-  pages = {1238-1245},
-  month = {May},
-  abstract = {We seek to increase user confidence in simulations as they are adapted
-	to meet new requirements. Our approach includes formal representation
-	of uncertainty, lightweight validation, and novel techniques for
-	exploring emergent behavior. Uncertainty representation, using formalisms
-	such as Dempster-Shafer theory, can capture designer insight about
-	uncertainty, enabling formal analysis and improving communication
-	with decision and policy makers. Lightweight validation employs targeted
-	program analysis and automated regression testing to maintain user
-	confidence as adaptations occur. Emergent behavior validation exploits
-	the semi-automatic adaptation capability of COERCE to make exploration
-	of such behavior efficient and productive. We describe our research
-	on these three technologies and their impact on validating dynamically
-	evolving simulations.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+@Conference{Spiegel2008,
+  Title                    = {Quantifying and Analyzing Uncertainty in Simulations to Enable User Understanding},
+  Author                   = {Spiegel, Michael and Gore, Ross and Reynolds, Paul F.},
+  Booktitle                = {Proceedings of the Modeling, Simulation, \& Gaming Student Capstone Conference},
+  Year                     = {2008},
+  Address                  = {Suffolk, VA},
+  Note                     = {Recipient of best paper award in "Discipline of Modeling \& Simulation" track.},
+  Organization             = {The Virginia Modeling, Analysis, \& Simulation Center (VMASC)},
+  Abstract                 = {Quantitative methods of analysis have progressed faster than quantitative
+	methods of capturing, representing, propagating and analyzing uncertainty
+	in the realm of computational thinking, adversely affecting the quality
+	of both scientific computational analysis, and important policy decisions.
+	Uncertainty arises from incomplete model input information (aleatory
+	uncertainty), incomplete model structure information (epistemic uncertainty),
+	and incomplete understanding of model dynamics. We describe a work
+	in progress computational approach, framework, and language, RiskModelica,
+	that will 1) support representation, propagation, and calibration
+	of aleatory uncertainty using probability theory, probability boxes,
+	and Dempster-Shafer theory of evidence; 2) develop reliable methodologies
+	- algorithms, data acquisition and management procedures, software
+	and theory - for quantifying uncertainty in computer predictions;
+	3) support exploration of epistemic uncertainty utilizing causal
+	analysis, and static and dynamic program slicing to characterize
+	the dependencies, causal relationships, and interactions of design
+	decisions; and 4) as a way of gaining insight into uncertainties,
+	enable subject matter experts to observe model characteristics under
+	novel conditions of interest. These capabilities represent a revolutionary
+	approach to capturing, representing, propagating, and analyzing quantitatively,
+	uncertainties that arise in the process of computational thinking.},
+  Owner                    = {mspiegel},
+  Timestamp                = {2008.08.11}
 }
 
-@INPROCEEDINGS{Spiegel2006a,
-  author = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
-  title = {Grand challenge case studies in a simulation curriculum},
-  booktitle = {Proceedings of the 2006 Winter Simulation Conference ({WSC})},
-  year = {2006},
-  editor = {Perrone, L.F., and Wieland, F.P., and Liu, J., and Lawson, B.G.,
-	and Nicol, D.M., and Fujimoto, R.M.},
-  pages = {2242-2249},
-  address = {Piscataway, New Jersey},
-  organization = {Institute of Electrical and Electronics Engineers},
-  abstract = {Students wishing to become experts in modeling and simulation (M&S)
-	need to appreciate limitations of the technology. Our goal is to
-	expose students to the current boundaries of simulation technology.
-	To achieve this, we propose the incorporation of grand challenge
-	case studies into a modeling and simulation curriculum. Grand challenge
-	problems are defined as problems for which there does not exist a
-	universally accepted solution (at present). We argue that grand challenge
-	case studies are an excellent vehicle for discovering and appreciating
-	current boundaries of M&S technology. We present three candidate
-	case studies, one in detail - the ongoing U.S. Department of Energy
-	analysis of Yucca Mountain as a location for nuclear waste storage
-	- with supporting discussion about how these cases can enhance exploration
-	of the challenges inM&S technology. We discuss the proposed Yucca
-	Mountain storage facility, along with two other case studies, and
-	examine their integration into M&S curricula.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+@TechReport{Spiegel2009,
+  Title                    = {The Dense Skip Tree: A Cache-Conscious Randomized Data Structure},
+  Author                   = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  Institution              = {Department of Computer Science, University of Virginia},
+  Year                     = {2009},
+  Number                   = {CS-2009-05},
+  Abstract                 = {We introduce the dense skip tree, a novel cache-conscious randomized
+	data structure. Algorithms for search, insertion, and deletion are
+	presented, and they are shown to have expected cost O(log n). The
+	dense skip tree obeys the same asymptotic properties as the skip
+	list and the skip tree. A series of properties on the dense skip
+	tree is proven, in order to show the probabilistic organization of
+	data in a cache-conscious design. Performance benchmarks show the
+	dense skip tree to outperform the skip list and the self-balancing
+	binary search tree when the working set cannot be contained in cache.},
+  Owner                    = {ms6ep},
+  Timestamp                = {2009.04.27}
 }
 
-@INCOLLECTION{Spiegel2006,
-  author = {Michael Spiegel},
-  title = {{Perfect} {Developer} tool suite},
-  booktitle = {A Survey of Tools for Model Checking and Model-Based Development},
-  publisher = {Technical Report CS-2006-17},
-  year = {2006},
-  editor = {Strunk, E. and Aiello, A. and Knight, J.},
-  pages = {53-57},
-  address = {Department of Computer Science, University of Virginia},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+@InProceedings{Spiegel2010,
+  Title                    = {Lock-Free Multiway Search Trees},
+  Author                   = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  Booktitle                = {Proceedings of the 39th Annual International Conference on Parallel Processing ({ICPP})},
+  Year                     = {2010},
+  Address                  = {San Diego, CA},
+  Month                    = {September 13-16},
+  Publisher                = {IEEE Computer Society},
+  Abstract                 = {We propose a lock-free multiway search tree algorithm for concurrent
+	applications with large working set sizes. Our algorithm is a variation
+	of the randomized skip tree. We relax the ordering constraints among
+	the nodes in the original skip tree definition. Optimal paths through
+	the tree are temporarily violated by mutation operations, and eventually
+	restored using online node compaction. Experimental evidence shows
+	that our lock-free skip tree outperforms a highly tuned concurrent
+	skip list under workloads of various proportions of operations and
+	working set sizes. The max throughput of our algorithm is on average
+	41% higher than the throughput of the skip list, and 129% higher
+	on the workload of the largest working set size and read-dominated
+	operations.},
+  Owner                    = {Michael},
+  Timestamp                = {2010.07.06},
+  URL                      = {http://dx.doi.org/10.1109/ICPP.2010.68}
 }
 
-@INPROCEEDINGS{Reynolds2006,
-  author = {Reynolds, Paul F. and Brogan, David C. and Carnahan, Joe and Loitiere,
-	Yannick and Spiegel, Michael},
-  title = {Capturing scientists' insight for {DDDAS}},
-  booktitle = {Proceedings of the 2006 International Conference on Computational
-	Science ({ICCS})},
-  year = {2006},
-  editor = {Alexandrov, V.N., and Van Albada, G.D., and Sloot, P.M.A., and Dongarra,
-	J.},
-  series = {Springer Lecture Notes in Computer Science},
-  pages = {570-577},
-  address = {Reading, U.K.},
-  abstract = {One of the intended consequences of utilizing simulations in dynamic,
-	data-driven application systems is that the simulations will adjust
-	to new data as it arrives. These adjustments will be difficult because
-	of the unpredictable nature of the world and because simulations
-	are so carefully tuned to model specific operating conditions. Accommodating
-	new data may require adapting or replacing numerical methods, simulation
-	parameters, or the analytical scientific models from which the simulation
-	is derived. In this research, we emphasize the important role a scientist's
-	insight can play in facilitating the runtime adaptation of a simulation
-	to accurately utilize new data. We present the tools that serve to
-	capture and apply a scientist's insight about opportunities for,
-	and limitations of, simulation adaptation. Additionaly, we report
-	on the two ongoing collaborations that serve to guide and evaluate
-	our research.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+@TechReport{Spiegel2011,
+  Title                    = {Lock-Free Multiway Search Trees as Priority Queues in Parallel Branch and Bound Applications},
+  Author                   = {Michael Spiegel and Reynolds, Jr., Paul F.},
+  Institution              = {Department of Computer Science, University of Virginia},
+  Year                     = {2011},
+  Month                    = {February},
+  Number                   = {CS-2011-01},
+  Abstract                 = {The lock-free skip tree is a cache-conscious concurrent data structure
+	for many-core systems that shows significant performance improvements
+	over the state of the art in concurrent data structure designs for
+	those applications that must contend with the deleterious effects
+	of the memory wall. In a previous study using a series of synthetic
+	benchmarks, the lock-free skip tree was found to improve peak throughput
+	by x1.8 to x2.3 relative to a state of the art lock-free skip list
+	implementation when the working set size exceeds cache size. In this
+	work, we study a class of application benchmarks that can be used
+	to characterize the relative merits of the lock-free skip tree as
+	compared to the lock-free skip list. In a series of four parallel
+	branch-and-bound applications, two of the applications are x2.3 and
+	x3.1 faster when using the skip tree as a concurrent priority queue
+	as compared to the lock-free skip list priority queue. On a shared-memory
+	supercomputer architecture the two branch-and-bound applications
+	are x1.6 and x2.1 faster with the skip tree versus the skip list
+	running at 80 hardware threads. Based on the four application benchmarks
+	and a synthetic branch-and-bound application, a set of guidelines
+	is offered for selecting the lock-free skip tree to use as a centralized
+	priority queue in parallel branch-and-bound applications.},
+  Owner                    = {ms6ep},
+  Timestamp                = {2009.04.27},
+  URL                      = {http://www.unc.edu/~mspiegel/publications/CS-2011-01.pdf}
 }
 
-@INPROCEEDINGS{Spiegel2005,
-  author = {Spiegel, Michael and Reynolds, Paul F. and Brogan, David C.},
-  title = {A case study of model context for simulation composability and reusability},
-  booktitle = {Proceedings of the 2005 Winter Simulation Conference ({WSC})},
-  year = {2005},
-  editor = {Kuhl, M.E., and Steiger, N.M., and Armstrong, F.B., and Joines, J.A.},
-  pages = {437-444},
-  address = {Piscataway, New Jersey},
-  organization = {Institute of Electrical and Electronics Engineers},
-  abstract = {How much effort will be required to compose or reuse simulations?
-	What factors need to be considered? It is generally known that composability
-	and reusability are daunting challenges for both simulations and
-	more broadly software design as a whole. We have conducted a small
-	case study in order to clarify the role that model context plays
-	in simulation composability and reusability. For a simple problem:
-	compute the position and velocity of a falling body, we found that
-	a reasonable formulation of a solution included a surprising number
-	of implicit constraints. Equally surprising, in a challenge posed
-	to a small group of capable individuals, no one of them was able
-	to identify more than three-quarters of the ultimate set of validation
-	constraints. We document the challenge, interpret its results, and
-	discuss the utility our study will have in future investigations
-	into simulation composition and reuse.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
+@PhdThesis{Spiegel2011a,
+  Title                    = {Cache-conscious concurrent data structures},
+  Author                   = {Michael Spiegel},
+  School                   = {University of Virginia},
+  Year                     = {2011},
+  Owner                    = {Michael},
+  Timestamp                = {2011.04.26},
+  URL                      = {http://mspiegel.github.io/publications/michael-spiegel-dissertation.pdf}
 }
-
-@INPROCEEDINGS{Newhall2003,
-  author = {Newhall, Tia and Finney, Sean and Ganchev, Kuzman and Spiegel, Michael},
-  title = {Nswap: A network swap module for linux clusters.},
-  booktitle = {Proceedings of the 9th European Conference on Parallel Processing
-	({Euro-Par})},
-  year = {2003},
-  editor = {Kosch, H., and Boszormenyi, L., and Hellwagner, H.},
-  series = {Springer Lecture Notes in Computer Science},
-  pages = {1160-1169},
-  abstract = {Cluster applications that process large amounts of data, such as parallel
-	scientific or multimedia applications, are likely to cause swapping
-	on individual cluster nodes. These applications will perform better
-	on clusters with network swapping support. Network swapping allows
-	any cluster node with over-committed memory to use idle memory of
-	a remote node as its backing store and to "swap" its pages over the
-	network. As the disparity between network speeds and disk speeds
-	continues to grow, network swapping will be faster than traditional
-	swapping to local disk. We present Nswap, a network swapping system
-	for heterogeneous Linux clusters and networks of Linux machines.
-	Nswap is implemented as a loadable kernel module for version 2.4
-	of the Linux kernel. It is a space-efficient and time-efficient implementation
-	that transparently performs network swapping. Nswap scales to larger
-	clusters, supports migration of remotely swapped pages, and supports
-	dynamic growing and shrinking of Nswap cache (the amount of RAM available
-	to store remote pages) in response to a node's local memory needs.
-	Results comparing Nswap running on an eight node Linux cluster with
-	100BaseT Ethernet interconnect and faster disk show that Nswap is
-	comparable to swapping to local, faster disk; depending on the workload,
-	Nswap's performance is up to 1.7 times faster than disk to between
-	1.3 and 4.6 times slower than disk for most workloads. We show that
-	with faster networking technology, Nswap will outperform swapping
-	to disk.},
-  owner = {mspiegel},
-  timestamp = {2008.08.11}
-}
-
-@comment{jabref-meta: selector_publisher:}
 
 @comment{jabref-meta: selector_author:}
 
 @comment{jabref-meta: selector_journal:}
 
 @comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: selector_publisher:}
 

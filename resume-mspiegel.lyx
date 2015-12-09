@@ -1,16 +1,16 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass simplecv
 \begin_preamble
-\newcommand\mybibname{Publications}
+\newcommand\mybibname{Selected Publications}
 \renewcommand\bibsection{%
    \noindent\normalsize{\mybibname}%
    \markboth{{\mybibname}}{{\mybibname}}%
   }
 \let\oldbibsection\bibsection
-\renewcommand{\bibsection}{\oldbibsection\addcontentsline{toc}{part}{Publications}}
+\renewcommand{\bibsection}{\oldbibsection\addcontentsline{toc}{part}{Selected Publications}}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -21,13 +21,13 @@
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -47,21 +47,30 @@
 \pdf_pdfusetitle true
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_authoryear
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0.9in
+\leftmargin 0.5in
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
@@ -180,6 +189,13 @@ end{minipage}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -0.25in
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Education
 \end_layout
@@ -240,21 +256,23 @@ Software
 Engineer AddThis (2012-present).
  Vienna, VA.
  Software engineer in the platform engineering team.
- Of the primary contributors to Hydra, a distributed data analytics platform.
- Hydra is an open source streaming data processing system that is designed
- to transform records into nested data aggregates for interactive querying.
- It is similar in features to Apache Drill or Apache Samza.
- Responsible for performance analysis and the design and implementation
- of a concurrent sorted paged object cache.
- Expert in performance optimizations by the replacement of course grained
- locking with either fine grained locking or lock-free algorithms.
+ The platform team is the expert team responsible for distributed systems
+ within AddThis.
+ We maintain Hydra, an open source streaming data processing system that
+ is designed to transform records into nested data aggregates for interactive
+ querying.
+ It is similar in features to Apache Drill.
+ Wrote a highly-concurrent sorted order paged object cache that spills to
+ disk that is one of the core data structures within Hydra.
  Principle evangelist and author of testing and documentation to improve
  stability and usability.
- Implemented an web application that exposes simple Hydra functionality
- as a teaching aid and debugging environment.
- Instituted nightly functional and performance testing.
- Wrote the reference documentation.
- Contributor to AddThis open source projects 
+ Instituted nightly automated testing.
+ Wrote the Hydra reference documentation.
+ Daily responsibilities include performance optimization, development of
+ incremental feature improvements, development of long-term large feature
+ improvements, devops application maintenance, and feedback, teaching, and
+ guidance to other teams using our platform.
+ Contributor to the AddThis open source projects 
 \begin_inset CommandInset href
 LatexCommand href
 name "hydra"
@@ -273,15 +291,41 @@ target "github.com/addthis/stream-lib"
 , 
 \begin_inset CommandInset href
 LatexCommand href
-target "basis"
+name "metrics-reporter-config"
+target "github.com/addthis/metrics-reporter-config"
+
+\end_inset
+
+ as well as several external open source projects such Google Guava.
+ Principle author of 
+\begin_inset CommandInset href
+LatexCommand href
+name "ssync"
+target "github.com/addthis/ssync"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+name "hydra-tutor"
+target "github.com/addthis/hydra-tutor"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+name "hermes"
+target "github.com/addthis/hermes"
 
 \end_inset
 
 , and 
 \begin_inset CommandInset href
 LatexCommand href
-name "ssync"
-target "github.com/addthis/ssync"
+name "cronus"
+target "github.com/addthis/cronus"
 
 \end_inset
 
@@ -354,70 +398,6 @@ www.github.com/mspiegel/lockfreeskiptree
 
 \begin_layout Topic
 \labelwidthstring MMMMM
-Graduate
-\begin_inset space ~
-\end_inset
-
-Student Modeling and Simulation Laboratory (2004-2006).
- Charlottesville, VA.
- My master's research studied the role model context plays in simulation
- composability and reusability.
- I performed a case study in which participants attempted to identify all
- validation constraints for a relatively simple model.
- For a simple problem: compute the position and velocity of a falling body,
- we found that no single study participant was capable of identifying more
- than three-quarters of all identified constraints.
- Experience with Modeling and Simulation concepts, including composability,
- reusability, interoperability, verification and validation, agent-based
- modeling, quantifying uncertainty, DIS, and HLA (refer to section 3: Teaching
- Experience).
-\end_layout
-
-\begin_layout Topic
-\labelwidthstring MMMMM
-Lead
-\begin_inset space ~
-\end_inset
-
-Developer Human Dynamics Laboratory (2008-2011).
- Charlottesville, VA.
- Founding participant in the design and development of the OpenMx library.
- OpenMx is free and open source software for use with R that allows estimation
- of a wide variety of advanced multivariate statistical models.
- The OpenMx website receives approximately 400 download requests per month.
- My areas of responsibility include the OpenMx library API, the implementation
- of the front end (transform the model into an intermediate representation),
- the implementation of the parallel back end (a numerical optimizer), the
- unit testing framework, and the performance testing framework.
- The OpenMx website is 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-openmx.psyc.virginia.edu
-\end_layout
-
-\end_inset
-
-.
- Development can be tracked at 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-www.unc.edu/~mspiegel/openmx
-\end_layout
-
-\end_inset
-
-.
- This work is funded by NIH grant 5R21DA024304-04.
-\end_layout
-
-\begin_layout Topic
-\labelwidthstring MMMMM
 Summer
 \begin_inset space ~
 \end_inset
@@ -425,155 +405,48 @@ Summer
 Intern Sun Microsystems (2008).
  Burlington, MA.
  Worked on the Fortress language implementation.
- Performed concurrent maintenance of the Fortress interpreter while designing
- a compiler to target Java bytecode instructions.
+ Performed maintenance of the Fortress interpreter while designing a compiler
+ to target Java bytecode instructions.
  Fortress is a novel programming language designed for high-performance
  computing with high programmability.
- Fortress is an open-source project sponsored by the programming languages
+ Fortress was an open-source project sponsored by the programming languages
  research group at Sun laboratories.
  Additionally I wrote a performance testing framework to work with the automated
  build system, such that code contributions can be assessed on multiple
  performance metrics.
- 
-\end_layout
-
-\begin_layout Section
-Teaching Experience
 \end_layout
 
 \begin_layout Topic
 \labelwidthstring MMMMM
-Teaching
+General
 \begin_inset space ~
 \end_inset
 
-Certificate Participant in the 2011 Training Initiative in Biomedical and
- Biological Sciences (TIBBS) Summer Teaching Series at the University of
- North Carolina, Chapel Hill.
- A series of workshops and panel discussions designed to help graduate students
- and postdocs learn how to become effective teachers, design a course, manage
- a classroom, involve undergraduates in research, and get a job at a primarily
- undergraduate teaching institution.
-\end_layout
-
-\begin_layout Topic
-\labelwidthstring MMMMM
-Twins
-\begin_inset space ~
-\end_inset
-
-Workshop Instructor for the 2010 and 2012 International Workshop on Statistical
- Genetics and Methodology of Twin and Family Studies: the Introductory Course
- in Boulder, CO.
- This five day workshop covers topics including causes of variation; univariate
- twin analysis; between group heterogeneity; path analysis; analysis of
- raw data; multivariate genetic analysis; and an introduction to quantitative
- trait loci and association.
- Assisted in syllabus modifications to introduce emphasis on software decomposit
-ion and software testing.
- 
-\end_layout
-
-\begin_layout Topic
-\labelwidthstring MMMMM
-CS451 University of Virginia.
- Team-taught Advanced Modeling and Simulation with my research advisor as
- an undergraduate seminar for upper-level students.
- The course is designed to expose students to the existing capabilities,
- challenges, and limitations of Modeling and Simulation (M&S) technology.
- I prepared reading material and class discussion for topics on modeling
- and simulation in public policy, such as model uncertainty, epidemic prediction
-, long-term nuclear waste storage, weather prediction and climate modeling.
- A static snapshot of the course website is available at 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.unc.edu/~mspiegel/wiki
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Topic
-\labelwidthstring MMMMM
-CS101
-\begin_inset space ~
-\end_inset
-
-&
-\begin_inset space ~
-\end_inset
-
-CS216 University of Virginia.
- Teaching assistant for one semester of CS101: Introduction to Computer
- Science.
- Introduces the basic principles and concepts of object-oriented programming
- through a study of algorithms, data structures and software development
- methods in Java.
- Teaching assistant for two semesters of CS216: Program and Data Representation.
- Introduces programs and data representation at the machine level.
- Representations of numbers, arithmetic operations, arrays, records, recursion,
- hashing, stacks, queues, trees, graphs, and related concepts.
- TA duties included running lab sessions every week, holding office hours,
- grading lab assignments, and grading three exams per semester.
- Lecture experience during professor's absence.
-\end_layout
-
-\begin_layout Section
-Community Activities
-\end_layout
-
-\begin_layout Standard
-Member of ACM and ACM-W organizations.
- Elected as a graduate student representative for the computer science departmen
-t, 2006-2007.
- Attended weekly faculty meetings and spoke on behalf of student opinion
- on relevant matters.
- Organized the graduate town hall meetings with department chair, the orientatio
-n weekend for incoming graduate students, and the visitation weekend for
- prospective graduate students.
- Graduate student mentor, 2005-2007.
- Volunteered in the fall of 2008 as a tutor in a departmental pilot program
- for the retention of women in computer science.
- Held weekly meeting with individual students from CS 205 to review the
- course material.
- Student and mentor assignments were rotated each week.
+Manager WSRN 91.5 FM (2001-2003).
+ Swarthmore College Radio.
+ Responsible for the continued operation of the campus 110 watt radio station.
+ The station broadcasts daily from 9 am to 4 am, with a staff of 120 students
+ and twelve musical and technical directors.
+ Annual budget of approximately $8,000.
+ Responsible for the maintenance of equipment, the training of DJs, and
+ the compliance with FCC regulations.
+ In my tenure I instituted regular office hours for the station staff, implement
+ed new security policies to protect our equipment, and facilitated the rewriting
+ of our organization’s charter.
 \end_layout
 
 \begin_layout Section
 Technical Skills
 \end_layout
 
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength{
-\backslash
-itemsep}{0mm}
-\end_layout
-
-\end_inset
-
-Languages: C, C++, Java, Java bytecode, OpenMP, MPI, Lisp, Scheme, R, Python,
- Scala, SQL, Javascript, Perl, Ruby
-\end_layout
-
-\begin_layout Itemize
-Tools: GCC, GDB, oprofile, make, autoconf, ant, maven, subversion, git,
- LaTeX, Eclipse
-\end_layout
-
-\begin_layout Itemize
-Operating Systems: Linux (RH, Debian, Ubuntu), UNIX, Windows, Mac OS X
+\begin_layout Standard
+Experienced in C (since 1995), C++ (1995), Java 1.4 - 8.0 (1999), Perl (1999),
+ Lisp (1998), Scheme (1999), MPI (2003), ant (2005), HTML/CGI (1999), CVS/SVN/gi
+t (2000), SQL (2001), XML (2001), Python (2006), R (2007), autoconf (2009),
+ JSON (2012), maven (2012), Dropwizard (Jetty, Jersey, and Jackson) (2013),
+ Cassandra (2014), PHP (2014), Javascript (since 2014), Scala (since 2014).
+ UNIX/Linux system administration experience in server and workstation environme
+nts such as Solaris, Debian, Fedora, Centos, and Ubuntu (since 1999).
 \end_layout
 
 \begin_layout Standard
@@ -581,7 +454,7 @@ Operating Systems: Linux (RH, Debian, Ubuntu), UNIX, Windows, Mac OS X
 \color white
 \begin_inset CommandInset citation
 LatexCommand nocite
-key "Olivier2011,Spiegel2011a,Boker2011,Spiegel2010,Spiegel2008,Reynolds2007,Reynolds2006,Spiegel2006a,Spiegel2005,Newhall2003"
+key "bizon2014variant,Olivier2011,Spiegel2011a,Boker2011,Spiegel2010,Spiegel2008,Spiegel2006a,Spiegel2005,Newhall2003"
 
 \end_inset
 

@@ -1,0 +1,9 @@
+# Site settings
+title: Michael Spiegel
+description: Personal website of Michael Spiegel
+
+# Build settings
+markdown: kramdown
+exclude: ["README.md"]
+sass:
+  style: compressed

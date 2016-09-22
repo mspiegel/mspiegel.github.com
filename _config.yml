@@ -1,7 +1,6 @@
 # Site settings
-title: Solo, a Jekyll Theme
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+title: Michael Spiegel
+description: Personal website of Michael Spiegel
 
 # Build settings
 markdown: kramdown

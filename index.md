@@ -2,62 +2,136 @@
 layout: default
 ---
 
-[Solo](http://chibicode.github.io/solo) is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive.
+Michael Spiegel, Ph.D.  
+Technical Fellow, Capital One  
+Twitter: [@DrMajorMcCheese](http://twitter.com/DrMajorMcCheese)  
+Publisher: [Nerd Guide DC](http://www.nerdguidedc.com)  
+Career: [Resume](/resume-mspiegel.pdf)  
+Brain Dump: [Techno Fomo](/technofomo)  
+Publications: [Google Scholar](http://scholar.google.com/citations?user=eezjo4sAAAAJ)  
 
-<iframe src="https://ghbtns.com/github-btn.html?user=chibicode&amp;repo=solo&amp;type=watch&amp;count=true&amp;size=large"
-  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe><br/>
+## Computer Science Canon
 
-Looking for a more standard Jekyll theme? Try out [Shiori](http://github.com/ellekasai/shiori) theme, which has Bootstrap integration.
+In studying computer science, I always wished for more emphasis on the
+history of the field. I like to read these formative papers in order to (a)
+understand the intellectual development of computer science, and (b) inspire
+new avenues of thinking in future research. Here is my [Great Works in Computer
+Science](/canon.md) reading list.  Please suggest any additions to the list.
 
-## Solo is useful if...
+## Open Source Projects
 
-* You want to create an "about me" page from a single markdown file and host it under a custom domain name.
-* You want to create a single-page website that's mostly text, like [Know Your Company](https://knowyourcompany.com/).
-* You want to share a single markdown file and tried GitHub Gist ([example](https://gist.github.com/dypsilon/5819504)), but would like something nicer-looking.
-* You want something like GitHub's [automatic page generator](http://pages.github.com/) for a non-code repository.
+### Hydra
 
-This page itself is built with Solo. It's generated from [this markdown file](https://github.com/chibicode/solo/blob/gh-pages/_includes/index.md).
+[Hydra](http://github.com/addthis/hydra) is a distributed data processing and
+storage system originally developed at AddThis. It ingests streams of data
+(think log files) and builds trees that are aggregates, summaries, or
+transformations of the data. These trees can be used by humans to explore (tiny
+queries), as part of a machine learning pipeline (big queries), or to support
+live consoles on websites (lots of queries). Hydra is most similar in feature
+set to Google Dremel / Apache Drill and Apache Samza.
 
-## Usage
+### ssync
 
-First, [install Jekyll](http://jekyllrb.com/docs/installation/). Then download Solo from its [GitHub Repository](https://github.com/chibicode/solo). Start Jekyll and you should see this page up and running.
+[ssync](http://github.com/addthis/ssync) is a divide-and-conquer file copying
+tool to multiple destination hosts. It transfers to N remote machines in log N
+iterations. ssync is a thin transparent layer on top of rsync that accepts
+nearly all the command-line options available to rsync.
 
-**The main file you'll be editing is `index.md`**. This becomes the content for the page.
+### stream-lib
 
-### Other Files
+[stream-lib](http://github.com/addthis/stream-lib) is a Java library for
+summarizing data in streams for which it is infeasible to store all events.
+More specifically, there are classes for estimating: cardinality (i.e. counting
+things); set membership; top-k elements and frequency.
 
-* Edit `_config.yml` to change the site's title and description.
-* Edit `_includes/head.html` to add custom code to `<head>`.
-* Edit `_includes/scripts.html` to add custom code before `</body>`.
-* Edit `CNAME` to host on a custom domain.
-* Edit `README.md` before pushing your code.
 
-### Don't use `<h1>` tags
+## Academia
 
-Wthin `index.md`, do not use `<h1>` tags - `<h1>` is reserved for the site title.
+### Hierarchical work-stealing
 
-### Supported Tags
+The high performance computing group at [RENCI](http://renci.org/) is
+developing an efficient hierarchical OpenMP implementation for the open-source
+[Qthreads](http://www.cs.sandia.gov/qthreads) runtime library. Efficient
+scheduling of tasks on modern multi-socket many-core shared memory systems
+requires consideration of an increasingly complex memory hierarchy. In a
+traditional work-stealing framework, each core is assigned a double-ended queue
+(a dequeue). One side of the dequeue supports sequential operations while the
+other side supports concurrent modification. In contrast, our runtime assigns
+several cores to a single dequeue. For these cores on the same chip, the LIFO
+task scheduling allows exploitation of cache locality between sibling tasks as
+well as between a parent task and its newly created child tasks. My contribution
+is the design and implementation of an array-based lock-free dequeue that
+supports concurrent modification on both ends of the data structure.
 
-Solo supports lists, `<hr>`s, `<table>`s,
+The paper "OpenMP Task Scheduling Strategies for Multicore NUMA Systems" has
+been accepted for publication in the peer-reviewed journal _International
+Jounral of High Performance Computing Applications_.
 
-> blockquotes, and...
+### Convergent Haplotype Association Tagging
 
-~~~html
-<pre>code blocks with syntax highlighting.</pre>
-~~~
+A haplotype is a DNA sequence that has been inherited from one parent. Each
+person possesses two haplotypes for most regions of the genome. The process of
+deducing haplotype information based on genotype data is known as _haplotype
+phasing_. Haplotype information is important in untangling the heritability of
+traits of interest such as generic disorders. We can use genetic markers that
+are uncommon in the population as beacons to identify common ancestors for
+individuals that are not known to be related. The design of this phasing
+strategy is ongoing. My responsibilities involve scaling our phasing algorithm
+to thousands of individuals and hundreds of thousands of genetic markers per
+individual.
 
-### Keep Solo up to date
+The [OpenMx Project](http://openmx.psyc.virginia.edu) intends to rewrite and
+extend the popular statistical package Mx to address the challenges facing a
+large range of modern statistical problems such as: (i) the difficulty of
+measuring behavioral traits; (ii) the availability of technologies - such as
+such as magnetic resonance imaging, continuous physiological monitoring and
+microarrays - which generate extremely large amounts of data often with complex
+time-dependent patterning; (iii) increased sophistication in the statistical
+models used to analyze the data. To address these problems, the Mx Structural
+Equation Modeling software will be rewritten so as to: (i) split OpenMx into
+modules that interoperate with the R statistical package; (ii) release OpenMx as
+open source so as to provide a stable path for future maintenance and
+development; (iii) integrate OpenMx with the Swift (formerly VDL) parallel
+workflow software.
 
-Instead of downloading, you can [fork Solo](https://github.com/chibicode/solo/fork) and use the "upstream" strategy described on [this page](https://help.github.com/articles/fork-a-repo) to keep Solo up to date.
+The paper "OpenMx: An Open Source Extended Structural Equation Modeling
+Framework" has been accepted for publication in the peer-reviewed journal
+_Psychometrika_, the print journal of the Psychometric Society.
 
-## Author
+### Cache-conscious concurrent data structures
 
-Shu Uesugi ([Twitter](http://twitter.com/chibicode)/[GitHub](http://github.com/chibicode)/[G+](https://plus.google.com/110325199858284431541?rel=author)).
+The power wall, the ILP wall, and the memory wall are driving a trend from
+implicitly parallel architectures towards explicitly parallel architectures.
+The memory wall has been identified as one of the fundamental challenges to
+high-performance concurrent computing. The design of cache-conscious concurrent
+data structures for many-core systems will show significant performance
+improvements over the state of the art in concurrent data structure designs for
+those applications that must contend with the deleterious effects of the memory
+wall. The design of cache-conscious, linearizable concurrent data structures
+has advantageous properties that can be measured across multiple architecture
+platforms. My dissertation research fills the gap in cache-conscious concurrent
+data structures by providing concurrent algorithms that implement an ordered
+set abstract data type. The dense skip tree is a randomized data structure that
+has been designed to probabilistically exploit spatial locality of reference.
+The dense skip tree causes fewer cache misses than self-balancing binary search
+trees by probabilistically aggregating consecutive sequences of keys into
+contiguous regions of memory. The primary contributions of my thesis are the
+optimistic skip tree algorithm, the lock-free concurrent skip tree algorithm,
+and the lock-free concurrent HAT trie algorithm.
 
-![Shu Uesugi](https://www.gravatar.com/avatar/b868d84bbe2ed30ec45c9253e1c1cefe.jpg?s=200)
+I successfully defended my dissertation on April 18, 2011. A copy of the thesis
+is [available online](publications/michael-spiegel-dissertation.pdf).
 
-### License
+### Fortress
 
-[MIT License](http://chibicode.mit-license.org/)
-
-<a href="https://github.com/chibicode/solo" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+[Fortress](https://en.wikipedia.org/wiki/Fortress_(programming_language)) was a
+programming language designed for high-performance computing with high
+programmability. Fortress will support features such as transactions,
+specification of locality, and implicit parallel computation as integral
+features built into the core of the language. Features such as the Fortress
+component system and test framework facilitate program assembly and testing, and
+enable powerful compiler optimizations across library boundaries. The syntax and
+type system of Fortress are custom-tailored to modern HPC programming,
+supporting mathematical notation and static checking of properties such as
+physical units and dimensions, static type checking of multidimensional arrays
+and matrices, and definitions of domain-specific language syntax in libraries.

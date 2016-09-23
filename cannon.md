@@ -92,6 +92,7 @@ These writings comprise my list of the classics in computer science. In recognit
 * "The rise and fall of High Performance Fortran: an historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
 * "Dynamo: Amazon’s Highly Available Key-value Store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels. _21st ACM Symposium on Operating Systems Principles_. October 2007.
 * "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber. _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
+* "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir. _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania. _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
 
 ### 2010 - present

@@ -5,10 +5,21 @@ layout: default
 ## A Computer Science Canon
 
 > "The classics are those books about which you usually hear people saying:
-> 'I'm rereading...';, never 'I'm reading...'" -- Italo Calvino, _Why read the
+> 'I'm rereading...', never 'I'm reading...'" -- Italo Calvino, _Why read the
 > classics?_ Italian publishing 1991, translated 1999.
 
-These writings comprise my list of the classics in computer science. In recognition of the inevitable for all efforts of this nature, the list below is biased and subjective.  While I have included several historical works, many of the contemporary works have been selected on the basis of personal interest. For a more comprehensive look at the historical works, I strongly recommend [Creating a computer science canon: A course of classic readings in computer science](http://l3d.cs.colorado.edu/~ctg/pubs/sigcsecanon.pdf) by Michael Eisenberg at the University of Colorado. My purpose of creating such a list is twofold; to enumerate those works that have profoundly shaped the computer science community, and to list those works that have influenced my own research and education. The list below strikes a balance of these two interests. Suggestions, criticisms, or comments are always appreciated.
+These writings comprise my list of the classics in computer science. In
+recognition of the inevitable for all efforts of this nature, the list below is
+biased and subjective.  While I have included several historical works, many of
+the contemporary works have been selected on the basis of personal interest. For
+a more comprehensive look at the historical works, I strongly recommend
+[Creating a computer science canon: A course of classic readings in computer
+science](http://l3d.cs.colorado.edu/~ctg/pubs/sigcsecanon.pdf) by Michael
+Eisenberg at the University of Colorado. My purpose of creating such a list is
+twofold; to enumerate those works that have profoundly shaped the computer
+science community, and to list those works that have influenced my own research
+and education. The list below strikes a balance of these two interests.
+Suggestions, criticisms, or comments are always appreciated.
 
 ### ? - 1969
 
@@ -27,7 +38,10 @@ These writings comprise my list of the classics in computer science. In recognit
 ### 1970 - 1979
 
 * "A relational model of data for large shared data banks." Edgar F. Codd, _Communications of the ACM_, volume 13, number 6, June 1970.
+* "Information distribution aspects of design methodology." David L. Parnas, _Technical Report_, Carnegie-Mellon University, February 1971.
+* "Program development by stepwise refinement." Niklaus Wirth. _Communications of the ACM_, volume 14, number 4, April 1971.
 * "Organization and maintenance of large ordered indexes." Rudolf Bayer and Edward M. McCreight, _Acta Informatica_, volume 1, issue 3, September 1972.
+* "Programming with abstract data types." Barbara Liskov and Stephen Zilles, _Proceedings of the ACM SIGPLAN symposium on Very high level languages_, April 1974.
 * "The UNIX timesharing system." Dennis Ritchie and Ken Thompson, _Communications of the ACM_, volume 17, number 7, July 1974.
 * "Computer programming as an art." Don Knuth, _Communications of the ACM_, volume 17, number 12, December 1974. ACM Turing award lecture 1974.
 * "Efficient string matching: an aid to bibliographic search." Alfred V. Aho and Margaret J. Corasick, _Communications of the ACM_, volume 18, issue 6, June 1975.
@@ -55,7 +69,7 @@ These writings comprise my list of the classics in computer science. In recognit
 * "Typestate: A programming language concept for enhancing software reliability." Robert E. Strom and Shaula Yemini, _IEEE Transactions on Software Engineering_, volume SE-12, number 1, January 1986.
 * "Fractional cascading: I. A data structuring technique." Bernard Chazelle and Leonidas J. Guibas, _Algorithmica_, volume 1, number 1-4, November 1986.
 * "A hierarchical O(N log N) force-calculation algorithm." Josh Barnes and Piet Hut, _Nature_, volume 324, December 4 1986.
-* "A case for redundant arrays of inexpensive disks (RAID)." David A Patterson, Garth Gibson, and Randy H. Katz, _ Proceedings of the 1988 ACM SIGMOD International Conference on Management of Data_, June 1988.
+* "A case for redundant arrays of inexpensive disks (RAID)." David A Patterson, Garth Gibson, and Randy H. Katz, _Proceedings of the 1988 ACM SIGMOD International Conference on Management of Data_, June 1988.
 * "Program verification: the very idea." James H. Fetzer, _Communications of the ACM_, volume 31, issue 9, September 1988.
 * "Fast, cheap and out of control: a robot invasion of the solar system." Rodney Brooks and Anita Flynn, _Journal of the British Interplanetary Society_, volume 42, 1989.
 * "Randomized search trees." Cecilia R. Aragon and Raimund G. Seidel, _Proceedings of the 30th Annual Symposium on Foundations of Computer Science_, October 1989.
@@ -86,7 +100,7 @@ These writings comprise my list of the classics in computer science. In recognit
 * "Principled design of the modern Web architecture." Roy T. Fielding and Richard N. Taylor. _ACM Transactions on Internet Technology_, volume 2, issue 2, May 2002.
 * "The evolutionary origin of complex features." Richard E. Lenski, Charles Ofria, Robert T. Pennock, and Christoph Adami. _Nature_, volume 423, May 8 2003.
 * "Traits: Composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black. _European Conference on Object-Oriented Programming_, July 21-25 2003.
-* "The Google file system." Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, _ 19th ACM Symposium on Operating Systems Principles_, October 2003.
+* "The Google file system." Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, _19th ACM Symposium on Operating Systems Principles_, October 2003.
 * "Hazard pointers: Safe memory reclamation for lock-free objects." Maged M. Michael, _IEEE Transactions on Parallel and Distributed Systems_, volume 15, issue 6, June 2004.
 * "Is computer science science?" by Peter J. Denning. From the 'Profession of IT' column of the _Communications of the ACM_, volume 48, number 4, April 2005.
 * "The rise and fall of High Performance Fortran: an historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
@@ -98,7 +112,7 @@ These writings comprise my list of the classics in computer science. In recognit
 ### 2010 - present
 
 * "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft. _Proceedings of the 18th international conference on Architectural support for programming languages and operating systems (ASPLOS)_. March 2013.
-* "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes. _Proceedings of the European Conference on Computer Systems_. April 2015._
+* "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes. _Proceedings of the European Conference on Computer Systems_. April 2015.
 
 ### On Teaching
 

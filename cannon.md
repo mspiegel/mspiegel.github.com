@@ -30,6 +30,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Computing machinery and intelligence." Alan Turing, _Mind_, volume 49, 1950.
 * "A proof of the queuing formula L =&lambda;W." John Little, _Operations Research_, volume 9, May-June 1961.
 * "College admissions and the stability of marriage." David Gale and Lloyd Shapley, _The American Mathematical Monthly_, volume 69, number 1, January 1962.
+* "Cramming more components onto integrated circuits." Gordon E. Moore, _Electronics_, volume 38, number 8, April 1965.
 * "Go to statement considered harmful." Edsger Dijkstra, _Communications of the ACM_, volume 11, number 3, March 1968.
 * "Semantics of context-free languages." Donald E. Knuth, _Theory of Computing Systems_, volume 2, number 2, June 1968.
 * "A formal basis for the heuristic determination of minimum cost paths." Peter E. Hart, Nils J. Nilsson, and Bertram Raphael, _IEEE Transactions on Systems Science and Cybernetics_, volume 4, issue 2, July 1968.

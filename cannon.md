@@ -1,5 +1,6 @@
 ---
 layout: default
+title: CS Canon
 ---
 
 ## A Computer Science Canon

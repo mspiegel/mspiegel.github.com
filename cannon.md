@@ -112,7 +112,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania. _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
 
 ### 2010 - present
-
+* "Cycles, cells and platters: an empirical analysisof hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan. _Proceedings of the sixth conference on Computer systems (EuroSys)_. April 2011.
 * "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft. _Proceedings of the 18th international conference on Architectural support for programming languages and operating systems (ASPLOS)_. March 2013.
 * "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes. _Proceedings of the European Conference on Computer Systems_. April 2015.
 

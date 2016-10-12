@@ -17,7 +17,7 @@ In studying computer science, I always wished for more emphasis on the
 history of the field. I like to read these formative papers in order to (a)
 understand the intellectual development of computer science, and (b) inspire
 new avenues of thinking in future research. Here is my [Great Works in Computer
-Science](/cannon) reading list.  Please suggest any additions to the list.
+Science](/canon) reading list.  Please suggest any additions to the list.
 
 ## Open Source Projects
 

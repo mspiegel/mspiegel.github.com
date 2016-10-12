@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Michael Spiegel
 ---
 
 Michael Spiegel, Ph.D.  

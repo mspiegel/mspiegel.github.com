@@ -103,6 +103,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services." Seth Gilbert and Nancy Lynch. _ACM SIGACT News_, volume 33, issue 2, June 2002.
 * "The evolutionary origin of complex features." Richard E. Lenski, Charles Ofria, Robert T. Pennock, and Christoph Adami. _Nature_, volume 423, May 8 2003.
 * "Traits: Composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black. _European Conference on Object-Oriented Programming_, July 21-25 2003.
+* "Making reliable distributed systems in the presence of software errors." Joe Armstrong. Doctoral dissertation. The Royal Institute of Technology Stockholm, Sweden. November 2003.
 * "The Google file system." Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, _19th ACM Symposium on Operating Systems Principles_, October 2003.
 * "Hazard pointers: Safe memory reclamation for lock-free objects." Maged M. Michael, _IEEE Transactions on Parallel and Distributed Systems_, volume 15, issue 6, June 2004.
 * "Is computer science science?" by Peter J. Denning. From the 'Profession of IT' column of the _Communications of the ACM_, volume 48, number 4, April 2005.

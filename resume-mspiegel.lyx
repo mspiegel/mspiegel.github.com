@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 506
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass simplecv
 \begin_preamble
 \newcommand\mybibname{Selected Publications}
@@ -18,16 +20,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman times
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -253,7 +255,7 @@ Software
 \begin_inset space ~
 \end_inset
 
-Engineer AddThis (2012-present).
+Engineer AddThis (2012-2016).
  Vienna, VA.
  Software engineer in the platform engineering team.
  The platform team is the expert team responsible for distributed systems
@@ -441,10 +443,8 @@ Technical Skills
 
 \begin_layout Standard
 Experienced in C (since 1995), C++ (1995), Java 1.4 - 8.0 (1999), Perl (1999),
- Lisp (1998), Scheme (1999), MPI (2003), ant (2005), HTML/CGI (1999), CVS/SVN/gi
-t (2000), SQL (2001), XML (2001), Python (2006), R (2007), autoconf (2009),
- JSON (2012), maven (2012), Dropwizard (Jetty, Jersey, and Jackson) (2013),
- Cassandra (2014), PHP (2014), Javascript (since 2014), Scala (since 2014).
+ Scheme (1999), SQL (2001), Python (2006), R (2007), autoconf (2009), PHP
+ (2014), Javascript (2014), Scala (2014), Go (2016), Rust (since 2016).
  UNIX/Linux system administration experience in server and workstation environme
 nts such as Solaris, Debian, Fedora, Centos, and Ubuntu (since 1999).
 \end_layout

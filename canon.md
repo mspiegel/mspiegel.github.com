@@ -54,6 +54,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Communicating sequential processes."  Tony Hoare (C.A.R. Hoare), _Communications of the ACM_, volume 21, number 8, August 1978.
 * "Social processes and proofs of theorems and programs." Richard De Millo, Richard Lipton, and Alan Perlis, _Communications of the ACM_, volume 22, number 5, May 1979.
 * "The ubiquitous B-Tree." Douglas Comer, _ACM Computing Surveys_, volume 11, issue 2, June 1979.
+* "The paradigms of programming." Robert W. Floyd, _Communications of the ACM_, volume 22, number 8, August 1979.
 * _Computers and intractability: A guide to the theory of NP-completeness_. Michael Garey and David Johnson, W. H. Freeman Publishers, 1979.
 * _G&ouml;del, Escher, Bach: An eternal golden braid_.  Douglas Hofstadter, Basic Books Publishers, 1979.  20th anniversary edition published 1999.
 

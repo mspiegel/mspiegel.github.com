@@ -251,6 +251,29 @@ Work Experience
 
 \begin_layout Topic
 \labelwidthstring MMMMM
+Technical
+\begin_inset space ~
+\end_inset
+
+Fellow Capital One (2016-present).
+ Tysons Corner, VA.
+ The Technical Fellows at Capital One are a team of individuals who have
+ demonstrated ability in building massive scalable systems in domains outside
+ of finance.
+ They apply their collective experience to transform Capital One into a
+ leading information-based technology company.
+ Fellows are valued for technical knowledge and judgment; creative problem
+ solving and innovation; technical leadership, advisory, and consulting;
+ capability as a teacher and mentor; and technical vision.
+ The Technology Fellow is the most senior position in the individual contributer
+ career path.
+ Fellows serve as role models for other individual contributors by assisting
+ to build the deliverables.
+ We learn by doing and by teaching others.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
 Software
 \begin_inset space ~
 \end_inset
@@ -260,7 +283,7 @@ Engineer AddThis (2012-2016).
  Software engineer in the platform engineering team.
  The platform team is the expert team responsible for distributed systems
  within AddThis.
- We maintain Hydra, an open source streaming data processing system that
+ They maintain Hydra, an open source streaming data processing system that
  is designed to transform records into nested data aggregates for interactive
  querying.
  It is similar in features to Apache Drill.
@@ -443,8 +466,8 @@ Technical Skills
 
 \begin_layout Standard
 Experienced in C (since 1995), C++ (1995), Java 1.4 - 8.0 (1999), Perl (1999),
- Scheme (1999), SQL (2001), Python (2006), R (2007), autoconf (2009), PHP
- (2014), Javascript (2014), Scala (2014), Go (2016), Rust (since 2016).
+ Scheme (1999), SQL (2001), Python (2006), R (2007), PHP (2014), Javascript
+ (2014), Scala (2014), Go (2016), Rust (since 2016).
  UNIX/Linux system administration experience in server and workstation environme
 nts such as Solaris, Debian, Fedora, Centos, and Ubuntu (since 1999).
 \end_layout
@@ -454,7 +477,7 @@ nts such as Solaris, Debian, Fedora, Centos, and Ubuntu (since 1999).
 \color white
 \begin_inset CommandInset citation
 LatexCommand nocite
-key "bizon2014variant,Olivier2011,Spiegel2011a,Boker2011,Spiegel2010,Spiegel2008,Spiegel2006a,Spiegel2005,Newhall2003"
+key "bizon2014variant,Olivier2011,Spiegel2011a,Boker2011,Spiegel2010,Spiegel2006a,Spiegel2005,Newhall2003"
 
 \end_inset
 

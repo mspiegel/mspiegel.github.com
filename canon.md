@@ -95,7 +95,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Cilk: An efficient multithreaded runtime system." Robert D. Blumofe, Christopher F. Joerg, Bradley C. Kuszmaul, Charles E. Leiserson, Keith H. Randall, and Yuli Zhou. _ACM SIGPLAN Notices_, volume 30, issue 8, August 1995.
 * "NESL: A nested data-parallel language." Guy E. Blelloch, _Technical Report CMU-CS-95-170_, September 1995.
 * "Exokernel: an operating system architecture for application-level resource management." Dawson R. Engler, M. Frans Kaashoek, and James O'Toole, _Proceedings of the Fifteenth ACM Symposium on Operating System Principles_, December 1995.
-* _Growing artificial societies: social science from the bottom up_ Joshua M. Epstein and Robert Axtell. Brookings Institution Press, 1996.
+* _Growing artificial societies: social science from the bottom up_. Joshua M. Epstein and Robert Axtell, Brookings Institution Press, 1996.
 * "The cathedral and the bazaar."  Eric S. Raymond, first presented by the author at the Linux Kongress, May 1997. Published as a part of a book with the same title in 1999.
 * "The PageRank Citation Ranking: Bringing Order to the Web". Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd. Technical Report. Stanford InfoLab. 1999.
 

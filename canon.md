@@ -65,7 +65,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Program slicing." Mark Weiser, _Proceedings of the 5th international conference on software engineering_, March 1981.
 * "The Byzantine generals problem." Leslie Lamport, Robert Shostak, and Marshall Pease, _ACM Transactions on Programming Languages and Systems_, volume 4, issue 3, July 1982.
 * "Epigrams on programming." Alan J. Perlis, _ACM SIGPLAN Notices_, volume 17, issue 9, September 1982.
-* "Maintaining knowledge about temporal intervals." James F. Allen, _Communications of the ACM_, volume 26, issue 11, November 1983.
+* "Maintaining knowledge about temporal intervals." James F. Allen, _Communications of the ACM_, volume 26, number 11, November 1983.
 * "Reflections on trusting trust." Ken Thompson, _Communications of the ACM_, volume 27, number 8, August 1984.  ACM Turing award lecture 1983.
 * "Depth-first iterative-deepening: An optimal admissible tree search." Richard E. Korf, _Artificial Intelligence_, volume 27, issue 1, September 1985.
 * "An experimental evaluation of the assumption of independence in multiversion programming." John C. Knight and Nancy G. Leveson, _IEEE Transactions on Software Engineering_, volume SE-12, number 1, January 1986.
@@ -73,7 +73,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Fractional cascading: I. A data structuring technique." Bernard Chazelle and Leonidas J. Guibas, _Algorithmica_, volume 1, number 1-4, November 1986.
 * "A hierarchical O(N log N) force-calculation algorithm." Josh Barnes and Piet Hut, _Nature_, volume 324, December 4 1986.
 * "A case for redundant arrays of inexpensive disks (RAID)." David A Patterson, Garth Gibson, and Randy H. Katz, _Proceedings of the 1988 ACM SIGMOD International Conference on Management of Data_, June 1988.
-* "Program verification: the very idea." James H. Fetzer, _Communications of the ACM_, volume 31, issue 9, September 1988.
+* "Program verification: the very idea." James H. Fetzer, _Communications of the ACM_, volume 31, number 9, September 1988.
 * "Fast, cheap and out of control: a robot invasion of the solar system." Rodney Brooks and Anita Flynn, _Journal of the British Interplanetary Society_, volume 42, 1989.
 * "Randomized search trees." Cecilia R. Aragon and Raimund G. Seidel, _Proceedings of the 30th Annual Symposium on Foundations of Computer Science_, October 1989.
 
@@ -111,6 +111,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Is computer science science?" by Peter J. Denning. From the 'Profession of IT' column of the _Communications of the ACM_, volume 48, number 4, April 2005.
 * "The rise and fall of High Performance Fortran: an historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
 * "Dynamo: Amazon’s Highly Available Key-value Store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels. _21st ACM Symposium on Operating Systems Principles_. October 2007.
+* "MapReduce: Simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.
 * "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber. _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
 * "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir. _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania. _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.

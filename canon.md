@@ -29,6 +29,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * _Theory of games and economic behavior_. John Von Neumann and Oskar Morgenstern, Princeton University Press, 1944. 60th anniversary edition published in 2004.
 * "A mathematical theory of communication." Claude Shannon, _Bell System Technical Journal_, volume 27, July and October, 1948.
 * "Computing machinery and intelligence." Alan Turing, _Mind_, volume 49, 1950.
+* "A difficulty in the concept of social welfare." Kenneth J. Arrow, _The Journal of Political Economy_, August 1950.
 * "A proof of the queuing formula L =&lambda;W." John Little, _Operations Research_, volume 9, May-June 1961.
 * "College admissions and the stability of marriage." David Gale and Lloyd Shapley, _The American Mathematical Monthly_, volume 69, number 1, January 1962.
 * "Cramming more components onto integrated circuits." Gordon E. Moore, _Electronics_, volume 38, number 8, April 1965.

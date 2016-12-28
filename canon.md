@@ -162,6 +162,7 @@ Michael Eisenberg.  University of Colorado.
 * "Consistent hashing and random trees: Distributed caching protocols for relieving hot spots on the World Wide Web." David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, and Daniel Lewin, _Proceedings of the 29th Annual ACM Symposium on Theory of Computing_ May 1997.
 * "Cache-oblivious algorithms." Matteo Frigo, Charles E. Leiserson, Harald Prokop, and Sridhar Ramachandran, _Proceedings of the 40th Annual Symposium on Foundations of Computer Science_, October 1999.
 * "Cuckoo hashing."  Rasmus Pagh and Flemming Friche Rodler, _Proceedings of the 9th Annual European Symposium on Algorithms_ August 2001.
+* "The cost of cache-oblivious searching." Michael A. Bender, Gerth Stølting Brodal, Rolf Fagerberg, Dongdong Ge, Simai He, Haodung Hu, John Iacono, and Alejandro López-Ortiz, _Proceedings of the 44th Annual IEEE Symposium on Foundations of Computer Science_, October 2003.
 * "Cache-oblivious B-Tree." Michael A. Bender, Erik D. Demaine, and Martin Farach-Colton, _SIAM Journal on Computing_, volume 35, issue 2, March 2005.
 * "Hopscotch hashing." Maurice Herlihy, Nir Shavit, and Moran Tzafrir, _Proceedings of the 22nd International Symposium on Distributed Computing_, September 2008.
 * "The adaptive radix tree: ARTful indexing for main-memory databases." Viktor Leis, Alfons Kemper, and Thomas Neumann, _Proceedings of the IEEE 29th International Conference on Data Engineering_, April 2013.

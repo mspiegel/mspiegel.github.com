@@ -2,7 +2,7 @@ html {
   font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 60rem) {
   html {
     font-size: 20px;
   }
@@ -13,7 +13,7 @@ body {
   color: #333;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 60rem) {
   body {
     margin-top: 5rem;
   }
@@ -41,7 +41,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 60rem) {
   h1 {
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -58,7 +58,7 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 60rem) {
   h2 {
     margin-top: 2.5rem;
     font-size: 1.5rem;
@@ -144,7 +144,7 @@ pre > code {
 }
 
 .container {
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 1rem;
 }

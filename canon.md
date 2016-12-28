@@ -42,7 +42,7 @@ Suggestions, criticisms, or comments are always appreciated.
 
 * "A relational model of data for large shared data banks." Edgar F. Codd, _Communications of the ACM_, volume 13, number 6, June 1970.
 * "Information distribution aspects of design methodology." David L. Parnas, _Technical Report_, Carnegie-Mellon University, February 1971.
-* "Program development by stepwise refinement." Niklaus Wirth. _Communications of the ACM_, volume 14, number 4, April 1971.
+* "Program development by stepwise refinement." Niklaus Wirth, _Communications of the ACM_, volume 14, number 4, April 1971.
 * "Organization and maintenance of large ordered indexes." Rudolf Bayer and Edward M. McCreight, _Acta Informatica_, volume 1, issue 3, September 1972.
 * "Programming with abstract data types." Barbara Liskov and Stephen Zilles, _Proceedings of the ACM SIGPLAN symposium on Very high level languages_, April 1974.
 * "The UNIX timesharing system." Dennis Ritchie and Ken Thompson, _Communications of the ACM_, volume 17, number 7, July 1974.
@@ -81,7 +81,7 @@ Suggestions, criticisms, or comments are always appreciated.
 ### 1990 - 1999
 
 * "Evaluation of safety-critical software." David Parnas, A. John van Schouwen, and Shu Po Kwan, _Communications of the ACM_, volume 33, number 6, June 1990.
-* "Linearizability: a correctness condition for concurrent objects." 	Maurice P. Herlihy and Jeannette M. Wing, _ACM Transactions on Programming Languages and Systems_, July 1990.
+* "Linearizability: a correctness condition for concurrent objects." Maurice P. Herlihy and Jeannette M. Wing, _ACM Transactions on Programming Languages and Systems_, July 1990.
 * "A bridging model for parallel computation." Leslie G. Valiant, _Communications of the ACM_, volume 33, number 8, August 1990.
 * "Wait-free synchronization." Maurice Herlihy. _ACM Transactions on Programming Languages and Systems_, volume 13, issue 1, January 1991.
 * "A data locality optimizing algorithm." Michael E. Wolf and Monica S. Lam, _Proceedings of the ACM Conference on Programming Language Design and Implementation_, June 1991.
@@ -93,7 +93,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Molecular computation of solutions to combinatorial problems." Leonard M. Adleman, _Science_, volume 266, number 5187, November 1994.
 * "Hitting the memory wall: implications of the obvious." William A. Wulf and Sally A. McKee, _ACM SIGARCH Computer Architecture News_, volume 23, issue 1, March 1995.
 * "Software transactional memory." Nir Shavit and Dan Touitou, _Proceedings of the 14th ACM Symposium on Principles of Distributed Computing_, August 1995.
-* "Cilk: An efficient multithreaded runtime system." Robert D. Blumofe, Christopher F. Joerg, Bradley C. Kuszmaul, Charles E. Leiserson, Keith H. Randall, and Yuli Zhou. _ACM SIGPLAN Notices_, volume 30, issue 8, August 1995.
+* "Cilk: An efficient multithreaded runtime system." Robert D. Blumofe, Christopher F. Joerg, Bradley C. Kuszmaul, Charles E. Leiserson, Keith H. Randall, and Yuli Zhou, _ACM SIGPLAN Notices_, volume 30, issue 8, August 1995.
 * "NESL: A nested data-parallel language." Guy E. Blelloch, _Technical Report CMU-CS-95-170_, September 1995.
 * "Exokernel: an operating system architecture for application-level resource management." Dawson R. Engler, M. Frans Kaashoek, and James O'Toole, _Proceedings of the Fifteenth ACM Symposium on Operating System Principles_, December 1995.
 * _Growing artificial societies: social science from the bottom up_. Joshua M. Epstein and Robert Axtell, Brookings Institution Press, 1996.
@@ -102,26 +102,32 @@ Suggestions, criticisms, or comments are always appreciated.
 
 ### 2000 - 2009
 
-* "Principled design of the modern Web architecture." Roy T. Fielding and Richard N. Taylor. _ACM Transactions on Internet Technology_, volume 2, issue 2, May 2002.
-* "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services." Seth Gilbert and Nancy Lynch. _ACM SIGACT News_, volume 33, issue 2, June 2002.
-* "The evolutionary origin of complex features." Richard E. Lenski, Charles Ofria, Robert T. Pennock, and Christoph Adami. _Nature_, volume 423, May 8 2003.
-* "Traits: Composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black. _European Conference on Object-Oriented Programming_, July 21-25 2003.
+* "Principled design of the modern Web architecture." Roy T. Fielding and Richard N. Taylor, _ACM Transactions on Internet Technology_, volume 2, issue 2, May 2002.
+* "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services." Seth Gilbert and Nancy Lynch, _ACM SIGACT News_, volume 33, issue 2, June 2002.
+* "The evolutionary origin of complex features." Richard E. Lenski, Charles Ofria, Robert T. Pennock, and Christoph Adami, _Nature_, volume 423, May 8 2003.
+* "Traits: Composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black, _European Conference on Object-Oriented Programming_, July 21-25 2003.
 * "The Google file system." Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, _19th ACM Symposium on Operating Systems Principles_, October 2003.
-* "Making reliable distributed systems in the presence of software errors." Joe Armstrong. Doctoral dissertation. The Royal Institute of Technology Stockholm, Sweden. November 2003.
+* "Making reliable distributed systems in the presence of software errors." Joe Armstrong, Doctoral dissertation. The Royal Institute of Technology Stockholm, Sweden. November 2003.
 * "Hazard pointers: Safe memory reclamation for lock-free objects." Maged M. Michael, _IEEE Transactions on Parallel and Distributed Systems_, volume 15, issue 6, June 2004.
-* "Is computer science science?" by Peter J. Denning. From the 'Profession of IT' column of the _Communications of the ACM_, volume 48, number 4, April 2005.
+* "Is computer science science?" by Peter J. Denning, _Communications of the ACM_, volume 48, number 4, April 2005.
 * "The rise and fall of High Performance Fortran: an historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
-* "Dynamo: Amazon’s Highly Available Key-value Store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels. _21st ACM Symposium on Operating Systems Principles_. October 2007.
+* "Dynamo: Amazon’s Highly Available Key-value Store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, _21st ACM Symposium on Operating Systems Principles_. October 2007.
 * "MapReduce: Simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.
-* "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber. _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
-* "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir. _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
-* "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania. _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
+* "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber, _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
+* "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir, _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
+* "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
 
 ### 2010 - present
-* "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan. _Proceedings of the Sixth Conference on Computer systems_. April 2011.
-* "The tail at scale." Jeffrey Dean and Luiz Andre Barroso. _Communications of the ACM_, volume 56, number 2, February 2013.
-* "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft. _Proceedings of the 18th International Conference on Architectural Support for Programming Languages and Operating Systems_. March 2013.
-* "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes. _Proceedings of the Tenth European Conference on Computer Systems_. April 2015.
+* "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan, _Proceedings of the Sixth Conference on Computer systems_. April 2011.
+* "The tail at scale." Jeffrey Dean and Luiz Andre Barroso, _Communications of the ACM_, volume 56, number 2, February 2013.
+* "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft, _Proceedings of the 18th International Conference on Architectural Support for Programming Languages and Operating Systems_. March 2013.
+* "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes, _Proceedings of the Tenth European Conference on Computer Systems_. April 2015.
+
+### Related Work
+
+See also [Creating a computer science canon: A course of classic readings in
+computer science](http://l3d.cs.colorado.edu/%7Ectg/pubs/sigcsecanon.pdf),
+Michael Eisenberg.  University of Colorado.
 
 ### On Teaching
 
@@ -130,6 +136,36 @@ Suggestions, criticisms, or comments are always appreciated.
 * "A 2007 model curriculum for a liberal arts degree in computer science." Liberal Arts Computer Science Consortium (LACS). ACM Journal on Educational Resources in Computing, volume 17, number 2, 2007.
 * "Computer science and the liberal arts: A philosophical examination." Henry M. Walker and Charles Kelemen, _ACM Transactions on Computing Education_, volume 10, number 1, 2010.
 
-See also [Creating a computer science canon: A course of classic readings in
-computer science](http://l3d.cs.colorado.edu/%7Ectg/pubs/sigcsecanon.pdf),
-Michael Eisenberg.  University of Colorado.
+### Data Structures
+
+> "Algorithms + Data Structures = Programs" - Niklaus Wirth
+
+* "File searching using variable length keys." Rene de la Briandais, _Proceedings of the Western Joint Computer Conference_, 1959.
+* "An algorithm for the organization of information." Georgy Adelson-Velsky and G. Evgenii Landis, _Proceedings of the USSR Academy of Sciences_, 1962.
+* "PATRICIA—practical algorithm to retrieve information coded in alphanumeric." Donald R. Morrison, _Journal of the ACM_, volume 15, issue 4, October 1968.
+* "Organization and maintenance of large ordered indexes." Rudolf Bayer and Edward M. McCreight, _Acta Informatica_, volume 1, issue 3, September 1972.
+* "Binary search trees of bounded balance." Jürg Nievergelt and Edward M. Reingold, _SIAM journal on Computing_ volume 2, number 1, March 1973.
+* "Linear pattern matching algorithms." Peter Weiner. _Proceedings of the 14th Annual Symposium on Switching and Automata Theory_, October 1973.
+* "Multidimensional binary search trees used for associative searching." Jon Louis Bentley, _Communications of the ACM_, volume 18, issue 9, September 1975.
+* "A space-economical suffix tree construction algorithm." Edward M. McCreight. _Journal of the ACM_, volume 22, issue 2, April 1976.
+* "A dichromatic framework for balanced trees." Leonidas J. Guibas and Robert Sedgewick, _Proceedings of the 19th Annual Symposium on Foundations of Computer Science_, October 1978.
+* "The ubiquitous B-Tree." Douglas Comer, _ACM Computing Surveys_, volume 11, issue 2, June 1979.
+* "Efficient locking for concurrent operations on B-trees." Philip L. Lehman, _ACM Transactions on Database Systems_, volume 6, issue 4, December 1981.
+* "Geometric modeling using octree encoding." Donald Meagher, _Computer Graphics and Image Processing_, volume 19, number 2, June 1982.
+* "Self-adjusting binary search trees." Daniel Dominic Sleator and Robert Endre Tarjan, _Journal of the ACM_, volume 32, issue 3, July 1985.
+* "Robin hood hashing." Pedro Celis, Doctoral dissertation, University of Waterloo, 1986. Technical report CS-86-14.
+* "A study of index structures for main memory database management systems." Tobin J. Lehman and Michael J. Carey, _Proceedings of the 12th International Conference on Very Large Data Bases_, August 1986.
+* "Fractional cascading: I. A data structuring technique." Bernard Chazelle and Leonidas J. Guibas, _Algorithmica_, volume 1, number 1-4, November 1986.
+* "Randomized search trees." Cecilia R. Aragon and Raimund G. Seidel, _Proceedings of the 30th Annual Symposium on Foundations of Computer Science_, October 1989.
+* "Skip lists: A probabilistic alternative to balanced trees." William Pugh. _Communications of the ACM_, volume 33, issue 6, June 1990.
+* "The log-structured merge-tree (LSM-tree)." Patrick O’Neil, Edward Cheng, Dieter Gawlick, and Elizabeth O’Neil. _Acta Informatica_, volume 33, issue 4, June 1996.
+* "Consistent hashing and random trees: Distributed caching protocols for relieving hot spots on the World Wide Web." David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, and Daniel Lewin, _Proceedings of the 29th Annual ACM Symposium on Theory of Computing_ May 1997.
+* "Cache-oblivious algorithms." Matteo Frigo, Charles E. Leiserson, Harald Prokop, and Sridhar Ramachandran, _Proceedings of the 40th Annual Symposium on Foundations of Computer Science_, October 1999.
+* "Cuckoo hashing."  Rasmus Pagh and Flemming Friche Rodler, _Proceedings of the 9th Annual European Symposium on Algorithms_ August 2001.
+* "Cache-oblivious B-Tree." Michael A. Bender, Erik D. Demaine, and Martin Farach-Colton, _SIAM Journal on Computing_, volume 35, issue 2, March 2005.
+* "Hopscotch hashing." Maurice Herlihy, Nir Shavit, and Moran Tzafrir, _Proceedings of the 22nd International Symposium on Distributed Computing_, September 2008.
+* "The adaptive radix tree: ARTful indexing for main-memory databases." Viktor Leis, Alfons Kemper, and Thomas Neumann, _Proceedings of the IEEE 29th International Conference on Data Engineering_, April 2013.
+* "Rank-balanced trees." Bernhard Haeupler, Siddhartha Sen, and Robert E. Tarjan. _ACM Transactions on Algorithms_ volume 11, number 4, June 2015.
+* "An introduction to B ε-trees and write-optimization." Michael A. Bender, Martin Farach-Colton, William Jannen, Rob Johnson, Bradley C. Kuszmaul, Donald E. Porter, Jun Yuan, and Yang Zhan, ";login: the USENIX magazine", volume 40, number 5, October 2015.
+* "40 years of suffix trees." Alberto Apostolico, Maxime Crochemore, Martin Farach-Colton, Zvi Galil, and S. Muthukrishnan. _Communications of the ACM_, volume 59, number 4, April 2016.
+* "Consistent hashing with bounded loads." Vahab Mirrokni, Mikkel Thorup, and Morteza Zadimoghaddam, arXiv:1608.01350, August 2016.

@@ -66,6 +66,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Program slicing." Mark Weiser, _Proceedings of the 5th international conference on software engineering_, March 1981.
 * "The Byzantine generals problem." Leslie Lamport, Robert Shostak, and Marshall Pease, _ACM Transactions on Programming Languages and Systems_, volume 4, issue 3, July 1982.
 * "Epigrams on programming." Alan J. Perlis, _ACM SIGPLAN Notices_, volume 17, issue 9, September 1982.
+* "A real-time garbage collector based on the lifetimes of objects." Henry Lieberman and Carl Hewitt, _Communications of the ACM_ volume 26, issue 6, June 1983.
 * "Maintaining knowledge about temporal intervals." James F. Allen, _Communications of the ACM_, volume 26, number 11, November 1983.
 * "Reflections on trusting trust." Ken Thompson, _Communications of the ACM_, volume 27, number 8, August 1984.  ACM Turing award lecture 1983.
 * "Depth-first iterative-deepening: An optimal admissible tree search." Richard E. Korf, _Artificial Intelligence_, volume 27, issue 1, September 1985.
@@ -118,6 +119,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
 
 ### 2010 - present
+
 * "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan, _Proceedings of the Sixth Conference on Computer systems_. April 2011.
 * "The tail at scale." Jeffrey Dean and Luiz Andre Barroso, _Communications of the ACM_, volume 56, number 2, February 2013.
 * "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft, _Proceedings of the 18th International Conference on Architectural Support for Programming Languages and Operating Systems_. March 2013.
@@ -158,6 +160,7 @@ Michael Eisenberg.  University of Colorado.
 * "Fractional cascading: I. A data structuring technique." Bernard Chazelle and Leonidas J. Guibas, _Algorithmica_, volume 1, number 1-4, November 1986.
 * "Randomized search trees." Cecilia R. Aragon and Raimund G. Seidel, _Proceedings of the 30th Annual Symposium on Foundations of Computer Science_, October 1989.
 * "Skip lists: A probabilistic alternative to balanced trees." William Pugh. _Communications of the ACM_, volume 33, issue 6, June 1990.
+* "Ropes: an alternative to strings." Hans J. Boehm, Russ Atkinson, and Michael Plass. _Software: Practice and Experience_ volume 25, number 12, December 1995.
 * "The log-structured merge-tree (LSM-tree)." Patrick O’Neil, Edward Cheng, Dieter Gawlick, and Elizabeth O’Neil. _Acta Informatica_, volume 33, issue 4, June 1996.
 * "Consistent hashing and random trees: Distributed caching protocols for relieving hot spots on the World Wide Web." David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, and Daniel Lewin, _Proceedings of the 29th Annual ACM Symposium on Theory of Computing_ May 1997.
 * "Cache-oblivious algorithms." Matteo Frigo, Charles E. Leiserson, Harald Prokop, and Sridhar Ramachandran, _Proceedings of the 40th Annual Symposium on Foundations of Computer Science_, October 1999.
@@ -165,6 +168,7 @@ Michael Eisenberg.  University of Colorado.
 * "The cost of cache-oblivious searching." Michael A. Bender, Gerth Stølting Brodal, Rolf Fagerberg, Dongdong Ge, Simai He, Haodung Hu, John Iacono, and Alejandro López-Ortiz, _Proceedings of the 44th Annual IEEE Symposium on Foundations of Computer Science_, October 2003.
 * "Cache-oblivious B-Tree." Michael A. Bender, Erik D. Demaine, and Martin Farach-Colton, _SIAM Journal on Computing_, volume 35, issue 2, March 2005.
 * "Hopscotch hashing." Maurice Herlihy, Nir Shavit, and Moran Tzafrir, _Proceedings of the 22nd International Symposium on Distributed Computing_, September 2008.
+* "Z-rays: divide arrays and conquer speed and flexibility." Jennifer B. Sartor, Stephen M. Blackburn, Daniel Frampton, Martin Hirzel, and Kathryn S. McKinley, _Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation_ June 2010.
 * "The adaptive radix tree: ARTful indexing for main-memory databases." Viktor Leis, Alfons Kemper, and Thomas Neumann, _Proceedings of the IEEE 29th International Conference on Data Engineering_, April 2013.
 * "Rank-balanced trees." Bernhard Haeupler, Siddhartha Sen, and Robert E. Tarjan. _ACM Transactions on Algorithms_ volume 11, number 4, June 2015.
 * "An introduction to B ε-trees and write-optimization." Michael A. Bender, Martin Farach-Colton, William Jannen, Rob Johnson, Bradley C. Kuszmaul, Donald E. Porter, Jun Yuan, and Yang Zhan, ";login: the USENIX magazine", volume 40, number 5, October 2015.

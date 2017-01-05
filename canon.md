@@ -105,6 +105,7 @@ Suggestions, criticisms, or comments are always appreciated.
 
 * "Principled design of the modern Web architecture." Roy T. Fielding and Richard N. Taylor, _ACM Transactions on Internet Technology_, volume 2, issue 2, May 2002.
 * "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services." Seth Gilbert and Nancy Lynch, _ACM SIGACT News_, volume 33, issue 2, June 2002.
+* "QuickCheck: a lightweight tool for random testing of Haskell programs." Koen Claessen and John Hughes, _ACM SIGPLAN Notices_, volume 37, issue 12, December 2002.
 * "The evolutionary origin of complex features." Richard E. Lenski, Charles Ofria, Robert T. Pennock, and Christoph Adami, _Nature_, volume 423, May 8 2003.
 * "Traits: Composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black, _European Conference on Object-Oriented Programming_, July 21-25 2003.
 * "The Google file system." Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, _19th ACM Symposium on Operating Systems Principles_, October 2003.

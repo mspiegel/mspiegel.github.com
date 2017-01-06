@@ -117,15 +117,17 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Dynamo: Amazon’s Highly Available Key-value Store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, _21st ACM Symposium on Operating Systems Principles_. October 2007.
 * "MapReduce: Simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.
 * "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber, _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
+* "KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs." Cristian Cadar, Daniel Dunbar, and Dawson R. Engler, _Proceedings of the 8th USENIX Symposium on Operating Systems Design and Implementation_, volume 8, December 2008.
 * "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir, _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
 
 ### 2010 - present
 
-* "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan, _Proceedings of the Sixth Conference on Computer systems_. April 2011.
+* "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan, _Proceedings of the Sixth Conference on Computer systems_, April 2011.
 * "The tail at scale." Jeffrey Dean and Luiz Andre Barroso, _Communications of the ACM_, volume 56, number 2, February 2013.
-* "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft, _Proceedings of the 18th International Conference on Architectural Support for Programming Languages and Operating Systems_. March 2013.
-* "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes, _Proceedings of the Tenth European Conference on Computer Systems_. April 2015.
+* "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft, _Proceedings of the 18th International Conference on Architectural Support for Programming Languages and Operating Systems_, March 2013.
+* "Spanner: Google’s globally distributed database." James C. Corbett, Jeffrey Dean, Michael Epstein, Andrew Fikes, Christopher Frost, Jeffrey John Furman, Sanjay Ghemawat et al. _ACM Transactions on Computer Systems_, volume 31, number 3, August 2013.
+* "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes, _Proceedings of the Tenth European Conference on Computer Systems_, April 2015.
 
 ### Related Work
 

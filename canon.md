@@ -32,6 +32,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "A difficulty in the concept of social welfare." Kenneth J. Arrow, _The Journal of Political Economy_, August 1950.
 * "A proof of the queuing formula L =&lambda;W." John Little, _Operations Research_, volume 9, May-June 1961.
 * "College admissions and the stability of marriage." David Gale and Lloyd Shapley, _The American Mathematical Monthly_, volume 69, number 1, January 1962.
+* "Design of a separable transition-diagram compiler." Melvin E. Conway, _Communications of the ACM_, volume 6, number 7, July 1963.
 * "Cramming more components onto integrated circuits." Gordon E. Moore, _Electronics_, volume 38, number 8, April 1965.
 * "Go to statement considered harmful." Edsger Dijkstra, _Communications of the ACM_, volume 11, number 3, March 1968.
 * "Semantics of context-free languages." Donald E. Knuth, _Theory of Computing Systems_, volume 2, number 2, June 1968.

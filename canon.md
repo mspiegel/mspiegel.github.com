@@ -174,6 +174,7 @@ Michael Eisenberg.  University of Colorado.
 * "Hopscotch hashing." Maurice Herlihy, Nir Shavit, and Moran Tzafrir, _Proceedings of the 22nd International Symposium on Distributed Computing_, September 2008.
 * "Z-rays: divide arrays and conquer speed and flexibility." Jennifer B. Sartor, Stephen M. Blackburn, Daniel Frampton, Martin Hirzel, and Kathryn S. McKinley, _Proceedings of the 31st ACM SIGPLAN Conference on Programming Language Design and Implementation_ June 2010.
 * "The adaptive radix tree: ARTful indexing for main-memory databases." Viktor Leis, Alfons Kemper, and Thomas Neumann, _Proceedings of the IEEE 29th International Conference on Data Engineering_, April 2013.
+* "Logical physical clocks and consistent snapshots in globally distributed databases." Sandeep Kulkarni, Murat Demirbas, Deepak Madeppa, Bharadwaj Avva, and Marcelo Leone, Technical Report 2014-04, SUNY University at Buffalo, 2014.
 * "Rank-balanced trees." Bernhard Haeupler, Siddhartha Sen, and Robert E. Tarjan. _ACM Transactions on Algorithms_ volume 11, number 4, June 2015.
 * "An introduction to B ε-trees and write-optimization." Michael A. Bender, Martin Farach-Colton, William Jannen, Rob Johnson, Bradley C. Kuszmaul, Donald E. Porter, Jun Yuan, and Yang Zhan, ";login: the USENIX magazine", volume 40, number 5, October 2015.
 * "40 years of suffix trees." Alberto Apostolico, Maxime Crochemore, Martin Farach-Colton, Zvi Galil, and S. Muthukrishnan. _Communications of the ACM_, volume 59, number 4, April 2016.

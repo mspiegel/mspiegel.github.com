@@ -75,6 +75,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Typestate: A programming language concept for enhancing software reliability." Robert E. Strom and Shaula Yemini, _IEEE Transactions on Software Engineering_, volume SE-12, number 1, January 1986.
 * "Fractional cascading: I. A data structuring technique." Bernard Chazelle and Leonidas J. Guibas, _Algorithmica_, volume 1, number 1-4, November 1986.
 * "A hierarchical O(N log N) force-calculation algorithm." Josh Barnes and Piet Hut, _Nature_, volume 324, December 4 1986.
+* "Flocks, herds and schools: A distributed behavioral model." Craig W. Reynolds, Proceedings of the 14th Annual Conference on Computer Graphics and Interactive Techniques, volume 21, number 4, July 1987.
 * "A case for redundant arrays of inexpensive disks (RAID)." David A Patterson, Garth Gibson, and Randy H. Katz, _Proceedings of the 1988 ACM SIGMOD International Conference on Management of Data_, June 1988.
 * "Program verification: the very idea." James H. Fetzer, _Communications of the ACM_, volume 31, number 9, September 1988.
 * "Fast, cheap and out of control: a robot invasion of the solar system." Rodney Brooks and Anita Flynn, _Journal of the British Interplanetary Society_, volume 42, 1989.

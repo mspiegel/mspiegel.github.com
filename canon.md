@@ -47,13 +47,14 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Organization and maintenance of large ordered indexes." Rudolf Bayer and Edward M. McCreight, _Acta Informatica_, volume 1, issue 3, September 1972.
 * "Programming with abstract data types." Barbara Liskov and Stephen Zilles, _Proceedings of the ACM SIGPLAN symposium on Very high level languages_, April 1974.
 * "The UNIX timesharing system." Dennis Ritchie and Ken Thompson, _Communications of the ACM_, volume 17, number 7, July 1974.
+* "Monitors: An operating system structuring concept." Tony Hoare (C.A.R. Hoare), _Communications of the ACM_, volume 17, number 10, October 1974.
 * "Computer programming as an art." Don Knuth, _Communications of the ACM_, volume 17, number 12, December 1974. ACM Turing award lecture 1974.
 * "Efficient string matching: an aid to bibliographic search." Alfred V. Aho and Margaret J. Corasick, _Communications of the ACM_, volume 18, issue 6, June 1975.
 * "Multidimensional binary search trees used for associative searching." Jon Louis Bentley, _Communications of the ACM_, volume 18, issue 9, September 1975.
 * "Debunking the 'Expensive Procedure Call' myth, or, procedure call implementations Considered Harmful, or, Lambda: The Ultimate GOTO." Guy Lewis Steele, Jr. _MIT AI Lab Memo_, AIM-443, October 1977.
 * "Time, clocks, and the ordering of events in a distributed system." Leslie Lamport, _Communications of the ACM_, volume 21, number 7, July 1978.
 * "Can programming be liberated from the Von Neumann style? A functional style and its algebra of programs." John Backus, _Communications of the ACM_, volume 21, number 8, August 1978. ACM Turing award lecture 1977.
-* "Communicating sequential processes."  Tony Hoare (C.A.R. Hoare), _Communications of the ACM_, volume 21, number 8, August 1978.
+* "Communicating sequential processes." Tony Hoare (C.A.R. Hoare), _Communications of the ACM_, volume 21, number 8, August 1978.
 * "Social processes and proofs of theorems and programs." Richard De Millo, Richard Lipton, and Alan Perlis, _Communications of the ACM_, volume 22, number 5, May 1979.
 * "The ubiquitous B-Tree." Douglas Comer, _ACM Computing Surveys_, volume 11, issue 2, June 1979.
 * "The paradigms of programming." Robert W. Floyd, _Communications of the ACM_, volume 22, number 8, August 1979.

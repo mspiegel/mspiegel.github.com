@@ -48,7 +48,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Programming with abstract data types." Barbara Liskov and Stephen Zilles, _Proceedings of the ACM SIGPLAN symposium on Very high level languages_, April 1974.
 * "The UNIX timesharing system." Dennis Ritchie and Ken Thompson, _Communications of the ACM_, volume 17, number 7, July 1974.
 * "Monitors: An operating system structuring concept." Tony Hoare (C.A.R. Hoare), _Communications of the ACM_, volume 17, number 10, October 1974.
-* "Computer programming as an art." Don Knuth, _Communications of the ACM_, volume 17, number 12, December 1974. ACM Turing award lecture 1974.
+* "Computer programming as an art." Donald E. Knuth, _Communications of the ACM_, volume 17, number 12, December 1974. ACM Turing award lecture 1974.
 * "Efficient string matching: an aid to bibliographic search." Alfred V. Aho and Margaret J. Corasick, _Communications of the ACM_, volume 18, issue 6, June 1975.
 * "Multidimensional binary search trees used for associative searching." Jon Louis Bentley, _Communications of the ACM_, volume 18, issue 9, September 1975.
 * "Debunking the 'Expensive Procedure Call' myth, or, procedure call implementations Considered Harmful, or, Lambda: The Ultimate GOTO." Guy Lewis Steele, Jr. _MIT AI Lab Memo_, AIM-443, October 1977.
@@ -70,6 +70,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Epigrams on programming." Alan J. Perlis, _ACM SIGPLAN Notices_, volume 17, issue 9, September 1982.
 * "A real-time garbage collector based on the lifetimes of objects." Henry Lieberman and Carl Hewitt, _Communications of the ACM_ volume 26, issue 6, June 1983.
 * "Maintaining knowledge about temporal intervals." James F. Allen, _Communications of the ACM_, volume 26, number 11, November 1983.
+* "Literate programming." Donald E. Knuth, _The Computer Journal_, volume 27, number 2, January 1984.
 * "Reflections on trusting trust." Ken Thompson, _Communications of the ACM_, volume 27, number 8, August 1984.  ACM Turing award lecture 1983.
 * "Depth-first iterative-deepening: An optimal admissible tree search." Richard E. Korf, _Artificial Intelligence_, volume 27, issue 1, September 1985.
 * "An experimental evaluation of the assumption of independence in multiversion programming." John C. Knight and Nancy G. Leveson, _IEEE Transactions on Software Engineering_, volume SE-12, number 1, January 1986.

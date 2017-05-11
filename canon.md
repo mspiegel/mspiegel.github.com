@@ -41,6 +41,7 @@ Suggestions, criticisms, or comments are always appreciated.
 
 ### 1970 - 1979
 
+* "The Uncanny Valley." Masahiro Mori, _Energy_, volume 7, number 4, 1970 (in Japanese). Republished as "The Uncanny Valley [From the Field]" Masahiro Mori, Karl F. MacDorman, and Norri Kageki, _IEEE Robotics Automation Magazine_, volume 19, number 2, June 2012.
 * "A relational model of data for large shared data banks." Edgar F. Codd, _Communications of the ACM_, volume 13, number 6, June 1970.
 * "Information distribution aspects of design methodology." David L. Parnas, _Technical Report_, Carnegie-Mellon University, February 1971.
 * "Program development by stepwise refinement." Niklaus Wirth, _Communications of the ACM_, volume 14, number 4, April 1971.

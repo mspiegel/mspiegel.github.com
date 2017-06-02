@@ -133,6 +133,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Spanner: Google’s globally distributed database." James C. Corbett, Jeffrey Dean, Michael Epstein, Andrew Fikes, Christopher Frost, Jeffrey John Furman, Sanjay Ghemawat et al. _ACM Transactions on Computer Systems_, volume 31, number 3, August 2013.
 * "In search of an understandable consensus algorithm." Diego Ongaro and John Ousterhout, _Proceedings of the 2014 USENIX Annual Technical Conference_, June 2014.
 * "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes, _Proceedings of the Tenth European Conference on Computer Systems_, April 2015.
+* "The Dataflow Model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." Tyler Akidau, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety, Daniel Mills, Frances Perry, Eric Schmidt, and Sam Whittle, _Proceedings of the VLDB Endowment_, volume 8, August 2015.
 
 ### Related Work
 

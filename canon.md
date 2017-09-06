@@ -186,3 +186,4 @@ Michael Eisenberg.  University of Colorado.
 * "An introduction to B ε-trees and write-optimization." Michael A. Bender, Martin Farach-Colton, William Jannen, Rob Johnson, Bradley C. Kuszmaul, Donald E. Porter, Jun Yuan, and Yang Zhan, ";login: the USENIX magazine", volume 40, number 5, October 2015.
 * "40 years of suffix trees." Alberto Apostolico, Maxime Crochemore, Martin Farach-Colton, Zvi Galil, and S. Muthukrishnan. _Communications of the ACM_, volume 59, number 4, April 2016.
 * "Consistent hashing with bounded loads." Vahab Mirrokni, Mikkel Thorup, and Morteza Zadimoghaddam, arXiv:1608.01350, August 2016.
+* "Mison: a fast JSON parser for data analytics." Yinan Li, Nikos R. Katsipoulakis, Badrish Chandramouli, Jonathan Goldstein, and Donald Kossmann, _Proceedings of the VLDB Endowment_, volume 10, number 10, June 2017.

@@ -4,7 +4,7 @@ title: Michael Spiegel
 ---
 
 Michael Spiegel, Ph.D.  
-Technical Fellow, Capital One  
+Master Software Engineer, Capital One  
 Twitter: [@DrMajorMcCheese](http://twitter.com/DrMajorMcCheese)  
 Publisher: [Nerd Guide DC](http://www.nerdguidedc.com)  
 Career: [Resume](/resume-mspiegel.pdf)  

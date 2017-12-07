@@ -117,6 +117,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Making reliable distributed systems in the presence of software errors." Joe Armstrong, Doctoral dissertation. The Royal Institute of Technology Stockholm, Sweden. November 2003.
 * "Hazard pointers: Safe memory reclamation for lock-free objects." Maged M. Michael, _IEEE Transactions on Parallel and Distributed Systems_, volume 15, issue 6, June 2004.
 * "Is computer science science?" by Peter J. Denning, _Communications of the ACM_, volume 48, number 4, April 2005.
+* "The Purely Functional Software Deployment Model." Eelco Dolstra, Doctoral dissertation. Faculty of Science, Utrecht, The Netherlands. January 2006.
 * "The rise and fall of High Performance Fortran: an historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
 * "Dynamo: Amazon’s highly available key-value store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, _21st ACM Symposium on Operating Systems Principles_. October 2007.
 * "MapReduce: Simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.

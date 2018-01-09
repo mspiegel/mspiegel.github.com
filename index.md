@@ -21,6 +21,22 @@ Science](/canon) reading list.  Please suggest any additions to the list.
 
 ## Open Source Projects
 
+### Checks-Out
+
+[Checks-Out](https://github.com/capitalone/checks-out) is a simple pull request
+approval system using GitHub protected branches and maintainers files.
+Pull requests are locked and cannot be merged until the minimum number of approvals
+are received. Project maintainers can indicate their approval by commenting on the
+pull request and including "I approve" in their approval text. Checks-Out also
+provides integration with GitHub Reviews. An accepted GitHub Review is counted
+as an approval. GitHub Review that requests additional changes blocks the pull
+request from merging.
+
+Some significant features in Checks-Out that are not (yet) in GitHub Reviews are:
+custom approval policies, different approval policies for different branches and/or
+file paths, optional auto-merge when all status checks have passed, optional
+auto-tagging of merges.
+
 ### Hydra
 
 [Hydra](http://github.com/addthis/hydra) is a distributed data processing and

@@ -6,7 +6,6 @@ title: Michael Spiegel
 Michael Spiegel, Ph.D.  
 Master Software Engineer, Capital One  
 Twitter: [@DrMajorMcCheese](http://twitter.com/DrMajorMcCheese)  
-Publisher: [Nerd Guide DC](http://www.nerdguidedc.com)  
 Career: [Resume](/resume-mspiegel.pdf)  
 Brain Dump: [Techno Fomo](/technofomo)  
 Publications: [Google Scholar](http://scholar.google.com/citations?user=eezjo4sAAAAJ)  

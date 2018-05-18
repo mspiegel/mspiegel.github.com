@@ -1,5 +1,5 @@
 #LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 506
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -259,7 +259,34 @@ Software
 \begin_inset space ~
 \end_inset
 
-Engineer Capital One (2016-present).
+Engineer Capital One (2018-present).
+ Tysons Corner, VA.
+ Lead individial contributor in the automated teller machine (ATM) division.
+ Member of the research and development team.
+ Design and implement software from the operating system to the backend
+ application to interact with next-generation hardware.
+ I also rotate across several teams in ATM that support the existing software
+ stack.
+ My role is to solve challenging technical problems in order to reduce the
+ technical debt of the division and to serve as a role model for junior
+ engineers.
+ Instituted peer review, automated build pipelines and deployments, containerize
+d build environments, and best practices for Golang software development.
+ Taught myself proficiency in our backend banking and credit mainframes
+ in order to automate the management of our test environment.
+\end_layout
+
+\begin_layout Topic
+\labelwidthstring MMMMM
+Master
+\begin_inset space ~
+\end_inset
+
+Software
+\begin_inset space ~
+\end_inset
+
+Engineer Capital One (2016-2018).
  Tysons Corner, VA.
  The Technical Fellows Program at Capital One is a team of individuals who
  have demonstrated ability in building massive scalable systems in domains
@@ -425,26 +452,6 @@ www.github.com/mspiegel/lockfreeskiptree
 
 \begin_layout Topic
 \labelwidthstring MMMMM
-Summer
-\begin_inset space ~
-\end_inset
-
-Intern Sun Microsystems (2008).
- Burlington, MA.
- Worked on the Fortress language implementation.
- Performed maintenance of the Fortress interpreter while designing a compiler
- to target Java bytecode instructions.
- Fortress is a novel programming language designed for high-performance
- computing with high programmability.
- Fortress was an open-source project sponsored by the programming languages
- research group at Sun laboratories.
- Additionally I wrote a performance testing framework to work with the automated
- build system, such that code contributions can be assessed on multiple
- performance metrics.
-\end_layout
-
-\begin_layout Topic
-\labelwidthstring MMMMM
 General
 \begin_inset space ~
 \end_inset
@@ -468,9 +475,9 @@ Technical Skills
 
 \begin_layout Standard
 Experienced in C (since 1995), C++ (1995), Java 1.4 - 8.0 (1999), Perl (1999),
- Scheme (1999), SQL (2001), Python (2006), R (2007), PHP (2014), Javascript
- (2014), Scala (2014), Kafka (2014), Cassandra (2014), Spark (2015), Go
- (2016), Rust (2016), AWS (EC2, ECS, S3, RDS, IAM, lambda).
+ Scheme (1999), SQL (2001), Python (2006), R (2007), MPI (2011), PHP (2014),
+ Javascript (2014), Scala (2014), Kafka (2014), Cassandra (2014), Spark
+ (2015), Go (2016), Rust (2016), AWS (EC2, ECS, S3, RDS, IAM, lambda).
  UNIX/Linux system administration experience in server and workstation environme
 nts such as Solaris, Debian, Fedora, Centos, and Ubuntu (since 1999).
 \end_layout
@@ -480,7 +487,7 @@ nts such as Solaris, Debian, Fedora, Centos, and Ubuntu (since 1999).
 \color white
 \begin_inset CommandInset citation
 LatexCommand nocite
-key "bizon2014variant,Olivier2011,Spiegel2011a,Boker2011,Spiegel2010,Spiegel2006a,Spiegel2005,Newhall2003"
+key "bizon2014variant,Olivier2011,Spiegel2011a,Boker2011,Spiegel2010,Newhall2003"
 
 \end_inset
 

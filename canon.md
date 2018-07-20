@@ -108,21 +108,23 @@ Suggestions, criticisms, or comments are always appreciated.
 
 ### 2000 - 2009
 
+* _Problem frames: analyzing and structuring software development problems_. Michael Jackson, Addison-Wesley Longman Publishing, 2001.
 * "Principled design of the modern Web architecture." Roy T. Fielding and Richard N. Taylor, _ACM Transactions on Internet Technology_, volume 2, issue 2, May 2002.
 * "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services." Seth Gilbert and Nancy Lynch, _ACM SIGACT News_, volume 33, issue 2, June 2002.
 * "QuickCheck: a lightweight tool for random testing of Haskell programs." Koen Claessen and John Hughes, _ACM SIGPLAN Notices_, volume 37, issue 12, December 2002.
 * "The evolutionary origin of complex features." Richard E. Lenski, Charles Ofria, Robert T. Pennock, and Christoph Adami, _Nature_, volume 423, May 8 2003.
-* "Traits: Composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black, _European Conference on Object-Oriented Programming_, July 21-25 2003.
+* "Traits: composable units of behaviour." Schärli, Nathanael, Stéphane Ducasse, Oscar Nierstrasz, and Andrew P. Black, _European Conference on Object-Oriented Programming_, July 21-25 2003.
 * "The Google file system." Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung, _19th ACM Symposium on Operating Systems Principles_, October 2003.
 * "Making reliable distributed systems in the presence of software errors." Joe Armstrong, Doctoral dissertation. The Royal Institute of Technology Stockholm, Sweden. November 2003.
 * "Hazard pointers: Safe memory reclamation for lock-free objects." Maged M. Michael, _IEEE Transactions on Parallel and Distributed Systems_, volume 15, issue 6, June 2004.
 * "Is computer science science?" by Peter J. Denning, _Communications of the ACM_, volume 48, number 4, April 2005.
-* "The Purely Functional Software Deployment Model." Eelco Dolstra, Doctoral dissertation. Faculty of Science, Utrecht, The Netherlands. January 2006.
+* _Software abstractions: logic, language, and analysis_. Daniel Jackson, MIT Press, 2006. Revised edition published 2016.
+* "The purely functional software deployment model." Eelco Dolstra, Doctoral dissertation. Faculty of Science, Utrecht, The Netherlands. January 2006.
 * "The rise and fall of High Performance Fortran: an historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
 * "Dynamo: Amazon’s highly available key-value store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, _21st ACM Symposium on Operating Systems Principles_. October 2007.
-* "MapReduce: Simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.
-* "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber, _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
-* "KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs." Cristian Cadar, Daniel Dunbar, and Dawson R. Engler, _Proceedings of the 8th USENIX Symposium on Operating Systems Design and Implementation_, volume 8, December 2008.
+* "MapReduce: simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.
+* "Bigtable: a distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber, _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
+* "KLEE: unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs." Cristian Cadar, Daniel Dunbar, and Dawson R. Engler, _Proceedings of the 8th USENIX Symposium on Operating Systems Design and Implementation_, volume 8, December 2008.
 * "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir, _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
 

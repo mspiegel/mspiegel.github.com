@@ -192,3 +192,5 @@ Michael Eisenberg.  University of Colorado.
 * "40 years of suffix trees." Alberto Apostolico, Maxime Crochemore, Martin Farach-Colton, Zvi Galil, and S. Muthukrishnan. _Communications of the ACM_, volume 59, number 4, April 2016.
 * "Consistent hashing with bounded loads." Vahab Mirrokni, Mikkel Thorup, and Morteza Zadimoghaddam, arXiv:1608.01350, August 2016.
 * "Mison: a fast JSON parser for data analytics." Yinan Li, Nikos R. Katsipoulakis, Badrish Chandramouli, Jonathan Goldstein, and Donald Kossmann, _Proceedings of the VLDB Endowment_, volume 10, number 10, June 2017.
+* "Anna: a KVS for any scale." Chengang Wu, Jose M. Faliero, Yihan Lin, and Joseph M. Hellerstein, _34th IEEE International Conference on Data Engineering (ICDE)_, April 2018.
+* "Filter before you parse: faster analytics on raw data with sparser." Shoumik Palkar, Firas Abuzaid, Peter Bailis, and Matei Zaharia, _Proceedings of the VLDB Endowment_, volume 11, number 11, June 2018.

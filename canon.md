@@ -197,3 +197,4 @@ Michael Eisenberg.  University of Colorado.
 * "Mison: a fast JSON parser for data analytics." Yinan Li, Nikos R. Katsipoulakis, Badrish Chandramouli, Jonathan Goldstein, and Donald Kossmann, _Proceedings of the VLDB Endowment_, volume 10, number 10, June 2017.
 * "Anna: a KVS for any scale." Chengang Wu, Jose M. Faliero, Yihan Lin, and Joseph M. Hellerstein, _34th IEEE International Conference on Data Engineering (ICDE)_, April 2018.
 * "Filter before you parse: faster analytics on raw data with sparser." Shoumik Palkar, Firas Abuzaid, Peter Bailis, and Matei Zaharia, _Proceedings of the VLDB Endowment_, volume 11, number 11, June 2018.
+* "A fork() in the road." Andrew Baumann, Jonathan Appavoo, Orran Krieger, and Timothy Roscoe, _Workshop on Hot Topics in Operating Systems (HotOS)_, May 2019.

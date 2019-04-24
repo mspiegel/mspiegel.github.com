@@ -131,6 +131,7 @@ Suggestions, criticisms, or comments are always appreciated.
 
 ### 2010 - present
 
+* "A few billion lines of code later: Using static analysis to find bugs in the real world." Al Bessey, Ken Block, Ben Chelf, Andy Chou, Bryan Fulton, Seth Hallem, Charles Henri-Gros, Asya Kamsky, Scott McPeak, and Dawson Engler, _Communications of the ACM_, volume 53, number 2, February 2010.
 * "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan, _Proceedings of the Sixth Conference on Computer systems_, April 2011.
 * "The tail at scale." Jeffrey Dean and Luiz Andre Barroso, _Communications of the ACM_, volume 56, number 2, February 2013.
 * "Unikernels: Library operating systems for the cloud." Anil Madhavapeddy, Richard Mortier, Charalampos Rotsos, David Scott, Balraj Singh, Thomas Gazagnaire, Steven Smith, Steven Hand and Jon Crowcroft, _Proceedings of the 18th International Conference on Architectural Support for Programming Languages and Operating Systems_, March 2013.

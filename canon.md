@@ -15,7 +15,7 @@ biased and subjective.  While I have included several historical works, many of
 the contemporary works have been selected on the basis of personal interest. For
 a more comprehensive look at the historical works, I strongly recommend
 [Creating a computer science canon: A course of classic readings in computer
-science](http://l3d.cs.colorado.edu/~ctg/pubs/sigcsecanon.pdf) by Michael
+science](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.84.1164) by Michael
 Eisenberg at the University of Colorado. My purpose of creating such a list is
 twofold; to enumerate those works that have profoundly shaped the computer
 science community, and to list those works that have influenced my own research
@@ -127,7 +127,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Bigtable: a distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber, _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
 * "KLEE: unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs." Cristian Cadar, Daniel Dunbar, and Dawson R. Engler, _Proceedings of the 8th USENIX Symposium on Operating Systems Design and Implementation_, volume 8, December 2008.
 * "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir, _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
-* "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22Nd Symposium on Operating Systems Principles_. October 2009.
+* "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22nd Symposium on Operating Systems Principles_. October 2009.
 
 ### 2010 - present
 
@@ -145,7 +145,7 @@ Suggestions, criticisms, or comments are always appreciated.
 ### Related Work
 
 See also [Creating a computer science canon: A course of classic readings in
-computer science](http://l3d.cs.colorado.edu/%7Ectg/pubs/sigcsecanon.pdf),
+computer science](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.84.1164),
 Michael Eisenberg.  University of Colorado.
 
 ### On Teaching

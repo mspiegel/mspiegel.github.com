@@ -193,7 +193,8 @@ Michael Eisenberg.  University of Colorado.
 * "WiscKey: Separating keys from values in SSD-conscious storage." Lanyue Lu, Thanumalayan Sankaranarayana Pillai, Andrea C. Arpaci-Dusseau, and Remzi H. Arpaci-Dusseau, _Proceedings of the 14th USENIX Conference on File and Storage Technologies (FAST)_, February 2016.
 * "An introduction to B ε-trees and write-optimization." Michael A. Bender, Martin Farach-Colton, William Jannen, Rob Johnson, Bradley C. Kuszmaul, Donald E. Porter, Jun Yuan, and Yang Zhan, ";login: the USENIX magazine", volume 40, number 5, October 2015.
 * "The many faces of consistency." Marcos K. Aguilera and Douglas B. Terry. _Data Engineering Bulletin_, March 2016.
-* "40 years of suffix trees." Alberto Apostolico, Maxime Crochemore, Martin Farach-Colton, Zvi Galil, and S. Muthukrishnan. _Communications of the ACM_, volume 59, number 4, April 2016.
+* "40 years of suffix trees." Alberto Apostolico, Maxime Crochemore, Martin Farach-Colton, Zvi Galil, and S. Muthukrishnan, _Communications of the ACM_, volume 59, number 4, April 2016.
+* "Deletion Without Rebalancing in Binary Search Trees." Siddhartha Sen, Robert E. Tarjan, and David Hong Kyun Kim, _ACM Transactions on Algorithms (TALG)_, volume 12, number 4, September 2016.
 * "Consistent hashing with bounded loads." Vahab Mirrokni, Mikkel Thorup, and Morteza Zadimoghaddam, arXiv:1608.01350, August 2016.
 * "Cicada: Dependably fast multi-core in-memory transactions." Hyeontaek Lim, Michael Kaminsky, and David G. Andersen, _Proceedings of the 2017 ACM International Conference on Management of Data (SIGMOD)_, May 2017.
 * "Mison: a fast JSON parser for data analytics." Yinan Li, Nikos R. Katsipoulakis, Badrish Chandramouli, Jonathan Goldstein, and Donald Kossmann, _Proceedings of the VLDB Endowment_, volume 10, number 10, June 2017.

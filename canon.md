@@ -155,7 +155,7 @@ Michael Eisenberg.  University of Colorado.
 * "A 2007 model curriculum for a liberal arts degree in computer science." Liberal Arts Computer Science Consortium (LACS). ACM Journal on Educational Resources in Computing, volume 17, number 2, 2007.
 * "Computer science and the liberal arts: A philosophical examination." Henry M. Walker and Charles Kelemen, _ACM Transactions on Computing Education_, volume 10, number 1, 2010.
 
-### Data Structures
+### Candidate Papers
 
 > "Algorithms + Data Structures = Programs" - Niklaus Wirth
 
@@ -202,3 +202,4 @@ Michael Eisenberg.  University of Colorado.
 * "Anna: a KVS for any scale." Chengang Wu, Jose M. Faliero, Yihan Lin, and Joseph M. Hellerstein, _34th IEEE International Conference on Data Engineering (ICDE)_, April 2018.
 * "Filter before you parse: faster analytics on raw data with sparser." Shoumik Palkar, Firas Abuzaid, Peter Bailis, and Matei Zaharia, _Proceedings of the VLDB Endowment_, volume 11, number 11, June 2018.
 * "A fork() in the road." Andrew Baumann, Jonathan Appavoo, Orran Krieger, and Timothy Roscoe, _Workshop on Hot Topics in Operating Systems (HotOS)_, May 2019.
+* "Snap: a microkernel approach to host networking." Michael Marty, Marc de Kruijf, Jacob Adriaens, Christopher Alfeld, Sean Bauer, Carlo Contavalli*Michael Dalton*, Nandita Dukkipati, William C. Evans, Steve Gribble, Nicholas Kidd, RomanKononov, Gautam Kumar, Carl Mauer, Emily Musick, Lena Olson, Erik Rubow, Michael Ryan,Kevin Springborn, Paul Turner, Valas Valancius, Xi Wang, and Amin Vahdat, _Proceedings of the ACM SIGOPS 27th Symposium on Operating Systems Principles_, October 2019.

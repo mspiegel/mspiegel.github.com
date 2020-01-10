@@ -140,7 +140,8 @@ Suggestions, criticisms, or comments are always appreciated.
 * "In search of an understandable consensus algorithm." Diego Ongaro and John Ousterhout, _Proceedings of the 2014 USENIX Annual Technical Conference_, June 2014.
 * "Large-scale cluster management at Google with Borg." Abhishek Verma, Luis Pedrosa, Madhukar R. Korupolu, David Oppenheimer, Eric Tune, and John Wilkes, _Proceedings of the Tenth European Conference on Computer Systems_, April 2015.
 * "The Dataflow Model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." Tyler Akidau, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety, Daniel Mills, Frances Perry, Eric Schmidt, and Sam Whittle, _Proceedings of the VLDB Endowment_, volume 8, August 2015.
-* "Bringing the web up to speed with WebAssembly." Andreas Haas, Andreas Rossberg, Derek L. Schuff, Ben L. Titzer, Michael Holman, Dan Gohman, Luke Wagner, Alon Zakai, JF Bastien, _Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation_, June 2017.
+* "Engineering record And replay For deployability: Extended technical report." Robert O'Callahan, Chris Jones, Nathan Froyd, Kyle Huey, Albert Noll, and Nimrod Partush. Mozilla Research. May 2017.
+* "Bringing the web up to speed with WebAssembly." Andreas Haas, Andreas Rossberg, Derek L. Schuff, Ben L. Titzer, Michael Holman, Dan Gohman, Luke Wagner, Alon Zakai, and JF Bastien, _Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation_, June 2017.
 
 ### Related Work
 

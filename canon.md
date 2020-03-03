@@ -129,7 +129,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "Parallel programming must be deterministic by default." Robert L. Bocchino, Jr., Vikram S. Adve, Sarita V. Adve, and Marc Snir, _Proceedings of the First USENIX conference on Hot topics in parallelism_. March 2009.
 * "The multikernel: a new OS architecture for scalable multicore systems." Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Tim Harris, Rebecca Isaacs, Simon Peter, Timothy Roscoe, Adrian Schüpbach, and Akhilesh Singhania, _Proceedings of the ACM SIGOPS 22nd Symposium on Operating Systems Principles_. October 2009.
 
-### 2010 - present
+### 2010 - 2019
 
 * "A few billion lines of code later: Using static analysis to find bugs in the real world." Al Bessey, Ken Block, Ben Chelf, Andy Chou, Bryan Fulton, Seth Hallem, Charles Henri-Gros, Asya Kamsky, Scott McPeak, and Dawson Engler, _Communications of the ACM_, volume 53, number 2, February 2010.
 * "Cycles, cells and platters: an empirical analysis of hardware failures on a million consumer PCs." Edmund B. Nightingale, John R. Douceur, and Vince Orgovan, _Proceedings of the Sixth Conference on Computer systems_, April 2011.
@@ -142,6 +142,10 @@ Suggestions, criticisms, or comments are always appreciated.
 * "The Dataflow Model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." Tyler Akidau, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety, Daniel Mills, Frances Perry, Eric Schmidt, and Sam Whittle, _Proceedings of the VLDB Endowment_, volume 8, August 2015.
 * "Engineering record and replay for deployability: Extended technical report." Robert O'Callahan, Chris Jones, Nathan Froyd, Kyle Huey, Albert Noll, and Nimrod Partush. Mozilla Research. May 2017.
 * "Bringing the web up to speed with WebAssembly." Andreas Haas, Andreas Rossberg, Derek L. Schuff, Ben L. Titzer, Michael Holman, Dan Gohman, Luke Wagner, Alon Zakai, and JF Bastien, _Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation_, June 2017.
+
+### 2020 - present
+
+* "Firecracker: Lightweight virtualization for serverless applications." Alexandru Agache, Marc Brooker, Andreea Florescu, Alexandra Iordache, Anthony Liguori, Rolf Neugebauer, Phil Piwonka, and Diana-Maria Popa, _Proceedings of the 17th USENIX Symposium on Networked Systems Design  and Implementation (NSDI ’20)_, February 2020.
 
 ### Related Work
 

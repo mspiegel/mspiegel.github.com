@@ -142,6 +142,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * "The Dataflow Model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." Tyler Akidau, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety, Daniel Mills, Frances Perry, Eric Schmidt, and Sam Whittle, _Proceedings of the VLDB Endowment_, volume 8, August 2015.
 * "Engineering record and replay for deployability: Extended technical report." Robert O'Callahan, Chris Jones, Nathan Froyd, Kyle Huey, Albert Noll, and Nimrod Partush. Mozilla Research. May 2017.
 * "Bringing the web up to speed with WebAssembly." Andreas Haas, Andreas Rossberg, Derek L. Schuff, Ben L. Titzer, Michael Holman, Dan Gohman, Luke Wagner, Alon Zakai, and JF Bastien, _Proceedings of the 38th ACM SIGPLAN Conference on Programming Language Design and Implementation_, June 2017.
+* "Looking back at Postgres." Joseph M. Hellerstein. In _Making Databases Work: the Pragmatic Wisdom of Michael Stonebraker_, Association for Computing Machinery and Morgan & Claypool, 205–224, December 2018.
 
 ### 2020 - present
 

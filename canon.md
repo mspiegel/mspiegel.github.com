@@ -122,6 +122,7 @@ Suggestions, criticisms, or comments are always appreciated.
 * _Software abstractions: Logic, language, and analysis_. Daniel Jackson, MIT Press, 2006. Revised edition published 2016.
 * "The purely functional software deployment model." Eelco Dolstra, Doctoral dissertation. Faculty of Science, Utrecht, The Netherlands. January 2006.
 * "The rise and fall of High Performance Fortran: An historical object lesson." Ken Kennedy, Charles Koelbel, and Hans Zima. _Proceedings of the third ACM SIGPLAN conference on History of programming languages_. 2007.
+* "Singularity: rethinking the software stack." Galen C. Hunt and James R. Larus. _ACM SIGOPS Operating Systems Review_, volume 41, issue 2, April 2007.
 * "Dynamo: Amazon’s highly available key-value store." Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels, _21st ACM Symposium on Operating Systems Principles_. October 2007.
 * "MapReduce: Simplified data processing on large clusters." Jeffrey Dean and Sanjay Ghemawat, _Communications of the ACM_, volume 51, number 1. January 2008.
 * "Bigtable: A distributed storage system for structured data." Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber, _ACM Transactions on Computer Systems_, volume 26, issue 2, June 2008.
@@ -209,3 +210,4 @@ Michael Eisenberg.  University of Colorado.
 * "Filter before you parse: Faster analytics on raw data with sparser." Shoumik Palkar, Firas Abuzaid, Peter Bailis, and Matei Zaharia, _Proceedings of the VLDB Endowment_, volume 11, number 11, June 2018.
 * "A fork() in the road." Andrew Baumann, Jonathan Appavoo, Orran Krieger, and Timothy Roscoe, _Workshop on Hot Topics in Operating Systems (HotOS)_, May 2019.
 * "Snap: A microkernel approach to host networking." Michael Marty, Marc de Kruijf, Jacob Adriaens, Christopher Alfeld, Sean Bauer, Carlo Contavalli*Michael Dalton*, Nandita Dukkipati, William C. Evans, Steve Gribble, Nicholas Kidd, RomanKononov, Gautam Kumar, Carl Mauer, Emily Musick, Lena Olson, Erik Rubow, Michael Ryan,Kevin Springborn, Paul Turner, Valas Valancius, Xi Wang, and Amin Vahdat, _Proceedings of the ACM SIGOPS 27th Symposium on Operating Systems Principles_, October 2019.
+* "A Linux in unikernel clothing." Hsuan-Chi Kuo, Dan Williams, Ricardo Koller, and Sibin Mohan, _Proceedings of the European Conference on Computer Systems_, April 2020.

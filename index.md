@@ -4,8 +4,8 @@ title: Michael Spiegel
 ---
 
 Michael Spiegel, Ph.D.  
-Twitter: [@DrMajorMcCheese](https://twitter.com/DrMajorMcCheese)  
-Career: [Resume](/resume-mspiegel.pdf)  
+Twitter: ~~@DrMajorMcCheese~~ (deleted)
+Career: [Resume](https://www.linkedin.com/in/michael-spiegel-908a3627)  
 Brain Dump: [Techno Fomo](/technofomo)  
 Publications: [Google Scholar](https://scholar.google.com/citations?user=eezjo4sAAAAJ)  
 Open Source: [GitHub Profile](https://github.com/mspiegel)  

@@ -211,4 +211,6 @@ Michael Eisenberg.  University of Colorado.
 * "A fork() in the road." Andrew Baumann, Jonathan Appavoo, Orran Krieger, and Timothy Roscoe, _Workshop on Hot Topics in Operating Systems (HotOS)_, May 2019.
 * "Snap: A microkernel approach to host networking." Michael Marty, Marc de Kruijf, Jacob Adriaens, Christopher Alfeld, Sean Bauer, Carlo Contavalli*Michael Dalton*, Nandita Dukkipati, William C. Evans, Steve Gribble, Nicholas Kidd, RomanKononov, Gautam Kumar, Carl Mauer, Emily Musick, Lena Olson, Erik Rubow, Michael Ryan,Kevin Springborn, Paul Turner, Valas Valancius, Xi Wang, and Amin Vahdat, _Proceedings of the ACM SIGOPS 27th Symposium on Operating Systems Principles_, October 2019.
 * "A Linux in unikernel clothing." Hsuan-Chi Kuo, Dan Williams, Ricardo Koller, and Sibin Mohan, _Proceedings of the European Conference on Computer Systems_, April 2020.
-* "Validating UTF-8 in less than one instruction per byte." John Keiser and Daniel Lemire, _Software: Practice and Experience_, to appear.
+* "Validating UTF-8 in less than one instruction per byte." John Keiser and Daniel Lemire, _Software: Practice and Experience_, volume 51, number 5, May 2021.
+* "DBOS: A DBMS-oriented operating system." Athinagoras Skiadopoulos, Qian Li, Peter Kraft, Kostis Kaffes, Daniel Hong, Shana
+Mathew, David Bestor, Michael Cafarella, Vijay Gadepally, Goetz Graefe, Jeremy Kepner, Christos Kozyrakis, Tim Kraska, Michael Stonebraker, Lalith Suresh, and Matei Zaharia, _Proceedings of the VLDB Endowment_, volume 15, number 1, September 2022.

@@ -175,7 +175,6 @@ Michael Eisenberg.  University of Colorado.
 * "Multidimensional binary search trees used for associative searching." Jon Louis Bentley, _Communications of the ACM_, volume 18, issue 9, September 1975.
 * "A space-economical suffix tree construction algorithm." Edward M. McCreight. _Journal of the ACM_, volume 22, issue 2, April 1976.
 * "A dichromatic framework for balanced trees." Leonidas J. Guibas and Robert Sedgewick, _Proceedings of the 19th Annual Symposium on Foundations of Computer Science_, October 1978.
-* "The ubiquitous B-Tree." Douglas Comer, _ACM Computing Surveys_, volume 11, issue 2, June 1979.
 * "Efficient locking for concurrent operations on B-trees." Philip L. Lehman, _ACM Transactions on Database Systems_, volume 6, issue 4, December 1981.
 * "Geometric modeling using octree encoding." Donald Meagher, _Computer Graphics and Image Processing_, volume 19, number 2, June 1982.
 * "Self-adjusting binary search trees." Daniel Dominic Sleator and Robert Endre Tarjan, _Journal of the ACM_, volume 32, issue 3, July 1985.
@@ -214,3 +213,4 @@ Michael Eisenberg.  University of Colorado.
 * "Validating UTF-8 in less than one instruction per byte." John Keiser and Daniel Lemire, _Software: Practice and Experience_, volume 51, number 5, May 2021.
 * "DBOS: A DBMS-oriented operating system." Athinagoras Skiadopoulos, Qian Li, Peter Kraft, Kostis Kaffes, Daniel Hong, Shana
 Mathew, David Bestor, Michael Cafarella, Vijay Gadepally, Goetz Graefe, Jeremy Kepner, Christos Kozyrakis, Tim Kraska, Michael Stonebraker, Lalith Suresh, and Matei Zaharia, _Proceedings of the VLDB Endowment_, volume 15, number 1, September 2022.
+* "Asterinas: A Linux ABI-compatible, Rust-based framekernel OS with a small and sound TCB." Yuke Peng, Hongliang Tian, Zhang Junyang, Ruihan Li, Chengjun Chen, Jianfeng Jiang, Jinyi Xian, Xiaolin Wang, Chenren Xu, Diyu Zhou, Yingwei Luo, Shoumeng Yan, and Yinqian Zhang, _Proceedings of the 2025 USENIX Annual Technical Conference_, July 2025.

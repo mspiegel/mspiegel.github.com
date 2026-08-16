@@ -46,11 +46,13 @@ system.
 
 ### OEIS A395493
 
-[A395493](https://oeis.org/A395493) enumerates the tilings of an *n* × *n*
-square by exactly *n* fixed polyominoes — equivalently, the partitions of the
-cells of an *n* × *n* grid into exactly *n* orthogonally-connected regions.
-I contributed the sequence and its first eleven terms in April 2026, ranging
-from a(1) = 1 and a(2) = 6 to a(11) ≈ 6.9 × 10^38.
+I am the author of [A395493](https://oeis.org/A395493). This sequence enumerates
+the tilings of an *n* × *n* square by exactly *n* fixed polyominoes —
+equivalently, the partitions of the cells of an *n* × *n* grid into exactly *n*
+orthogonally-connected regions. I contributed the sequence and its first eleven
+terms in April 2026, ranging from a(1) = 1 and a(2) = 6 to a(11) ≈ 6.9 × 10^38.
+This sequence is one step towards answering how many valid boards exist of the
+[Star Battle](https://www.puzzle-star-battle.com) puzzle game.
 
 The terms are computed by a Rust implementation of a frontier dynamic program,
 a technique with an established history. Knuth's Simpath (TAOCP 4B §7.1.4) is
@@ -152,26 +154,25 @@ interruption would cost at most the term in progress.
 
 ### OEIS A157418
 
-[A157418](https://oeis.org/A157418) arises in the theory of Rota-Baxter
-algebras. A Rota-Baxter operator is a linear map `P` satisfying
-`P(u)P(v) = P(uP(v)) + P(P(u)v)`, which is the rule of integration by parts
-written without integral signs: taking `P` to be integration from zero
-recovers the familiar identity exactly. Free Rota-Baxter algebras have a basis
-of *Rota-Baxter words* — expressions built from a generator `x` and the
-operator, with `P` written as a pair of parentheses — and the counting of these
-words was studied by
-[Guo and Sit](https://arxiv.org/abs/math/0602449), who contributed this
-sequence in 2010. In
-June 2026 I contributed a formula to the entry, found in collaboration with
-Claude, expressing the sequence in terms of the Catalan numbers.
+[A157418](https://oeis.org/A157418) counts a family of parenthesized strings.
+Write `x` for an object, and take *n* copies of it in a row. A string is
+admissible when three conditions hold: single `x`s and parenthesized blocks
+strictly alternate, so that no two of the objects share an innermost region and
+no two blocks sit side by side; no pair of parentheses immediately encloses
+another, which rules out `((x))` while allowing `((x)x)`; and the string begins
+or ends in `x`, so that at least one of the two objects at the ends is left
+outside every pair. For `n = 2` the admissible strings are `(x)x` and `x(x)`.
+For `n = 3` there are five: `((x)x)x`, `(x(x))x`, `x((x)x)`, `x(x)x`, and
+`x(x(x))`. The sequence begins `1, 2, 5, 16, 55, 202`. In June 2026 I
+contributed a formula to the entry, found in collaboration with Claude,
+expressing the sequence in terms of the Catalan numbers.
 
-The relations reduce every expression to a normal form: the Rota-Baxter
-identity rewrites any product of two parenthesized terms, the operator is
-idempotent, and the generator is idempotent. What survives is a strictly
-alternating sequence of single `x`s and parenthesized blocks, with no pair of
-parentheses immediately enclosing another. A157418 counts the *associate*
-words, those beginning or ending in `x`: for `n = 3` they are `((x)x)x`,
-`(x(x))x`, `x((x)x)`, `x(x)x`, and `x(x(x))`.
+These strings are the *associate Rota-Baxter words* in one idempotent generator
+and one idempotent operator: `x` is the generator, a pair of parentheses is the
+operator, and the three conditions above are exactly what the relations of a
+free Rota-Baxter algebra leave behind. The enumeration of such words was
+studied by [Guo and Sit](https://arxiv.org/abs/math/0602449), and Sit
+contributed this sequence in 2010.
 
 The Catalan numbers `1, 1, 2, 5, 14, 42, 132, …` count the objects that arise
 whenever a structure is built by repeatedly splitting something in two: the
@@ -179,12 +180,12 @@ balanced strings of *n* pairs of parentheses, the binary trees with *n* nodes,
 the triangulations of a polygon. Their generating function `F` satisfies
 `F(t) = 1 + t·F(t)^2`, the algebraic form of that single splitting rule.
 
-Rota-Baxter words are not Catalan objects — their counts, `1, 2, 5, 16, 55,
-202`, follow the Catalan numbers for three terms and then diverge, 16 against
-14 — but they turn out to be Catalan objects in disguise. Guo and Sit showed as
-much for the count of *all* Rota-Baxter words, whose generating function they
-wrote as `(1 + t)·F(t + t^2)`, while leaving the associate case in raw
-algebraic form. Writing `B(t) = F(t + t^2)`, the generating function of
+A157418 is not a Catalan sequence — it follows the Catalan numbers for three
+terms and then diverges, 16 against 14 — but its strings turn out to be Catalan
+objects in disguise. Guo and Sit showed as much for the count of *all*
+Rota-Baxter words, whose generating function they wrote as `(1 + t)·F(t + t^2)`,
+while leaving the associate case in raw algebraic form. Writing
+`B(t) = F(t + t^2)`, the generating function of
 A157418 is `t·B(t)·(1 + t·B(t))`, which is equivalent to the algebraic
 generating function already recorded in the entry. Substituting `t + t^2`
 for `t` leaves the recursive splitting structure untouched and only changes

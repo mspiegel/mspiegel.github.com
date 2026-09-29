@@ -44,6 +44,20 @@ infrastructure — while routinely diagnosing and fixing deep bugs in attestatio
 deadlocks, certificate bookkeeping, and race conditions across the distributed
 system.
 
+### Infinite Numbers
+
+[Infinite Numbers](https://apps.apple.com/us/app/infinite-numbers/id6762451403) is a quiet
+puzzle game for iPhone and iPad, published on the App Store, about guessing the
+next term of an integer sequence. Each of its 151 sequences is drawn from the
+[OEIS](https://oeis.org) and shown with its name hidden and only its first few
+terms visible. The player types a guess and is told whether it is too high or
+too low. The sequences were chosen from those that Wikipedia, MathWorld,
+PlanetMath, and Wikidata cite, then filtered against a blacklist of about 3,000
+entries. The list runs from the easiest sequences to the hardest. Each sequence has its own instrumental theme, played from MIDI through
+a bundled SoundFont. The app is written in SwiftUI and runs entirely offline. It
+has no accounts, ads, or analytics, and asks for no permissions. The game is meant to
+share a little of the joy of finding patterns in mathematics.
+
 ### OEIS A395493
 
 I am the author of [A395493](https://oeis.org/A395493). This sequence enumerates
